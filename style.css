@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Oxygen;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Oswald;
+}
+
+body > *,
+section {
+  margin-bottom: 5vw;
+}
+
+.cntnr {
+  padding: 0 10vw;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+li {
+  background: #b9b9b9;
+  padding: 1vw;
+  margin-right: 1vw;
+  border-radius: 5px;
+}
+
+header {
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background-image: url("stockport.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header .content {
+  position: absolute;
+  margin-top: 40vh;
+}
+
+header .darkening-layer,
+header .dotted-layer {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+header .darkening-layer {
+  background: black;
+  opacity: 0.6;
+}
+
+header .dotted-layer {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==);
+}
+
+main * > * {
+  margin-bottom: 1vw;
+}
+
+main .prj .img-box {
+  position: relative;
+}
+
+main .prj .img-box img {
+  width: 100%;
+}
+
+main .prj .img-box img:nth-child(even) {
+  position: absolute;
+  width: 20%;
+  bottom: 0;
+  right: 0;
+}
+
+main .analytics-page,
+main .debt-solutions-page {
+  overflow: hidden;
+}
+
+main .analytics-page input[name="r"],
+main .debt-solutions-page input[name="r"] {
+  display: none;
+}
+
+main .analytics-page .slide-window,
+main .debt-solutions-page .slide-window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500%;
+}
+
+main .analytics-page .slide-window .img-box,
+main .debt-solutions-page .slide-window .img-box {
+  width: 20%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+main .analytics-page .navigation,
+main .debt-solutions-page .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .analytics-page .navigation .bar,
+main .debt-solutions-page .navigation .bar {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main .analytics-page .navigation .bar:hover,
+main .debt-solutions-page .navigation .bar:hover {
+  background: white;
+}
+
+main .analytics-page #r1:checked ~ .s1,
+main .debt-solutions-page #r1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+main .analytics-page #r2:checked ~ .s1,
+main .debt-solutions-page #r2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+main .analytics-page #r3:checked ~ .s1,
+main .debt-solutions-page #r3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+@media (min-width: 64rem) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .about,
+  main .skills {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
