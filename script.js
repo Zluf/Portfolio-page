@@ -5,21 +5,32 @@
 //     })
 // }
 
-document.querySelector('.page-1').addEventListener('mouseover', function() {
-    document.querySelector('.analytics-1').classList.remove('hidden');
-    document.querySelector('.analytics-2').classList.add('hidden');
-    document.querySelector('.analytics-3').classList.add('hidden');
-})
+// Burger Menu Toggle
 
-document.querySelector('.page-2').addEventListener('mouseover', function() {
-    document.querySelector('.analytics-1').classList.add('hidden');
-    document.querySelector('.analytics-2').classList.remove('hidden');
-    document.querySelector('.analytics-3').classList.add('hidden');
-})
+const brgrBox = document.querySelector(".brgr-box");
 
-document.querySelector('.page-3').addEventListener('mouseover', function() {
-    document.querySelector('.analytics-1').classList.add('hidden');
-    document.querySelector('.analytics-2').classList.add('hidden');
-    document.querySelector('.analytics-3').classList.remove('hidden');
-})
+brgrBox.addEventListener("click", function () {
+  document.querySelectorAll(".nav-menu li").forEach((o) => {
+    o.classList.toggle("hidden");
+    o.classList.toggle("visible");
+  });
+  brgrBox.classList.toggle("menu-open");
+});
 
+// document.querySelector('.page-1').addEventListener('mouseover', function() {
+//     document.querySelector('.analytics-1').classList.remove('hidden');
+//     document.querySelector('.analytics-2').classList.add('hidden');
+//     document.querySelector('.analytics-3').classList.add('hidden');
+// })
+
+// document.querySelector('.page-2').addEventListener('mouseover', function() {
+//     document.querySelector('.analytics-1').classList.add('hidden');
+//     document.querySelector('.analytics-2').classList.remove('hidden');
+//     document.querySelector('.analytics-3').classList.add('hidden');
+// })
+
+// document.querySelector('.page-3').addEventListener('mouseover', function() {
+//     document.querySelector('.analytics-1').classList.add('hidden');
+//     document.querySelector('.analytics-2').classList.add('hidden');
+//     document.querySelector('.analytics-3').classList.remove('hidden');
+// })

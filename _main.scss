@@ -1,0 +1,233 @@
+$amber: #d67701;
+
+// MAIN
+
+main * > * {
+  margin-bottom: 1vh;
+}
+
+main {
+  section {
+    position: relative;
+    padding-bottom: 5vh;
+    h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      padding: 5vh 0 3vh;
+    }
+    // h3:first-child {
+    //   margin: 5vw 0 3vw;
+    // }
+    p {
+      margin-bottom: 4vh;
+    }
+    &:not(:last-of-type)::after {
+      content: "";
+      position: absolute;
+      width: 20vw;
+      height: 1px;
+      background: $amber;
+      color: $amber;
+      font-size: large;
+      bottom: 0;
+      left: calc(50% - 10vw);
+    }
+    i {
+      color: black;
+    }
+  }
+
+  .education {
+    p {
+      a {
+        color: $amber;
+        border-bottom: 1px solid $amber;
+      }
+    }
+    h3 {
+      i {
+        padding-right: 1vw;
+      }
+    }
+  }
+
+  .skills {
+    ul {
+      margin-top: 7vw;
+      display: block;
+      li {
+        .skill {
+          display: flex;
+          align-items: center;
+          i {
+            font-size: 2.4rem;
+          }
+          h3 {
+            margin: 0 0 0 5vw;
+          }
+        }
+        p {
+          margin-bottom: 7vw;
+        }
+      }
+    }
+    @include breakpoint-up(medium) {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  .prj {
+    margin-top: 7vh;
+    a:nth-child(odd) {
+      display: flex;
+      align-items: center;
+      color: black;
+      margin-bottom: 2vh;
+      i {
+        font-size: 2.9rem;
+        margin: 0;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-left: 5vw;
+      }
+    }
+    ul {
+      flex-wrap: wrap;
+    }
+    li {
+      background: rgb(185, 185, 185);
+      padding: 1vw;
+      font-size: small;
+      margin-right: 1vw;
+      border-radius: 5px;
+    }
+    a:nth-of-type(even) {
+      display: inline;
+      padding: 1.5vw 2vw;
+      border-radius: 10vw;
+      color: black;
+      font-size: small;
+      background: rgba(169, 144, 73, 0.463);
+      i {
+        color: black;
+        font-size: medium;
+        padding-left: 1vw;
+      }
+    }
+
+    .img-box {
+      position: relative;
+      margin-top: 2vw;
+
+      img {
+        width: 100%;
+      }
+
+      img:nth-child(even) {
+        position: absolute;
+        width: 20%;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .slides {
+    overflow: hidden;
+
+    input[name="r"] {
+      display: none;
+    }
+
+    .slide-window {
+      display: flex;
+      width: 333%;
+      .img-box {
+        width: 30%;
+        margin: 0 3% 0 0;
+        transition: 0.6s;
+      }
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-evenly;
+      .bar {
+        // background: red;
+        width: 16vw;
+        height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.4s;
+        font-size: large;
+        &:hover {
+          background: white;
+          font-size: 1.5rem;
+          font-weight: bolder;
+          transition: all 0.3s;
+        }
+      }
+    }
+    #r1:checked ~ .s1,
+    #r5:checked ~ .s1,
+    #r7:checked ~ .s1 {
+      margin-left: 0;
+    }
+    #r2:checked ~ .s1,
+    #r6:checked ~ .s1,
+    #r8:checked ~ .s1 {
+      margin-left: -33%;
+    }
+    #r3:checked ~ .s1 {
+      margin-left: -66%;
+    }
+  }
+
+  // MAIN LARGE
+
+  @include breakpoint-up(large) {
+    section {
+      padding-top: 8vh;
+      padding-bottom: 5vh;
+    }
+    .about,
+    .education {
+      padding-right: 12vw;
+    }
+    .skills ul {
+      margin-top: 7vh;
+      li p {
+        margin-bottom: 4vh;
+      }
+    }
+    .portfolio {
+      .prj {
+        a h3 {
+          margin-left: 2vw;
+        }
+        ul {
+          margin-bottom: 2vh;
+          li {
+            padding: 0.7vw;
+          }
+        }
+        .slide {
+          margin-top: 4vh;
+        }
+        a:nth-of-type(even) {
+          padding: 0.8vw 1vw;
+          i {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

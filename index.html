@@ -19,10 +19,32 @@
     ></script>
   </head>
   <body>
-    <header>
+    <nav class="main-nav">
+      <img src="img/mugshot.jpg" alt="Slav Konovalov mugshot" />
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+    <header id="header">
+      <div class="cntnr"></div>
       <div class="dotted-layer"></div>
       <div class="darkening-layer"></div>
-      <div class="content cntnr">
+      <div class="brgr-box">
+        <div class="brgr-mid"></div>
+      </div>
+      <nav class="main-nav">
+        <img src="img/mugshot.jpg" alt="Slav Konovalov mugshot" />
+        <ul class="nav-menu">
+          <li class="hidden"><a href="#about">About</a></li>
+          <li class="hidden"><a href="#skills">Skills</a></li>
+          <li class="hidden"><a href="#education">Education</a></li>
+          <li class="hidden"><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </nav>
+      <div class="content">
         <span>Hi, there! I'm</span>
         <h1>Slav Konovalov</h1>
         <h2>Front End Developer</h2>
@@ -31,9 +53,24 @@
           Stockport, UK
         </h3>
       </div>
+      <div class="header-icons">
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/slav-konovalov-466650182"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/Zluf" target="_blank"
+            ><i class="fab fa-github-square"></i
+          ></a>
+          <a href="mailto:slav.konovalov@gmail.com"
+            ><i class="fas fa-envelope-square"></i
+          ></a>
+        </div>
+      </div>
     </header>
     <main class="cntnr">
-      <section class="about">
+      <section class="about" id="about">
         <h2>About Me</h2>
         <p>Greetings, dear visitor!</p>
         <p>
@@ -43,21 +80,111 @@
         </p>
         <p>
           I'm currently open to jobs or projects that match the skill level of a
-          Junior Developer as I advance on my learning path.
+          Junior Developer. I'm prepared to commute within Greater Manchester /
+          Stockport area or be engaged in remote projects.
         </p>
       </section>
-      <section class="skills">
+
+      <section class="education" id="education">
+        <h2>Education</h2>
+        <p>
+          Being a visually-oriented person I picked Front End as I appreciate
+          design aesthetics and interactive functionality of web pages.
+        </p>
+        <p>
+          In March 2021 I started self-studying HTML and CSS from free online
+          tutorials.
+        </p>
+        <h3><i class="fa fa-book" aria-hidden="true"></i> Tutoring</h3>
+        <p>
+          After grabbing the basics I reached out to Tom Parson of
+          <a href="https://workwithhuddle.com/" target="_blank"
+            >Huddle Digital</a
+          >
+          via a tutoring website
+          <a href="https://www.superprof.com/" target="_blank">Superprof</a>.
+          Tom introduced me to a series of Adobe XD mock-up designs from which I
+          built web pages while continuing to self-study relevant techniques.
+          During the lessons feedback was discussed for later to be implemented
+          in the projects. As Tom is an experienced Developer, his lessons were
+          of great value to my learning.
+        </p>
+        <h3><i class="fa fa-book" aria-hidden="true"></i> Udemy</h3>
+        <p>
+          At the moment I also follow a detailed
+          <a href="https://www.udemy.com/course/the-complete-javascript-course"
+            >Javascript course</a
+          >
+          from Udemy.com
+        </p>
+      </section>
+
+      <section class="skills" id="skills">
         <h2>Skills</h2>
-        <ul class="flex">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>SASS</li>
-          <li>Responsive Design</li>
-          <li>GIT</li>
+        <ul>
+          <li>
+            <div class="skill">
+              <i class="fa fa-html5"></i>
+              <h3>HTML5</h3>
+            </div>
+            <p>
+              Navigation of HTML tree, parent & child elements, semantics,
+              tables & forms, embedding media.
+            </p>
+          </li>
+          <li>
+            <div class="skill">
+              <i class="fa fa-css3"></i>
+              <h3>CSS3</h3>
+            </div>
+            <p>
+              Working with helper classes, spacing, relative & absolute
+              positioning, alignment of elements with flexbox & grid, pseudo
+              elements, z-index, transitions and transforms, advanced
+              selsectors, fonts, various measurement units.
+            </p>
+          </li>
+          <li>
+            <div class="skill">
+              <i class="fab fa-js-square"></i>
+              <h3>Javascript</h3>
+            </div>
+            <p>
+              Using DOM maniuplation & events handlers for website
+              functionality.
+            </p>
+          </li>
+          <li>
+            <div class="skill">
+              <i class="fab fa-sass"></i>
+              <h3>SASS</h3>
+            </div>
+            <p>
+              Setting up partials & variables, navigation of elements through
+              nesting, using mixins to engage with viewport resolutions.
+            </p>
+          </li>
+          <li>
+            <div class="skill">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Responsive Design</h3>
+            </div>
+            <p>
+              Adjusting of CSS properties for the viewports of appropriate
+              devices.
+            </p>
+          </li>
+          <li>
+            <div class="skill">
+              <i class="fab fa-git-alt"></i>
+              <h3>GIT</h3>
+            </div>
+            <p>Deploying projects to Github at various stages of completion.</p>
+          </li>
         </ul>
       </section>
-      <section class="projects">
+
+      <section class="portfolio" id="portfolio">
         <div class="info">
           <h2>Portfolio</h2>
           <p>
@@ -65,13 +192,16 @@
             oldest.
           </p>
           <p>
-            All pages are built from pre-designed mock-ups which can be provided
-            upon request.
+            All pages are built from pre-designed Adobe XD mock-ups which can be
+            provided upon request.
           </p>
         </div>
 
         <div class="prj interiors-page">
-          <h3>Interior Design page</h3>
+          <a href="">
+            <i class="fas fa-file-alt"></i>
+            <h3>Interior Design page</h3>
+          </a>
           <ul class="flex">
             <li>HTML</li>
             <li>CSS</li>
@@ -79,6 +209,11 @@
             <li>Desktop</li>
             <li>Mobile</li>
           </ul>
+          <a
+            href="https://github.com/Zluf/Assignment-12---Interiors"
+            target="_blank"
+            >Github project<i class="fas fa-arrow-right"></i
+          ></a>
           <div class="img-box">
             <img
               src="img/aa11-prj06-dt-interiors_page.png"
@@ -93,7 +228,10 @@
         </div>
 
         <div class="prj charity-page-2">
-          <h3>Charity page</h3>
+          <a href="">
+            <i class="fas fa-file-alt"></i>
+            <h3>Charity page 2</h3>
+          </a>
           <ul class="flex">
             <li>HTML</li>
             <li>CSS</li>
@@ -101,6 +239,11 @@
             <li>JavaScript</li>
             <li>Desktop</li>
           </ul>
+          <a
+            href="https://github.com/Zluf/Assignment-11---Charity-page-2"
+            target="_blank"
+            >Github project<i class="fas fa-arrow-right"></i
+          ></a>
           <div class="img-box">
             <img
               src="img/aa10-prj05-dt-charity_page2.png"
@@ -110,14 +253,22 @@
         </div>
 
         <div class="prj analytics-page slides">
-          <h3>Analytics page</h3>
+          <a href="">
+            <i class="fas fa-file-alt"></i>
+            <h3>Analytics page</h3>
+          </a>
           <ul class="flex">
             <li>HTML</li>
             <li>CSS</li>
             <li>Desktop</li>
             <li>Mobile</li>
           </ul>
-          <div class="slide-window">
+          <a
+            href="https://github.com/Zluf/Assignment-10---Analytics-page"
+            target="_blank"
+            >Github project<i class="fas fa-arrow-right"></i
+          ></a>
+          <div class="img-box slide-window">
             <input type="radio" name="r" id="r1" checked />
             <input type="radio" name="r" id="r2" />
             <input type="radio" name="r" id="r3" />
@@ -159,37 +310,61 @@
           </div>
         </div>
 
-        <div class="prj sports-data-page">
-          <h3>Sports Data page</h3>
+        <div class="prj sports-data-page slides">
+          <a class="prj-title" href="">
+            <i class="fas fa-file-alt"></i>
+            <h3>Sports Data page</h3>
+          </a>
           <ul class="flex">
             <li>HTML</li>
             <li>CSS</li>
             <li>Desktop</li>
           </ul>
-          <div class="img-box">
-            <img
-              src="img/aa08-prj03-dt-sports_data1.png"
-              alt="sample page sports data"
-            />
+          <a
+            href="https://github.com/Zluf/Assignment-9---Sports-Data-page"
+            target="_blank"
+            >Github project<i class="fas fa-arrow-right"></i
+          ></a>
+          <div class="img-box slide-window">
+            <input type="radio" name="r" id="r7" checked />
+            <input type="radio" name="r" id="r8" />
+            <div class="img-box s1">
+              <img
+                src="img/aa08-prj03-dt-sports_data1.png"
+                alt="sample page sports data"
+              />
+            </div>
+            <div class="img-box">
+              <img
+                src="img/aa08-prj03-dt-sports_data2.png"
+                alt="sample page sports data"
+              />
+            </div>
           </div>
-          <!-- <div class="img-box">
-                    <img src="img/aa08-prj03-dt-sports_data2.png" alt="sample page sports data">
-                </div> -->
-          <a href="">Page 1</a>
-          <a href="">Page 2</a>
+          <div class="navigation">
+            <label for="r7" class="page-1 bar">Page 1</label>
+            <label for="r8" class="page-2 bar">Page 2</label>
+          </div>
         </div>
 
-        <div class="prj debt-solutions-page">
-          <h3>Debt Solutions page</h3>
+        <div class="prj debt-solutions-page slides">
+          <a class="prj-title" href="">
+            <i class="fas fa-file-alt"></i>
+            <h3>Debt Solutions page</h3>
+          </a>
           <ul class="flex">
             <li>HTML</li>
             <li>CSS</li>
             <li>Desktop</li>
           </ul>
-          <div class="slide-window">
-            <input type="radio" name="r" id="r1" checked />
-            <input type="radio" name="r" id="r2" />
-            <input type="radio" name="r" id="r3" />
+          <a
+            href="https://github.com/Zluf/Assignment-8---Debt-Solutions-page"
+            target="_blank"
+            >Github project<i class="fas fa-arrow-right"></i
+          ></a>
+          <div class="img-box slide-window">
+            <input type="radio" name="r" id="r5" checked />
+            <input type="radio" name="r" id="r6" />
             <div class="img-box s1">
               <img
                 src="img/aa07-prj02-dt-debt_solutions1.png"
@@ -204,18 +379,26 @@
             </div>
           </div>
           <div class="navigation">
-            <label for="r1" class="page-1 bar">Page 1</label>
-            <label for="r2" class="page-2 bar">Page 2</label>
+            <label for="r5" class="page-1 bar">Page 1</label>
+            <label for="r6" class="page-2 bar">Page 2</label>
           </div>
         </div>
 
         <div class="prj charity-page-1">
-          <h3>Charity page 1</h3>
+          <a class="prj-title" href="">
+            <i class="fas fa-file-alt"></i>
+            <h3>Charity page 1</h3>
+          </a>
           <ul class="flex">
             <li>HTML</li>
             <li>CSS</li>
             <li>Desktop</li>
           </ul>
+          <a
+            href="https://github.com/Zluf/Assignment-7---Charity-page-1"
+            target="_blank"
+            >Github project<i class="fas fa-arrow-right"></i
+          ></a>
           <div class="img-box">
             <img
               src="img/aa06-prj01-dt-charity_page1.png"
@@ -225,6 +408,28 @@
         </div>
       </section>
     </main>
-    <!-- <script src="script.js"></script> -->
+    <footer>
+      <a href="#header" class="back-to-top">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>Back to Top</p>
+      </a>
+
+      <div class="footer-icons">
+        <a
+          href="https://www.linkedin.com/in/slav-konovalov-466650182"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Zluf" target="_blank"
+          ><i class="fab fa-github-square"></i
+        ></a>
+        <a href="mailto:slav.konovalov@gmail.com"
+          ><i class="fas fa-envelope-square"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
