@@ -7,17 +7,27 @@ main * > * {
 }
 
 main {
+  section:nth-child(odd) {
+    // background: linear-gradient(
+    //   180deg,
+    //   rgb(25, 24, 32),
+    //   rgb(102, 102, 145) 280%
+    // );
+  }
+  section:nth-child(even) {
+    // background: linear-gradient(180deg, rgb(102, 102, 145), rgb(25, 24, 32));
+  }
+
   section {
     position: relative;
-    padding-bottom: 5vh;
+    padding: 0 7vw 5vh;
+
+    // padding-bottom: 5vh;
     h2 {
       font-size: 2.4rem;
       font-weight: bold;
       padding: 5vh 0 3vh;
     }
-    // h3:first-child {
-    //   margin: 5vw 0 3vw;
-    // }
     p {
       margin-bottom: 4vh;
     }
@@ -46,8 +56,20 @@ main {
     }
     h3 {
       i {
+        font-size: 2.4rem;
         padding-right: 1vw;
       }
+    }
+  }
+
+  .skill {
+    display: flex;
+    align-items: center;
+    i {
+      width: 3vw;
+      text-align: center;
+      margin-right: 30px;
+      font-size: 2rem;
     }
   }
 
@@ -55,20 +77,8 @@ main {
     ul {
       margin-top: 7vw;
       display: block;
-      li {
-        .skill {
-          display: flex;
-          align-items: center;
-          i {
-            font-size: 2.4rem;
-          }
-          h3 {
-            margin: 0 0 0 5vw;
-          }
-        }
-        p {
-          margin-bottom: 7vw;
-        }
+      p {
+        margin-bottom: 7vw;
       }
     }
     @include breakpoint-up(medium) {
@@ -85,49 +95,14 @@ main {
 
   .prj {
     margin-top: 7vh;
-    a:nth-child(odd) {
-      display: flex;
-      align-items: center;
-      color: black;
-      margin-bottom: 2vh;
-      i {
-        font-size: 2.9rem;
-        margin: 0;
-      }
-      h3 {
-        font-size: 2rem;
-        margin-left: 5vw;
-      }
-    }
-    ul {
-      flex-wrap: wrap;
-    }
-    li {
-      background: rgb(185, 185, 185);
-      padding: 1vw;
-      font-size: small;
-      margin-right: 1vw;
-      border-radius: 5px;
-    }
-    a:nth-of-type(even) {
-      display: inline;
-      padding: 1.5vw 2vw;
-      border-radius: 10vw;
-      color: black;
-      font-size: small;
-      background: rgba(169, 144, 73, 0.463);
-      i {
-        color: black;
-        font-size: medium;
-        padding-left: 1vw;
-      }
-    }
 
     .img-box {
+      display: block;
+      width: 100%;
       position: relative;
-      margin-top: 2vw;
 
       img {
+        margin-top: 15px;
         width: 100%;
       }
 
@@ -136,6 +111,57 @@ main {
         width: 20%;
         bottom: 0;
         right: 0;
+      }
+    }
+    a:first-child {
+      display: flex;
+      align-items: center;
+      color: black;
+      margin-bottom: 1vh;
+      i {
+        font-size: 2.9rem;
+        margin: 0;
+      }
+      h3 {
+        font-size: 1.7rem;
+        margin-left: 20px;
+        margin-bottom: 0;
+        i {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    a:nth-child(2) {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: normal;
+      i {
+        font-size: 1rem;
+      }
+    }
+    ul {
+      flex-wrap: wrap;
+      margin-top: 2vh;
+      margin-bottom: 1vh;
+    }
+    li {
+      background: rgb(185, 185, 185);
+      padding: 1vw;
+      font-size: small;
+      margin-right: 1vw;
+      border-radius: 5px;
+    }
+    & > a:nth-of-type(even) {
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 10vw;
+      color: black;
+      font-size: small;
+      background: rgba(169, 144, 73, 0.463);
+      i {
+        color: black;
+        font-size: medium;
+        padding-left: 1vw;
       }
     }
   }
@@ -161,8 +187,8 @@ main {
       justify-content: space-evenly;
       .bar {
         // background: red;
-        width: 16vw;
-        height: 1.5rem;
+        width: 20vw;
+        height: 2rem;
         text-align: center;
         cursor: pointer;
         transition: 0.4s;
@@ -201,6 +227,12 @@ main {
     .education {
       padding-right: 12vw;
     }
+    .skill {
+      margin-right: 20px;
+      i {
+        margin-right: 15px;
+      }
+    }
     .skills ul {
       margin-top: 7vh;
       li p {
@@ -208,10 +240,14 @@ main {
       }
     }
     .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .info {
+        width: 100%;
+      }
       .prj {
-        a h3 {
-          margin-left: 2vw;
-        }
+        width: 45%;
         ul {
           margin-bottom: 2vh;
           li {

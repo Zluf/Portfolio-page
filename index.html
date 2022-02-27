@@ -23,8 +23,8 @@
       <img src="img/mugshot.jpg" alt="Slav Konovalov mugshot" />
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
       </ul>
     </nav>
@@ -39,21 +39,21 @@
         <img src="img/mugshot.jpg" alt="Slav Konovalov mugshot" />
         <ul class="nav-menu">
           <li class="hidden"><a href="#about">About</a></li>
-          <li class="hidden"><a href="#skills">Skills</a></li>
           <li class="hidden"><a href="#education">Education</a></li>
+          <li class="hidden"><a href="#skills">Skills</a></li>
           <li class="hidden"><a href="#portfolio">Portfolio</a></li>
         </ul>
       </nav>
-      <div class="content">
-        <span>Hi, there! I'm</span>
-        <h1>Slav Konovalov</h1>
-        <h2>Front End Developer</h2>
-        <h3>
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
-          Stockport, UK
-        </h3>
-      </div>
-      <div class="header-icons">
+      <div class="content flex">
+        <div class="name">
+          <span>Hi, there! I'm</span>
+          <h1>Slav Konovalov</h1>
+          <h2>Front End Developer</h2>
+          <h3>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Stockport, UK
+          </h3>
+        </div>
         <div class="icons">
           <a
             href="https://www.linkedin.com/in/slav-konovalov-466650182"
@@ -63,7 +63,8 @@
           <a href="https://github.com/Zluf" target="_blank"
             ><i class="fab fa-github-square"></i
           ></a>
-          <a href="mailto:slav.konovalov@gmail.com"
+          <a
+            href="mailto:slav.konovalov@gmail.com?subject=Interested in web development services&body=Hi, Slav"
             ><i class="fas fa-envelope-square"></i
           ></a>
         </div>
@@ -75,8 +76,8 @@
         <p>Greetings, dear visitor!</p>
         <p>
           My name is Slav Konovalov. I'm a Front-End Developer residing in
-          Stockport, UK. This website showcases some of my works built along my
-          on-going study of Front-End technologies.
+          Stockport, UK. This website showcases some of my works built along an
+          ongoing study of Front-End technologies.
         </p>
         <p>
           I'm currently open to jobs or projects that match the skill level of a
@@ -95,7 +96,10 @@
           In March 2021 I started self-studying HTML and CSS from free online
           tutorials.
         </p>
-        <h3><i class="fa fa-book" aria-hidden="true"></i> Tutoring</h3>
+        <div class="skill">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <h3>Tutoring</h3>
+        </div>
         <p>
           After grabbing the basics I reached out to Tom Parson of
           <a href="https://workwithhuddle.com/" target="_blank"
@@ -109,7 +113,10 @@
           in the projects. As Tom is an experienced Developer, his lessons were
           of great value to my learning.
         </p>
-        <h3><i class="fa fa-book" aria-hidden="true"></i> Udemy</h3>
+        <div class="skill">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <h3>Udemy</h3>
+        </div>
         <p>
           At the moment I also follow a detailed
           <a href="https://www.udemy.com/course/the-complete-javascript-course"
@@ -191,16 +198,13 @@
             Here you can view the pages I've built, arranged most recent to
             oldest.
           </p>
-          <p>
-            All pages are built from pre-designed Adobe XD mock-ups which can be
-            provided upon request.
-          </p>
+          <p>All pages are built from pre-designed Adobe XD mock-ups.</p>
         </div>
 
         <div class="prj interiors-page">
-          <a href="">
+          <a href="interior/">
             <i class="fas fa-file-alt"></i>
-            <h3>Interior Design page</h3>
+            <h3>Interior Design page <i class="fas fa-arrow-right"></i></h3>
           </a>
           <ul class="flex">
             <li>HTML</li>
@@ -214,7 +218,7 @@
             target="_blank"
             >Github project<i class="fas fa-arrow-right"></i
           ></a>
-          <div class="img-box">
+          <a href="interior/" class="img-box">
             <img
               src="img/aa11-prj06-dt-interiors_page.png"
               alt="sample page interior design"
@@ -223,14 +227,13 @@
               src="img/aa11-prj06-m-interiors_page.png"
               alt="sample page interior design"
             />
-          </div>
-          <div class="img-box"></div>
+          </a>
         </div>
 
         <div class="prj charity-page-2">
-          <a href="">
+          <a href="charity2/">
             <i class="fas fa-file-alt"></i>
-            <h3>Charity page 2</h3>
+            <h3>Charity page 2 <i class="fas fa-arrow-right"></i></h3>
           </a>
           <ul class="flex">
             <li>HTML</li>
@@ -244,18 +247,18 @@
             target="_blank"
             >Github project<i class="fas fa-arrow-right"></i
           ></a>
-          <div class="img-box">
+          <a href="charity2/" class="img-box">
             <img
               src="img/aa10-prj05-dt-charity_page2.png"
               alt="sample page charity"
             />
-          </div>
+          </a>
         </div>
 
         <div class="prj analytics-page slides">
-          <a href="">
+          <a href="analytics/page1">
             <i class="fas fa-file-alt"></i>
-            <h3>Analytics page</h3>
+            <h3>Analytics page <i class="fas fa-arrow-right"></i></h3>
           </a>
           <ul class="flex">
             <li>HTML</li>
@@ -268,11 +271,11 @@
             target="_blank"
             >Github project<i class="fas fa-arrow-right"></i
           ></a>
-          <div class="img-box slide-window">
+          <div class="slide-window">
             <input type="radio" name="r" id="r1" checked />
             <input type="radio" name="r" id="r2" />
             <input type="radio" name="r" id="r3" />
-            <div class="img-box s1 analytics-1">
+            <a href="analytics/page1" class="img-box s1 analytics-1">
               <img
                 src="img/aa09-prj04-dt-analytics_page1.png"
                 alt="sample page analytics"
@@ -281,8 +284,8 @@
                 src="img/aa09-prj04-m-analytics_page1.png"
                 alt="sample page analytics"
               />
-            </div>
-            <div class="img-box analytics-2">
+            </a>
+            <a href="analytics/page2" class="img-box analytics-2">
               <img
                 src="img/aa09-prj04-dt-analytics_page2.png"
                 alt="sample page analytics"
@@ -291,8 +294,8 @@
                 src="img/aa09-prj04-m-analytics_page2.png"
                 alt="sample page analytics"
               />
-            </div>
-            <div class="img-box analytics-3">
+            </a>
+            <a href="analytics/page3" class="img-box analytics-3">
               <img
                 src="img/aa09-prj04-dt-analytics_page3.png"
                 alt="sample page analytics"
@@ -301,19 +304,19 @@
                 src="img/aa09-prj04-m-analytics_page3.png"
                 alt="sample page analytics"
               />
-            </div>
+            </a>
           </div>
           <div class="navigation">
-            <label for="r1" class="page-1 bar">Page 1</label>
+            <label for="r1" class="page-1 bar highlight">Page 1</label>
             <label for="r2" class="page-2 bar">Page 2</label>
             <label for="r3" class="page-3 bar">Page 3</label>
           </div>
         </div>
 
         <div class="prj sports-data-page slides">
-          <a class="prj-title" href="">
+          <a class="prj-title" href="sports-data/">
             <i class="fas fa-file-alt"></i>
-            <h3>Sports Data page</h3>
+            <h3>Sports Data page <i class="fas fa-arrow-right"></i></h3>
           </a>
           <ul class="flex">
             <li>HTML</li>
@@ -325,32 +328,32 @@
             target="_blank"
             >Github project<i class="fas fa-arrow-right"></i
           ></a>
-          <div class="img-box slide-window">
+          <div class="slide-window">
             <input type="radio" name="r" id="r7" checked />
             <input type="radio" name="r" id="r8" />
-            <div class="img-box s1">
+            <a href="sports-data/" class="img-box s1">
               <img
                 src="img/aa08-prj03-dt-sports_data1.png"
                 alt="sample page sports data"
               />
-            </div>
-            <div class="img-box">
+            </a>
+            <a href="sports-data/page2" class="img-box">
               <img
                 src="img/aa08-prj03-dt-sports_data2.png"
                 alt="sample page sports data"
               />
-            </div>
+            </a>
           </div>
           <div class="navigation">
-            <label for="r7" class="page-1 bar">Page 1</label>
+            <label for="r7" class="page-1 bar highlight">Page 1</label>
             <label for="r8" class="page-2 bar">Page 2</label>
           </div>
         </div>
 
         <div class="prj debt-solutions-page slides">
-          <a class="prj-title" href="">
+          <a class="prj-title" href="debt-solutions/">
             <i class="fas fa-file-alt"></i>
-            <h3>Debt Solutions page</h3>
+            <h3>Debt Solutions page <i class="fas fa-arrow-right"></i></h3>
           </a>
           <ul class="flex">
             <li>HTML</li>
@@ -362,32 +365,32 @@
             target="_blank"
             >Github project<i class="fas fa-arrow-right"></i
           ></a>
-          <div class="img-box slide-window">
+          <div class="slide-window">
             <input type="radio" name="r" id="r5" checked />
             <input type="radio" name="r" id="r6" />
-            <div class="img-box s1">
+            <a href="debt-solutions/" class="img-box s1">
               <img
                 src="img/aa07-prj02-dt-debt_solutions1.png"
                 alt="sample page debt solutions"
               />
-            </div>
-            <div class="img-box">
+            </a>
+            <a href="debt-solutions/page2" class="img-box">
               <img
                 src="img/aa07-prj02-dt-debt_solutions2.png"
                 alt="sample page debt solutions"
               />
-            </div>
+            </a>
           </div>
           <div class="navigation">
-            <label for="r5" class="page-1 bar">Page 1</label>
+            <label for="r5" class="page-1 bar highlight">Page 1</label>
             <label for="r6" class="page-2 bar">Page 2</label>
           </div>
         </div>
 
         <div class="prj charity-page-1">
-          <a class="prj-title" href="">
+          <a class="prj-title" href="charity1/">
             <i class="fas fa-file-alt"></i>
-            <h3>Charity page 1</h3>
+            <h3>Charity page 1 <i class="fas fa-arrow-right"></i></h3>
           </a>
           <ul class="flex">
             <li>HTML</li>
@@ -399,12 +402,12 @@
             target="_blank"
             >Github project<i class="fas fa-arrow-right"></i
           ></a>
-          <div class="img-box">
+          <a href="charity1/" class="img-box">
             <img
               src="img/aa06-prj01-dt-charity_page1.png"
               alt="sample page charity"
             />
-          </div>
+          </a>
         </div>
       </section>
     </main>
@@ -425,7 +428,8 @@
         <a href="https://github.com/Zluf" target="_blank"
           ><i class="fab fa-github-square"></i
         ></a>
-        <a href="mailto:slav.konovalov@gmail.com"
+        <a
+          href="mailto:slav.konovalov@gmail.com?subject=Interested in web development services&body=Hi, Slav"
           ><i class="fas fa-envelope-square"></i
         ></a>
       </div>

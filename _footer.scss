@@ -47,7 +47,10 @@ footer {
   }
   .footer-icons {
     display: flex;
-    width: 10vw;
+    width: 120px;
     justify-content: space-between;
+    i {
+      font-size: 2rem;
+    }
   }
 }

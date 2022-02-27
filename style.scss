@@ -40,10 +40,10 @@ p {
 }
 
 .cntnr {
-  padding: 0 10vw;
+  // padding: 0 10vw;
   @include breakpoint-up(medium) {
-    margin: 0 10vw;
-    padding: 0 7vw;
+    // margin: 0 10vw;
+    // padding: 0 7vw;
   }
 }
 
@@ -68,14 +68,16 @@ i {
   display: none;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(
-    90deg,
-    rgba(247, 247, 247, 0.936) 50%,
-    rgb(195, 194, 194)
-  );
   img {
     width: 6vw;
     border-radius: 50%;
+  }
+  @include breakpoint-up(large) {
+    background: linear-gradient(
+      90deg,
+      rgba(247, 247, 247, 0.936) 50%,
+      rgb(195, 194, 194)
+    );
   }
 
   ul {
@@ -84,7 +86,13 @@ i {
       margin-right: 2vw;
       color: black;
       font-size: large;
+      transition: all 0.3s;
       font-weight: bolder;
+      &:hover {
+        font-weight: bolder;
+        transition: all 0.3s;
+        font-size: 1.3rem;
+      }
     }
   }
   // cancels hiding on large resolution
@@ -93,7 +101,7 @@ i {
   }
 }
 
-// TOGGLED CLASSES (Burger Menu)
+// Toggled Clesses (Burger Menu)
 
 .menu-open {
   transform: translateY(-50%);
@@ -111,6 +119,8 @@ i {
     }
   }
 }
+
+// Inner Links
 
 .hidden {
   visibility: hidden;
@@ -131,15 +141,19 @@ i {
 
 .hidden:nth-child(2),
 .visible:nth-child(2) {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .hidden:nth-child(3),
 .visible:nth-child(3) {
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 .hidden:nth-child(4),
 .visible:nth-child(4) {
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
+}
+
+.highlight {
+  color: #d67701;
 }
