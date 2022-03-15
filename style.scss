@@ -20,10 +20,6 @@ body {
   background: rgb(247, 247, 247);
 }
 
-main {
-  background: white;
-}
-
 h1,
 h2,
 h3,
@@ -36,7 +32,11 @@ html {
 }
 
 p {
-  color: rgba(0, 0, 0, 0.737);
+  color: rgba(0, 0, 0, 0.774);
+}
+
+main {
+  background-color: white;
 }
 
 .cntnr {

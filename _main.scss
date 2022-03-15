@@ -7,41 +7,38 @@ main * > * {
 }
 
 main {
-  section:nth-child(odd) {
-    // background: linear-gradient(
-    //   180deg,
-    //   rgb(25, 24, 32),
-    //   rgb(102, 102, 145) 280%
-    // );
-  }
   section:nth-child(even) {
-    // background: linear-gradient(180deg, rgb(102, 102, 145), rgb(25, 24, 32));
+    background: rgba(188, 187, 187, 0.394);
+    h2,
+    h3,
+    h4 {
+      color: rgb(60, 60, 145);
+    }
   }
 
   section {
     position: relative;
     padding: 0 7vw 5vh;
 
-    // padding-bottom: 5vh;
     h2 {
       font-size: 2.4rem;
       font-weight: bold;
       padding: 5vh 0 3vh;
     }
     p {
-      margin-bottom: 4vh;
+      margin-bottom: 7vh;
     }
-    &:not(:last-of-type)::after {
-      content: "";
-      position: absolute;
-      width: 20vw;
-      height: 1px;
-      background: $amber;
-      color: $amber;
-      font-size: large;
-      bottom: 0;
-      left: calc(50% - 10vw);
-    }
+    // &:not(:last-of-type)::after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 20vw;
+    //   height: 1px;
+    //   background: $amber;
+    //   color: $amber;
+    //   font-size: large;
+    //   bottom: 0;
+    //   left: calc(50% - 10vw);
+    // }
     i {
       color: black;
     }
@@ -186,7 +183,6 @@ main {
       display: flex;
       justify-content: space-evenly;
       .bar {
-        // background: red;
         width: 20vw;
         height: 2rem;
         text-align: center;
@@ -194,7 +190,6 @@ main {
         transition: 0.4s;
         font-size: large;
         &:hover {
-          background: white;
           font-size: 1.5rem;
           font-weight: bolder;
           transition: all 0.3s;

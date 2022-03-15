@@ -2,6 +2,16 @@ main * > * {
   margin-bottom: 1vh;
 }
 
+main section:nth-child(even) {
+  background: rgba(188, 187, 187, 0.394);
+}
+
+main section:nth-child(even) h2,
+main section:nth-child(even) h3,
+main section:nth-child(even) h4 {
+  color: #3c3c91;
+}
+
 main section {
   position: relative;
   padding: 0 7vw 5vh;
@@ -14,19 +24,7 @@ main section h2 {
 }
 
 main section p {
-  margin-bottom: 4vh;
-}
-
-main section:not(:last-of-type)::after {
-  content: "";
-  position: absolute;
-  width: 20vw;
-  height: 1px;
-  background: #d67701;
-  color: #d67701;
-  font-size: large;
-  bottom: 0;
-  left: calc(50% - 10vw);
+  margin-bottom: 7vh;
 }
 
 main section i {
@@ -214,7 +212,6 @@ main .slides .navigation .bar {
 }
 
 main .slides .navigation .bar:hover {
-  background: white;
   font-size: 1.5rem;
   font-weight: bolder;
   -webkit-transition: all 0.3s;
@@ -288,6 +285,32 @@ main .slides #r3:checked ~ .s1 {
   }
   main .portfolio .prj a:nth-of-type(even) i {
     padding-left: 10px;
+  }
+}
+
+@-webkit-keyframes nameAppear {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes nameAppear {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -396,21 +419,33 @@ header .content {
           justify-content: space-between;
 }
 
-header .content .name span {
+header .content .name h3:first-child {
+  opacity: 0;
+  -webkit-animation: nameAppear 1s forwards 0.5s;
+          animation: nameAppear 1s forwards 0.5s;
   font-size: 1.2rem;
 }
 
 header .content .name h1 {
+  opacity: 0;
+  -webkit-animation: nameAppear 1s forwards 0.7s;
+          animation: nameAppear 1s forwards 0.7s;
   font-size: 3rem;
   line-height: 1.2;
 }
 
 header .content .name h2 {
+  opacity: 0;
+  -webkit-animation: nameAppear 1s forwards 0.9s;
+          animation: nameAppear 1s forwards 0.9s;
   font-size: 2rem;
 }
 
 header .content .name h3,
 header .content .name i {
+  opacity: 0;
+  -webkit-animation: nameAppear 1s forwards 1.1s;
+          animation: nameAppear 1s forwards 1.1s;
   font-size: 1.2rem;
 }
 
@@ -596,10 +631,6 @@ body {
   background: #f7f7f7;
 }
 
-main {
-  background: white;
-}
-
 h1,
 h2,
 h3,
@@ -612,7 +643,11 @@ html {
 }
 
 p {
-  color: rgba(0, 0, 0, 0.737);
+  color: rgba(0, 0, 0, 0.774);
+}
+
+main {
+  background-color: white;
 }
 
 .flex {
