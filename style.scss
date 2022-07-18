@@ -3,7 +3,7 @@
 @import "_header";
 @import "_footer";
 
-// Commin styling
+// Common styling
 
 * {
   margin: 0;
@@ -32,7 +32,7 @@ html {
 }
 
 p {
-  color: rgba(0, 0, 0, 0.774);
+  color: rgba(0, 0, 0, 0.773);
 }
 
 main {
@@ -106,7 +106,7 @@ i {
 .menu-open {
   transform: translateY(-50%);
   transition: all 0.5s;
-  .brgr-mid {
+  .brgr-midline {
     background-color: transparent !important;
     transition: all 0.5s;
     &::before {
