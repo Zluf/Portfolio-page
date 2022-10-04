@@ -1,6 +1,6 @@
 @import "_mixins";
 @import "_main";
-@import "_header";
+@import "_hero";
 @import "_footer";
 
 // Common styling
@@ -31,7 +31,10 @@ html {
   scroll-behavior: smooth;
 }
 
-p {
+p,
+li {
+  font-size: 1.2rem;
+  font-family: Source Sans Pro;
   color: rgba(0, 0, 0, 0.773);
 }
 
@@ -47,6 +50,15 @@ main {
   }
 }
 
+.center-text * {
+  @include breakpoint-up(medium) {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -56,48 +68,51 @@ i {
   font-size: 3vw;
 }
 
+.hero__icons *,
+.footer__icons * {
+  transition: transform 0.2s;
+}
+
+.hero__icons *:hover,
+.footer__icons *:hover {
+  transform: scale(1.1);
+}
+
 // MAIN NAV (outside of header)
 
-.main-nav {
+.header {
   position: fixed;
   z-index: 1;
-  padding: 0.7vw 8vw;
   top: 0;
   right: 0;
   width: 100%;
   display: none;
   align-items: center;
-  justify-content: space-between;
-  img {
-    width: 6vw;
-    border-radius: 50%;
-  }
-  @include breakpoint-up(large) {
-    background: linear-gradient(
-      90deg,
-      rgba(247, 247, 247, 0.936) 50%,
-      rgb(195, 194, 194)
-    );
-  }
+  justify-content: flex-end;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 247, 247, 0.936) 50%,
+    rgb(195, 194, 194)
+  );
 
   ul {
     display: flex;
     li a {
+      display: block;
       margin-right: 2vw;
       color: black;
       font-size: large;
       transition: all 0.3s;
       font-weight: bolder;
       &:hover {
-        font-weight: bolder;
-        transition: all 0.3s;
-        font-size: 1.3rem;
+        transform: scale(1.2);
       }
     }
   }
   // cancels hiding on large resolution
   @include breakpoint-up(large) {
     display: flex;
+    padding: 0.7vw 8vw;
   }
 }
 
@@ -122,7 +137,7 @@ i {
 
 // Inner Links
 
-.hidden {
+.mobile-hidden {
   visibility: hidden;
   opacity: 0;
   transform: translateX(20px);
@@ -132,7 +147,7 @@ i {
     opacity: 1;
   }
 }
-.visible {
+.mobile-visible {
   visibility: visible;
   opacity: 1;
   transform: translateX(0px);

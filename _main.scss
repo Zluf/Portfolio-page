@@ -1,20 +1,24 @@
+@import "_portfolio";
+
 $amber: #d67701;
 
 // MAIN
 
 main {
   section:nth-child(even) {
-    background: rgba(188, 187, 187, 0.394);
+    // alternates background color in every 2nd sections
+    background: linear-gradient(0.25turn, white, rgba(130, 135, 189, 0.394));
     h2,
     h3,
     h4 {
-      color: rgb(60, 60, 145);
+      color: rgb(45, 45, 111);
     }
   }
 
   section {
     position: relative;
     padding: 0 7vw 5vh;
+    background: linear-gradient(0.25turn, rgba(188, 187, 187, 0.394), white);
 
     h2 {
       font-size: 2.4rem;
@@ -30,16 +34,28 @@ main {
   }
 
   .education {
-    p {
-      a {
-        color: $amber;
-        border-bottom: 1px solid $amber;
-      }
+    a {
+      color: $amber;
     }
     h3 {
       i {
         font-size: 2.4rem;
         padding-right: 1vw;
+      }
+    }
+    .skill {
+      margin-bottom: 10px;
+      h3 {
+        font-size: 1.6rem;
+        width: 500px;
+      }
+    }
+  }
+
+  .skills {
+    ul {
+      p {
+        margin-bottom: 7vw;
       }
     }
   }
@@ -55,15 +71,29 @@ main {
     }
   }
 
-  .skills {
-    ul {
-      margin-top: 7vw;
-      display: block;
-      p {
-        margin-bottom: 7vw;
+  // MAIN MEDIUM
+
+  @include breakpoint-up(medium) {
+    section {
+      width: 100%;
+      // padding: 0 10vw;
+      padding-bottom: 5vh;
+      > p {
+        margin-bottom: 2vh;
       }
     }
-    @include breakpoint-up(medium) {
+
+    .skill {
+      margin-right: 20px;
+      margin-bottom: 10px;
+      i {
+        margin-right: 15px;
+      }
+    }
+    .skills {
+      h2 {
+        text-align: center;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -71,182 +101,21 @@ main {
         li {
           width: 40%;
         }
-      }
-    }
-  }
-
-  .prj {
-    margin-top: 7vh;
-
-    &__title {
-      display: flex;
-      align-items: center;
-      * {
-        margin-right: 10px;
-      }
-      i {
-        font-size: 2rem;
-      }
-      h3 {
-        font-size: 1.5rem;
-      }
-      i:nth-child(3) {
-        font-size: 1rem;
-      }
-    }
-
-    .slider {
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 5px 10px 10px #6c6c6c;
-
-      &__reel {
-        position: relative;
-        display: flex;
-        transform: translateX(0);
-        transition: transform 0.3s;
-        border-radius: 55px;
-        &::after {
-          position: absolute;
-          content: "";
-          top: 35px;
-          bottom: 0;
-          left: 10px;
-          width: 100%;
-          background-color: #6c6c6c;
-          z-index: -1;
-          box-shadow: 5px 10px 10px 30px #6c6c6c;
+        li p {
+          margin-bottom: 4vh;
         }
+      }
+    }
 
-        .slide {
+    @include breakpoint-up(large) {
+      .education {
+        &__sources {
           display: flex;
-          border-radius: 55px;
-          margin-right: 1%;
-          img {
-            width: 100%;
-            border-radius: 15px;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          > div {
+            width: 45%;
           }
-        }
-      }
-
-      .slides-x3 {
-        width: 309%;
-        .slide {
-          width: 33.33%;
-        }
-      }
-
-      .slides-x2 {
-        width: 204%;
-        .slide {
-          width: 50%;
-        }
-      }
-    }
-    .slider-navigation {
-      .slider__btn {
-        cursor: pointer;
-      }
-    }
-
-    &__img-box {
-      display: flex;
-      width: 100%;
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 5px 10px 10px #6c6c6c;
-
-      img {
-        // margin-top: 15px;
-        width: 100%;
-        margin-bottom: 0;
-      }
-
-      img:nth-child(even) {
-        position: absolute;
-        width: 20%;
-        bottom: 0;
-        right: 0;
-      }
-    }
-    // > a:first-child {
-    //   display: flex;
-    //   align-items: center;
-    //   color: black;
-    //   margin-bottom: 1vh;
-    //   i {
-    //     font-size: 2.9rem;
-    //     margin: 0;
-    //   }
-    //   h3 {
-    //     font-size: 1.7rem;
-    //     margin-left: 20px;
-    //     margin-bottom: 0;
-    //     i {
-    //       font-size: 1.4rem;
-    //     }
-    //   }
-    // }
-    // > a:nth-child(2) {
-    //   color: black;
-    //   font-size: 1.2rem;
-    //   font-weight: normal;
-    //   i {
-    //     font-size: 1rem;
-    //   }
-    // }
-    &__skills-used {
-      flex-wrap: wrap;
-      margin-top: 2vh;
-      margin-bottom: 1vh;
-      li {
-        background: rgb(185, 185, 185);
-        padding: 1vw;
-        font-size: small;
-        margin-right: 1vw;
-        border-radius: 5px;
-      }
-    }
-  }
-}
-
-// MAIN LARGE
-
-@include breakpoint-up(medium) {
-  section {
-    // padding-top: 8vh;
-    padding-bottom: 5vh;
-  }
-  .about,
-  .education {
-    padding-right: 12vw;
-  }
-  .skill {
-    margin-right: 20px;
-    i {
-      margin-right: 15px;
-    }
-  }
-  .skills ul {
-    margin-top: 7vh;
-    li p {
-      margin-bottom: 4vh;
-    }
-  }
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .info {
-      width: 100%;
-    }
-    .prj {
-      width: 45%;
-      &__skills-used {
-        margin-bottom: 2vh;
-        li {
-          padding: 0.7vw;
         }
       }
     }

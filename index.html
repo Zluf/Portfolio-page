@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>Slav Konovalov | Front End Developer</title>
@@ -20,32 +24,31 @@
     ></script>
   </head>
   <body>
-    <nav class="body__main-nav main-nav">
+    <header class="body__header header">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
       </ul>
-    </nav>
+    </header>
 
-    <header class="header" id="header">
-      <div class="header__layer--dotted"></div>
-      <div class="header__layer--darkening"></div>
-      <div class="header__brgr-menu">
+    <section class="hero" id="hero">
+      <header class="hero__header header">
+        <ul class="nav-menu">
+          <li class="mobile-hidden"><a href="#about">About</a></li>
+          <li class="mobile-hidden"><a href="#education">Education</a></li>
+          <li class="mobile-hidden"><a href="#skills">Skills</a></li>
+          <li class="mobile-hidden"><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </header>
+      <div class="hero__layer--dotted"></div>
+      <div class="hero__layer--darkening"></div>
+      <div class="hero__brgr-menu">
         <div class="brgr-midline"></div>
       </div>
-      <nav class="header__main-nav main-nav">
-        <img src="" alt="" />
-        <ul class="nav-menu">
-          <li class="hidden"><a href="#about">About</a></li>
-          <li class="hidden"><a href="#education">Education</a></li>
-          <li class="hidden"><a href="#skills">Skills</a></li>
-          <li class="hidden"><a href="#portfolio">Portfolio</a></li>
-        </ul>
-      </nav>
-      <div class="header__content flex">
-        <div class="name">
+      <div class="hero__content flex">
+        <div class="hero__title">
           <h3>Hi, there! I'm</h3>
           <h1>Slav Konovalov</h1>
           <h2>Front End Developer</h2>
@@ -54,7 +57,7 @@
             Stockport, UK
           </h3>
         </div>
-        <div class="icons">
+        <div class="hero__icons">
           <a
             href="https://www.linkedin.com/in/slav-konovalov-466650182"
             target="_blank"
@@ -69,10 +72,10 @@
           ></a>
         </div>
       </div>
-    </header>
+    </section>
 
     <main>
-      <section class="about" id="about">
+      <section class="about center-text" id="about">
         <h2>About Me</h2>
         <p>Greetings, dear visitor!</p>
         <p>
@@ -88,42 +91,84 @@
       </section>
 
       <section class="education" id="education">
-        <h2>Education</h2>
-        <p>
-          Being a visually-oriented person I picked Front End as I appreciate
-          design aesthetics and interactive functionality of web pages.
-          <br />
-          In March 2021 I started self-studying HTML and CSS from free online
-          tutorials.
-        </p>
-        <div class="skill">
-          <i class="fa fa-book" aria-hidden="true"></i>
-          <h3>Tutoring</h3>
+        <div class="education__intro center-text">
+          <h2>Education</h2>
+          <p>
+            Being a visually-oriented person I picked Front End as I appreciate
+            design aesthetics and interactive functionality of web pages.
+            <br />
+            In March 2021 I started self-studying HTML and CSS from free online
+            tutorials.
+          </p>
         </div>
-        <p>
-          After grabbing the basics I reached out to Tom Parson of
-          <a href="https://workwithhuddle.com/" target="_blank"
-            >Huddle Digital</a
-          >
-          via a tutoring website
-          <a href="https://www.superprof.com/" target="_blank">Superprof</a>.
-          Tom introduced me to a series of Adobe XD mock-up designs from which I
-          built web pages while continuing to self-study relevant techniques.
-          During the lessons feedback was discussed for later to be implemented
-          in the projects. As Tom is an experienced Developer, his lessons were
-          of great value to my learning.
-        </p>
-        <div class="skill">
-          <i class="fa fa-book" aria-hidden="true"></i>
-          <h3>Udemy</h3>
+
+        <div class="education__sources">
+          <div class="education__tutoring">
+            <div class="skill">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <h3>Tutoring</h3>
+            </div>
+            <p>
+              After grabbing the basics I reached out to Tom Parson of
+              <a href="https://workwithhuddle.com/" target="_blank"
+                >Huddle Digital</a
+              >
+              via a tutoring website
+              <a href="https://www.superprof.com/" target="_blank">Superprof</a
+              >. Tom introduced me to a series of Adobe XD mock-up designs from
+              which I built web pages while continuing to self-study relevant
+              techniques. During the lessons feedback was discussed to later               be implemented in the projects. As Tom is an experienced
+              Developer, his lessons were of great value to my learning.
+            </p>
+          </div>
+
+          <div class="education__udemy">
+            <div class="skill">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <h3>Udemy</h3>
+            </div>
+            
+            <p>
+              •
+            <a
+              href="https://www.udemy.com/course/the-complete-javascript-course"
+              >The Complete JavaScript Course 2022 </a
+            ><br />
+            •
+            <a
+              href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+              >React - The Complete Guide (incl Hooks, React Router, Redux)
+            </a><br>
+              On-going and thorough study of Udemy courses as I implement learnt
+              skills in the projects.
+            </p>
+          </div>
+          <div class="education__front-end-mentor">
+            <div class="skill">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <h3>Frontend Mentor</h3>
+            </div>
+            <p>
+              On-going practice of building apps and web pages from pre-designed mock-ups at <a
+              href="https://www.frontendmentor.io/home"
+              >frontendmentor.io</a>
+            </p>
+          </div>
+          <div class="education__hackathon">
+            <div class="skill">
+              <i class="fa fa-book" aria-hidden="true"></i>
+              <h3>Global Legal Hackathon 2022</h3>
+            </div>
+            <p>
+              Working in a team developing new app that had to be accomplished and published within 2 days. The team won the first stage of the competition in the category of Access to Justice.<br>
+              • <a href="https://www.youtube.com/watch?v=b4IADyH9BJM">Fast Law: Team presentation (video)</a><br>
+              • <a href="https://legaltech.wales/researcher-blogs/lilw-meets-glh-2022-fastlaw">Fast Law: Project description (article)</a>
+            </p>
+          </div>
         </div>
-        <p>
-          At the moment I also follow a detailed
-          <a href="https://www.udemy.com/course/the-complete-javascript-course"
-            >Javascript course</a
-          >
-          from Udemy.com
-        </p>
+
+        
+      </div>
       </section>
 
       <section class="skills" id="skills">
@@ -134,10 +179,7 @@
               <i class="fa fa-html5"></i>
               <h3>HTML5</h3>
             </div>
-            <p>
-              HTML tree | Parent/Child Elements | Semantics Tables/Forms |
-              Embedding Media
-            </p>
+            <p>HTML tree | Parent/Child Elements | Semantics | Tables/Forms</p>
           </li>
           <li>
             <div class="skill">
@@ -147,7 +189,7 @@
             <p>
               Classes | Box Model | Positioning | Flexbox | Grid | Pseudo
               Elements | Z-Index | Transitions and Animations | Selectors |
-              Length Units
+              Length Units | Media Quieries
             </p>
           </li>
           <li>
@@ -155,21 +197,21 @@
               <i class="fab fa-js-square"></i>
               <h3>Javascript</h3>
             </div>
-            <p>DOM | Event Handlers | OOP | API</p>
+            <p>DOM Manipulation | ES6+ | OOP | API</p>
           </li>
           <li>
             <div class="skill">
               <i class="fab fa-react"></i>
               <h3>ReactJS</h3>
             </div>
-            <p>Components | Props | Hooks | States | Events.</p>
+            <p>Components | Props | Hooks | States | Events</p>
           </li>
           <li>
             <div class="skill">
               <i class="fab fa-sass"></i>
               <h3>SASS</h3>
             </div>
-            <p>Partials | Variables | Nesting | Mixins</p>
+            <p>Partials | Variables | Maps | Nesting | Mixins</p>
           </li>
           <li>
             <div class="skill">
@@ -192,7 +234,7 @@
       </section>
 
       <section class="portfolio" id="portfolio">
-        <div class="info">
+        <div class="portfolio__info center-text">
           <h2>Portfolio</h2>
           <p>
             Here you can view the pages I've built, arranged most recent to
@@ -202,7 +244,7 @@
         </div>
 
         <div class="prj e-commerce-page">
-          <a class="prj__title" href="e-commerce-app/">
+          <a class="prj__title" href="e-commerce-page/">
             <i class="fas fa-file-alt"></i>
             <h3>E-Commerce Page</h3>
             <i class="fas fa-arrow-right"></i>
@@ -218,7 +260,7 @@
           <a href="e-commerce-page/" class="prj__img-box">
             <img
               src="img/e-commerce-page.png"
-              alt="sample page Advice Generator App"
+              alt="sample page E-Commerce Page"
             />
           </a>
         </div>
@@ -280,7 +322,7 @@
           </a>
         </div>
 
-        <div class="prj analytics-page slides">
+        <div class="prj analytics-page">
           <a class="prj__title" href="analytics/page1">
             <i class="fas fa-file-alt"></i>
             <h3>Analytics page</h3>
@@ -305,46 +347,16 @@
               </a>
             </div>
           </div>
-          <div class="slider-navigation">
-            <button class="slider__btn slide-1">Page 1</button>
-            <button class="slider__btn slide-2">Page 2</button>
-            <button class="slider__btn slide-3">Page 3</button>
+          <div class="slider-navigation flex">
+            <div class="slider-navigation__btn-container flex">
+              <button class="slide-btn slide-1">Page 1</button>
+              <button class="slide-btn slide-2">Page 2</button>
+              <button class="slide-btn slide-3">Page 3</button>
+            </div>
           </div>
         </div>
 
-        <!-- <div class="prj analytics-page slides">
-          <a href="analytics/page1">
-            <i class="fas fa-file-alt"></i>
-            <h3>Analytics page <i class="fas fa-arrow-right"></i></h3>
-          </a>
-          <ul class="prj__skills-used flex">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Desktop</li>
-            <li>Mobile</li>
-          </ul>
-          <div class="slide-window">
-            <input type="radio" name="r" id="r1" checked />
-            <input type="radio" name="r" id="r2" />
-            <input type="radio" name="r" id="r3" />
-            <a href="analytics/page1" class="img-box s1 analytics-1">
-              <img src="img/analytics-1.png" alt="sample page analytics" />
-            </a>
-            <a href="analytics/page2" class="img-box analytics-2">
-              <img src="img/analytics-2.png" alt="sample page analytics" />
-            </a>
-            <a href="analytics/page3" class="img-box analytics-3">
-              <img src="img/analytics-3.png" alt="sample page analytics" />
-            </a>
-          </div>
-          <div class="navigation">
-            <label for="r1" class="page-1 bar highlight">Page 1</label>
-            <label for="r2" class="page-2 bar">Page 2</label>
-            <label for="r3" class="page-3 bar">Page 3</label>
-          </div>
-        </div> -->
-
-        <div class="prj sports-data-page slides">
+        <div class="prj sports-data-page">
           <a class="prj__title" href="sports-data/">
             <i class="fas fa-file-alt"></i>
             <h3>Sports Data page</h3>
@@ -365,9 +377,11 @@
               </a>
             </div>
           </div>
-          <div class="slider-navigation">
-            <button class="slider__btn slide-1">Page 1</button>
-            <button class="slider__btn slide-2">Page 2</button>
+          <div class="slider-navigation flex">
+            <div class="slider-navigation__btn-container flex">
+              <button class="slide-btn slide-1">Page 1</button>
+              <button class="slide-btn slide-2">Page 2</button>
+            </div>
           </div>
         </div>
 
@@ -384,17 +398,19 @@
           </ul>
           <div class="slider">
             <div class="slider__reel slides-x2">
-              <a href="sports-data" class="slide analytics-1">
-                <img src="img/sports-1.png" alt="sample page analytics" />
+              <a href="debt-solutions" class="slide analytics-1">
+                <img src="img/debt-1.png" alt="sample page debt solutions" />
               </a>
-              <a href="sports-data/page2" class="slide analytics-2">
-                <img src="img/sports-2.png" alt="sample page analytics" />
+              <a href="debt-solutions/page2" class="slide analytics-2">
+                <img src="img/debt-2.png" alt="sample page debt solutions" />
               </a>
             </div>
           </div>
-          <div class="slider-navigation">
-            <button class="slider__btn slide-1">Page 1</button>
-            <button class="slider__btn slide-2">Page 2</button>
+          <div class="slider-navigation flex">
+            <div class="slider-navigation__btn-container flex">
+              <button class="slide-btn slide-1">Page 1</button>
+              <button class="slide-btn slide-2">Page 2</button>
+            </div>
           </div>
         </div>
 
@@ -415,15 +431,15 @@
         </div>
       </section>
     </main>
-    <footer>
-      <a href="#header" class="back-to-top">
+    <footer class="footer">
+      <a class="footer__btn--back-to-top" href="#hero">
         <span></span>
         <span></span>
         <span></span>
         <p>Back to Top</p>
       </a>
 
-      <div class="footer-icons">
+      <div class="footer__icons">
         <a
           href="https://www.linkedin.com/in/slav-konovalov-466650182"
           target="_blank"
