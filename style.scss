@@ -1,0 +1,174 @@
+@import "_mixins";
+@import "_main";
+@import "_hero";
+@import "_footer";
+
+// Common styling
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Oxygen;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+body {
+  background: rgb(247, 247, 247);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Oswald;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p,
+li {
+  font-size: 1.2rem;
+  font-family: Source Sans Pro;
+  color: rgba(0, 0, 0, 0.773);
+}
+
+main {
+  background-color: white;
+}
+
+.cntnr {
+  // padding: 0 10vw;
+  @include breakpoint-up(medium) {
+    // margin: 0 10vw;
+    // padding: 0 7vw;
+  }
+}
+
+.center-text * {
+  @include breakpoint-up(medium) {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+i {
+  color: white;
+  font-size: 3vw;
+}
+
+.hero__icons *,
+.footer__icons * {
+  transition: transform 0.2s;
+}
+
+.hero__icons *:hover,
+.footer__icons *:hover {
+  transform: scale(1.1);
+}
+
+// MAIN NAV (outside of header)
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 247, 247, 0.936) 50%,
+    rgb(195, 194, 194)
+  );
+
+  ul {
+    display: flex;
+    li a {
+      display: block;
+      margin-right: 2vw;
+      color: black;
+      font-size: large;
+      transition: all 0.3s;
+      font-weight: bolder;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  // cancels hiding on large resolution
+  @include breakpoint-up(large) {
+    display: flex;
+    padding: 0.7vw 8vw;
+  }
+}
+
+// Toggled Clesses (Burger Menu)
+
+.menu-open {
+  transform: translateY(-50%);
+  transition: all 0.5s;
+  .brgr-midline {
+    background-color: transparent !important;
+    transition: all 0.5s;
+    &::before {
+      transform: rotate(45deg) translate(21px, 22px);
+      transition: all 0.5s;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      transition: all 0.5s;
+    }
+  }
+}
+
+// Inner Links
+
+.mobile-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.8s;
+  @include breakpoint-up(large) {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.mobile-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.8s;
+}
+
+.hidden:nth-child(2),
+.visible:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.hidden:nth-child(3),
+.visible:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.hidden:nth-child(4),
+.visible:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.highlight {
+  color: #d67701;
+}
