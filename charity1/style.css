@@ -1,0 +1,674 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* Common classes/elements */
+
+@font-face {
+  font-family: FS Me Pro Regular;
+  src: url("FSMePro-Regular.otf");
+}
+
+@font-face {
+  font-family: FS Me Pro Bold;
+  src: url("FSMePro-Bold.otf");
+}
+
+@font-face {
+  font-family: FS Me Pro Light;
+  src: url("FSMePro-Light.otf");
+}
+
+* {
+  font-family: "FS Me Pro Light";
+  list-style: none;
+  font-weight: lighter;
+  color: white;
+}
+
+p,
+address {
+  font-size: 1.1em;
+}
+
+address {
+  font-style: normal;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 35px;
+  font-size: 0.7rem;
+  border-color: transparent;
+  border-radius: 30px;
+  float: left;
+  background-color: #804236;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+button i {
+  font-size: 0.8rem;
+}
+
+.logo {
+  font-size: 3vw;
+  font-family: FS Me Pro Light;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 0 1vw;
+  display: inline-flex;
+}
+
+/*Header*/
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: -500px;
+  display: flex;
+  background-color: #804236;
+}
+
+.logo {
+  font-size: 3vw;
+  font-family: FS Me Pro Light;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 0 1vw;
+  display: inline-flex;
+}
+
+header nav {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-and-list {
+  width: 65vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul {
+  width: 70%;
+  font-weight: bold;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav button {
+  margin-right: 3%;
+  background-color: white;
+  float: right;
+  color: black;
+  width: 120px;
+}
+
+nav button i {
+  color: black;
+}
+
+.man-reading {
+  margin-left: 35%;
+  width: 65%;
+  object-fit: cover;
+}
+
+/*Section*/
+
+section {
+  position: relative;
+  top: 30vh;
+  background-color: #9bd2f1;
+  padding-top: 200px;
+  clip-path: polygon(35% 0, 100% 50vh, 100% 100%, 0 100%, 0 5%);
+}
+
+section * {
+  color: white;
+}
+
+.container {
+  padding: 20px 10vw;
+}
+
+h2 {
+  font-family: FS Me Pro Regular;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+section .container > p {
+  margin-bottom: 50px;
+}
+
+.explore-and-watch {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.explore-and-watch button {
+  width: 90px;
+  margin-right: 30px;
+}
+
+.explore-and-watch .circle-button {
+  background-color: white;
+  width: 35px;
+  margin-right: 10px;
+  padding-left: 13px;
+}
+
+.explore-and-watch .circle-button i {
+  color: #804236;
+}
+
+.explore-and-watch a {
+  display: flex;
+  align-items: center;
+}
+
+.explore-and-watch a p {
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+}
+
+.container ul {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container ul li {
+  position: relative;
+  width: 47%;
+  margin-top: 30px;
+}
+
+.container ul li .contact {
+  display: block;
+}
+
+.container ul li .contact * {
+  font-size: 1rem;
+}
+
+.container ul li .contact address {
+  margin-bottom: 20px;
+}
+
+.container ul li .contact p {
+  margin-top: 20px;
+}
+
+.container ul li .contact p,
+.container ul li .contact a:last-of-type {
+  font-weight: bold;
+}
+
+.container ul li img {
+  width: 100%;
+}
+
+.container ul li button {
+  width: 140px;
+}
+
+.container ul li a:last-of-type {
+  text-decoration: underline;
+}
+
+.container ul li .img-box img {
+  width: 100%;
+  height: 300px;
+}
+
+.container ul li h3 {
+  margin-top: 40px;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.play-video {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.play-video img {
+  width: 100%;
+}
+
+.play-video .play-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-video .play-button button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #9bd2f1;
+}
+
+.play-video .play-button button i {
+  font-size: 35px;
+  padding-left: 5px;
+}
+
+.what-we-do {
+  margin: 120px 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.what-we-do p,
+h2,
+button {
+  margin: 20px auto;
+}
+
+.what-we-do h2 {
+  display: block;
+  text-align: center;
+}
+
+.what-we-do a button {
+  background-color: #804236;
+  width: 110px;
+}
+
+.our-stories {
+  position: relative;
+}
+
+.our-stories img {
+  width: 100%;
+}
+
+.our-stories .rectangle-layer {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  background-color: #804236;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.our-stories .triangle-layer-1 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  background-color: #804236;
+  clip-path: polygon(75% 0, 100% 100%, 100% 0);
+  opacity: 0.5;
+}
+
+.our-stories .triangle-layer-2 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  background-color: #9bd2f1;
+  clip-path: polygon(75% 100%, 100% 100%, 100% 0);
+  opacity: 0.5;
+}
+
+.story-example {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 55%;
+}
+
+.story-example p,
+h3 {
+  margin-bottom: 25px;
+}
+
+.story-example h3 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.story-example a button {
+  width: 100px;
+}
+
+.story-example a * {
+  background-color: white;
+  color: #804236;
+}
+
+/*FOOTER*/
+
+footer {
+  position: relative;
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4c4e52;
+}
+
+footer .logo {
+  line-height: normal;
+  margin-right: 20px;
+}
+
+footer > * {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+footer .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 290px;
+}
+
+footer nav > a,
+footer p,
+footer address {
+  opacity: 50%;
+}
+
+footer nav:nth-child(4) a {
+  opacity: 1;
+}
+
+footer nav:first-child a:last-child {
+  opacity: 1;
+}
+
+footer nav:nth-child(4) i {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+footer > a:last-child {
+  margin-left: 150px;
+}
+
+footer > p {
+  margin-top: 50px;
+}
+
+footer .lower-footer {
+  display: flex;
+  margin-top: 50px;
+}
+
+footer .lower-footer p {
+  font-size: 0.8rem;
+}
+
+footer .lower-footer img {
+  width: 15%;
+  object-fit: contain;
+  margin-right: 40px;
+}
+
+.bottom-links {
+  display: flex;
+  text-align: center;
+}
+
+.bottom-links a {
+  display: block;
+  width: 20%;
+  height: 30px;
+  padding-top: 8px;
+}
+
+.bottom-links a:first-child {
+  background-color: #f7be1f;
+  color: #e13316;
+}
+
+.bottom-links a:nth-child(2) {
+  background-color: #9bd2f1;
+  color: #e13316;
+}
+
+.bottom-links a:nth-child(3) {
+  background-color: #6c4791;
+  color: #ed8c01;
+}
+
+.bottom-links a:nth-child(4) {
+  background-color: #b5ca52;
+  color: #00517a;
+}
+
+.bottom-links a:nth-child(5) {
+  background-color: #6c4791;
+  color: #81c3af;
+}

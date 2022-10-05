@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: Avenir Light;
+  src: url("fonts/Avenir-Light.ttf");
+}
+
+@font-face {
+  font-family: Avenir Medium;
+  src: url("fonts/Avenir-Medium.ttf");
+}
+
+@font-face {
+  font-family: Avenir Heavy;
+  src: url("fonts/Avenir-Heavy.ttf");
+}
+
+@font-face {
+  font-family: Mostin Regular;
+  src: url("fonts/Mostin-Regular.ttf");
+}
+
+body {
+  font-family: Avenir Light;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  line-height: normal;
+  font-family: Mostin Regular;
+  font-size: 36px;
+}
+
+h2, h3, h4, h5 {
+  color: black;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: Mostin Regular;
+  color: black;
+}
+
+.container {
+  padding: 0 9vw;
+}
+
+@media (min-width: 64rem) {
+  .container {
+    padding: 0 14vw;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-sb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-ai-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.559);
+}
+
+.img-box {
+  position: relative;
+  max-width: 430px;
+}
+
+.img-box::before, .img-box::after {
+  position: absolute;
+  content: '';
+  width: 80%;
+  height: 120%;
+}
+
+.img-box::before {
+  border: 2px solid #CCCCCC;
+  border-right: none;
+}
+
+.img-box::after {
+  border-right: 2px solid #CCCCCC;
+  z-index: 2;
+}
+
+.img-box img {
+  position: relative;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
+}
+
+.img-box .desktop-img {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .img-box .mobile-img {
+    display: none;
+  }
+  .img-box .desktop-img {
+    display: block;
+  }
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background-image: url("mobile-images/lycs-architecture-H77w4l3UWy4-unsplash.png");
+  background-size: cover;
+  background-position: center bottom;
+  color: white;
+}
+
+header .darkening-linear {
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(80%, transparent));
+  background: linear-gradient(0deg, black, transparent 80%);
+  opacity: 0.7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding-top: 13vw;
+  padding-bottom: 9vw;
+}
+
+header .mobile-logo {
+  width: 15vw;
+  margin: 0 auto;
+}
+
+header .desktop-logo,
+header a {
+  display: none;
+}
+
+header h1 {
+  font-family: Mostin Regular;
+  margin-bottom: 21px;
+}
+
+header p {
+  width: 75%;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.59);
+}
+
+@media (min-width: 64rem) {
+  header {
+    height: 100vh;
+    background-image: url("images/lycs-architecture-H77w4l3UWy4-unsplash (1).png");
+  }
+  header .container {
+    width: 100%;
+    padding-top: 5vw;
+    padding-bottom: 7vw;
+  }
+  header .container .top-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .container .top-header .mobile-logo {
+    margin: 0;
+    width: 6vw;
+  }
+  header .container .top-header a {
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  header .container h1 {
+    font-size: 3vw;
+  }
+  header .container p {
+    width: 32%;
+    font-size: 1.2vw;
+  }
+}
+
+main .section-1 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .section-1 article h2 {
+  margin: 30px 0 27px;
+}
+
+main .section-1 article h2 span {
+  font-family: Avenir Light;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #a09334;
+}
+
+main .section-1 article p {
+  margin-bottom: 40px;
+}
+
+main .section-1 article p strong {
+  position: relative;
+  color: black;
+}
+
+main .section-1 article p strong::after {
+  position: absolute;
+  content: "";
+  bottom: -0.7vw;
+  left: 0;
+  right: 0;
+  background-color: black;
+  height: 1px;
+}
+
+main .section-1 article .button {
+  position: relative;
+  padding: 18px 25px 15px 25px;
+  color: #a09334;
+  border: 2px solid #a09334;
+  text-decoration: none;
+}
+
+main .section-1 article .button::before {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: -2px;
+  width: 2px;
+  bottom: 17px;
+  background-color: white;
+}
+
+main .section-1 .img-box {
+  margin: 95px auto 85px;
+}
+
+@media (min-width: 64rem) {
+  main .section-1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .section-1 article,
+  main .section-1 .img-box {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 15vw 0;
+  }
+  main .section-1 p {
+    width: 72%;
+  }
+  main .section-1 article p strong::after {
+    bottom: -0.2vw;
+  }
+  main .section-1 .img-box {
+    min-width: 35vw;
+  }
+}
+
+main .full-img-box {
+  position: relative;
+  background-image: url("mobile-images/louis-hansel-wVoP_Q2Bg_A-unsplash.png");
+  background-size: cover;
+  height: 500px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+main .full-img-box .darkening-full {
+  position: absolute;
+  background-image: url("mobile-images/nastuh-abootalebi-JdcJn85xD2k-unsplash.svg");
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+main .full-img-box .container {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .full-img-box .container h3 {
+  font-family: Avenir Light;
+  text-transform: uppercase;
+  font-size: 100px;
+  color: #a09334;
+  font-style: italic;
+  margin: 50px 0 -80px;
+}
+
+main .full-img-box .container p {
+  font-style: oblique;
+  margin-bottom: 30px;
+  width: 87%;
+}
+
+main .full-img-box .container span {
+  text-transform: uppercase;
+}
+
+main .full-img-box .container span:first-of-type {
+  font-size: 22px;
+  color: #a09334;
+  margin-bottom: 15px;
+}
+
+main .full-img-box .container p,
+main .full-img-box .container span:nth-of-type(2) {
+  color: rgba(255, 255, 255, 0.867);
+}
+
+@media (min-width: 64rem) {
+  main .full-img-box {
+    background-image: url("images/louis-hansel-wVoP_Q2Bg_A-unsplash.png");
+  }
+  main .full-img-box .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .full-img-box .container h3 {
+    margin: 0 0 -6vw;
+  }
+  main .full-img-box .container p {
+    margin-bottom: 2vw;
+  }
+  main .full-img-box .container p {
+    width: 60%;
+  }
+}
+
+main .articles {
+  counter-reset: text-box;
+}
+
+main .articles ul {
+  margin: 50px 0;
+  list-style: none;
+}
+
+main .articles ul h4 {
+  margin-bottom: 50px;
+}
+
+main .articles ul li {
+  position: relative;
+  background: white;
+  display: inline-block;
+  counter-increment: text-box;
+  margin-bottom: 80px;
+  padding: 10px 35px 20px 0;
+}
+
+main .articles ul li::before {
+  display: block;
+  content: counter(text-box) ".";
+  color: #a09334;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+main .articles ul li::after {
+  position: absolute;
+  content: "";
+  border: 2px solid #cccccc;
+  width: 67%;
+  height: 114%;
+  top: -7%;
+  right: -2px;
+  z-index: -1;
+}
+
+main .articles ul li:nth-child(odd) {
+  padding: 10px 0px 20px 35px;
+}
+
+main .articles ul li:nth-child(odd)::after {
+  left: -2px;
+}
+
+main .articles ul li h5 {
+  font-size: 28px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 64rem) {
+  main .articles ul {
+    margin: 200px 0 250px;
+    padding-top: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+    background-color: white;
+  }
+  main .articles ul h4,
+  main .articles ul li {
+    width: 21vw;
+    margin: 0 3vw 40px 0;
+  }
+  main .articles ul h4 {
+    color: white;
+    height: 300px;
+    position: relative;
+    background: black;
+    padding: 2vw;
+    margin-bottom: 0;
+  }
+  main .articles ul h4 .arrow {
+    position: absolute;
+    height: 1px;
+    width: 11vw;
+    background-color: white;
+    bottom: 30px;
+    left: -2vw;
+  }
+  main .articles ul h4 .arrow::before, main .articles ul h4 .arrow::after {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 2px;
+    background-color: white;
+    right: 0;
+  }
+  main .articles ul h4 .arrow::before {
+    bottom: 0px;
+    -webkit-transform: skew(45deg) translateX(-12px);
+            transform: skew(45deg) translateX(-12px);
+  }
+  main .articles ul h4 .arrow::after {
+    top: 0px;
+    -webkit-transform: skew(-45deg) translateX(-12px);
+            transform: skew(-45deg) translateX(-12px);
+  }
+  main .articles ul li {
+    padding: 0px 0px 0px 0px;
+  }
+  main .articles ul li::after {
+    display: none;
+  }
+  main .articles ul li:nth-child(odd) {
+    padding: 0px 0px 0px 0px;
+  }
+  main .articles ul::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 110%;
+    right: -20px;
+    top: -5%;
+    border: 2px solid #cccccc;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 87.5rem) {
+  main .articles ul h4,
+  main .articles ul li {
+    width: 15vw;
+  }
+}
+
+main .articles .article-box h4 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+main .articles .article-box h4::before {
+  position: absolute;
+  content: "Why ### Interiors";
+  color: #a09334;
+  font-family: Avenir Light;
+  text-transform: uppercase;
+  font-size: 16px;
+  top: -40px;
+}
+
+main .articles .article-box .img-box {
+  margin: 80px 0 130px;
+}
+
+@media (min-width: 64rem) {
+  main .articles .article-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 12vw;
+  }
+  main .articles .article-box:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main .articles .article-box article {
+    width: 30vw;
+  }
+  main .articles .article-box article h4 {
+    margin-bottom: 12px;
+  }
+  main .articles .article-box article h4::before {
+    top: -30px;
+  }
+  main .articles .article-box .img-box {
+    min-width: 35vw;
+    margin: 0;
+  }
+}
+
+footer {
+  margin-top: -30px;
+  padding: 50px 0;
+  background: black;
+  text-align: center;
+}
+
+footer .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .container h2 {
+  color: white;
+}
+
+footer .container p {
+  color: rgba(255, 255, 255, 0.744);
+  margin: 20px 0;
+}
+
+footer .container a {
+  display: block;
+  color: #a09334;
+  margin-bottom: 7px;
+  font-size: 20px;
+}
+
+@media (min-width: 64rem) {
+  footer {
+    margin: 0;
+    padding: 50px 20vw;
+  }
+  footer .contacts a {
+    display: inline;
+    margin: 0.6vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

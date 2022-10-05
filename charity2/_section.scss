@@ -1,0 +1,257 @@
+section {
+    article {
+        width: 60vw;
+        padding: 9vw 0;
+        
+        p:nth-child(1) {
+            margin-bottom: 4vw;
+            font-size: $medium;
+            color: $darkGrey;
+        }
+
+        p:nth-child(2) {
+            color: $magenta;
+            width: 40vw;
+            font-size: $small;
+        }
+    }
+
+    .video-link{
+        width: 100%;
+        position: relative;
+
+        img {
+            width: inherit;
+        }
+
+        .play-video {
+            width: 7vw;
+            height: 7vw;
+            border-radius: 50%;
+            background: $magenta;
+            color: white;
+            position: absolute;
+            padding-left: 0.3vw;
+            top: calc(50% - 3.5vw);
+            left: 46.5vw;
+            cursor: pointer;
+            
+            i {
+                font-size: 2vw;
+            }
+        }
+    }
+
+    .current-roles {
+        padding: 8vw 0;
+
+        * {
+            color: $darkGrey;
+            font-size: $medium;
+        }
+
+        h2 {
+            margin-bottom: 4vw;
+            font-size: $large;
+        }
+
+        ul li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw 0;
+            border-top: 1px solid $darkGrey;
+            
+        }
+
+        ul li:last-child {
+            border-bottom: 1px solid $grey;
+        }
+
+        .pop-down-trigger-1, .pop-down-trigger-2, .pop-down-trigger-3 {
+            position: relative;
+            width: 3vw;
+            height: 3vw;
+            background: $honey;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .hor{
+                position: absolute;
+                width: 1.5vw;
+                height: 1px;
+                background: white;
+            }
+            .vert-1, .vert-2, .vert-3 {
+                display: none;
+                position: absolute;
+                width: 1px;
+                height: 1.5vw;
+                background: white;                
+            }
+            .vert-on {
+                display: block;
+            }
+        }
+
+        .pop-down-1, .pop-down-2, .pop-down-3 {
+            width: 30vw;
+            font-size: $small;
+            height: 0;
+            opacity: 0;
+            transition: 0.5s opacity, 0.5s height;
+        }
+
+        .popped-down {
+            height: 8vw;
+            opacity: 1;
+        }
+    }
+
+    .forms-container {
+
+        background: $magenta;
+        font-size: $xSmall;
+
+        .forms {
+            position: relative;
+            padding: 5vw;
+            flex-direction: column;
+    
+            * {
+                display: block;
+            }
+
+            h2 {
+                font-size: $large;
+                margin-bottom: 2vw;;
+            }
+
+            > label, > span {
+                margin-bottom: 1vw;;
+            }
+
+            .selected {
+                cursor: pointer;
+                position: relative;
+                background-color: white;
+                color: $darkGrey;
+                z-index: 0;
+                &::after {
+                    position: absolute;
+                    content: '\002193';
+                    right: .5vw;
+                    top: -0.3vw;
+                    font-size: 2vw;
+                }
+            }
+
+            .options-container {
+
+                &.active {
+                    max-height: 200px;
+                    opacity: 1;
+                    margin-top: -1.1vw;
+                }
+
+                background: white;
+                max-height: 0;
+                opacity: 0;
+                overflow: scroll;
+
+                .option {
+
+                    label {
+                        display: block;
+                        cursor: pointer;
+                        padding: .5vw;
+                        color:$darkGrey;
+                        width: 100%;
+                    }
+
+                    input{
+                        width: auto;
+                        display: none;
+                    }
+
+                    :hover{
+                        background-color: lightgray;
+                    }
+                }
+            }
+
+            .selected, > input, > textarea {
+                width: 35vw;
+                margin-bottom: 1vw;
+                resize: none;
+                color: $darkGrey;
+                font-size: inherit;
+                padding: .65vw .5vw .5vw;
+            }
+
+            .selected, > input {
+                height: 2.8vw
+            }
+
+            textarea {
+                height: 10vw;
+                overflow-y: scroll;
+            }
+    
+            .checkbox {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2vw;
+    
+                label {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                }
+                
+                input {
+                    cursor: pointer;
+                    opacity: 0;
+                    position: absolute;
+                }
+    
+                label::before {
+                    content: '';
+                    width: 2.8vw;
+                    height: 2.8vw;
+                    background: white;
+                    margin-right: 1.5vw;
+                }
+    
+                label:hover::before {
+                    background: lightgrey;
+                }
+    
+                input:checked + label::before {
+                    content: '\002713';
+                    background: blue;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.5vw;
+                }
+            }
+
+            .button {
+                width: 12vw;
+                display: inline-flex;
+                background: $honey;
+            }
+
+            .button::after {
+                content: '\002192';
+            }
+        }
+    }
+
+    
+
+}
