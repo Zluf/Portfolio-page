@@ -222,6 +222,14 @@ main section i {
   color: black;
 }
 
+main #about .logo-sk {
+  display: none;
+}
+
+main #about article {
+  width: 100%;
+}
+
 main .education a {
   color: #d67701;
 }
@@ -261,6 +269,32 @@ main .skill i {
 }
 
 @media (min-width: 40rem) {
+  main #about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main #about article {
+    width: 50%;
+  }
+  main #about .logo-sk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #about .logo-sk img {
+    opacity: 0.1;
+    width: 25%;
+    -webkit-filter: brightness(500%);
+            filter: brightness(500%);
+  }
   main section {
     width: 100%;
     padding-bottom: 5vh;

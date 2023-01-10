@@ -42,14 +42,6 @@ main {
   background-color: white;
 }
 
-.cntnr {
-  // padding: 0 10vw;
-  @include breakpoint-up(medium) {
-    // margin: 0 10vw;
-    // padding: 0 7vw;
-  }
-}
-
 .center-text * {
   @include breakpoint-up(medium) {
     text-align: center;

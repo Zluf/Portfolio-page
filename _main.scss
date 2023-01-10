@@ -33,8 +33,18 @@ main {
     }
   }
 
+  #about {
+    .logo-sk {
+      display: none;
+    }
+    article {
+      width: 100%;
+    }
+  }
+
   .education {
     a {
+      // all links in the section
       color: $amber;
     }
     h3 {
@@ -74,6 +84,32 @@ main {
   // MAIN MEDIUM
 
   @include breakpoint-up(medium) {
+    #about {
+      display: flex;
+      article {
+        width: 50%;
+      }
+      .logo-sk {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        img {
+          opacity: 0.1;
+          width: 25%;
+          filter: brightness(500%);
+        }
+        // img:first-child {
+        //   transform: translateY(-10%);
+        // }
+        // img:nth-child(2) {
+        //   transform: translateY(10%);
+        // }
+        // img:nth-child(3) {
+        //   transform: translateY(80%);
+        // }
+      }
+    }
     section {
       width: 100%;
       // padding: 0 10vw;
