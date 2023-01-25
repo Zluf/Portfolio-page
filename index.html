@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/sk-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/scss/style.css" />
     <script
       defer
       src="https://kit.fontawesome.com/0e82673129.js"
@@ -37,12 +38,12 @@
           <li class="mobile-hidden"><a href="#portfolio">Portfolio</a></li>
         </ul>
       </header>
-      <div class="hero__layer--dotted"></div>
-      <div class="hero__layer--darkening"></div>
+      <div class="hero__overlay--dotted"></div>
+      <div class="hero__overlay--darkening"></div>
       <div class="hero__brgr-menu">
         <div class="brgr-midline"></div>
       </div>
-      <div class="hero__content flex">
+      <div class="hero__container flex">
         <div class="hero__title">
           <h3>Hi, there! I'm</h3>
           <h1>Slav Konovalov</h1>
@@ -78,21 +79,9 @@
       <section id="about">
         <div class="logo-sk">
           <img
-            src="sk-logo.png"
+            src="img/sk-logo.png"
             alt="SLav Konovalov Frontend Web Developer logo"
           />
-          <!-- <img
-            src="sk-logo-p2.png"
-            alt="SLav Konovalov Frontend Web Developer logo"
-          />
-          <img
-            src="sk-logo-p3.png"
-            alt="SLav Konovalov Frontend Web Developer logo"
-          />
-          <img
-            src="sk-logo-p4.png"
-            alt="SLav Konovalov Frontend Web Developer logo"
-          /> -->
         </div>
         <article class="about">
           <h2>About Me</h2>
@@ -111,90 +100,84 @@
       </section>
 
       <section class="education" id="education">
-        <div class="education__intro center-text">
-          <h2>Education</h2>
+        <h2 class="center-text">Education</h2>
+
+        <div class="education__module">
+          <h3>Private Online Tutoring</h3>
           <p>
-            Being a visually-oriented person I picked Front End as I appreciate
-            design aesthetics and interactive functionality of web pages.
-            <br />
-            In March 2021 I started self-studying HTML and CSS from free online
-            tutorials.
+            After grabbing the basics of <strong>HTML & CSS</strong> I reached
+            out to Tom Parson of
+            <a href="https://workwithhuddle.com/" target="_blank"
+              >Huddle Digital</a
+            >
+            via a tutoring website
+            <a href="https://www.superprof.com/" target="_blank">Superprof</a>.
+            Tom introduced me to a series of Adobe XD mock-up designs from which
+            I built web pages while continuing to self-study relevant
+            techniques. During the lessons Tom would give me his feedback and we
+            would discuss page mark-up and styling practices which I would
+            implement later in the projects. As Tom is an experienced Developer,
+            his lessons were of great value to my learning.
           </p>
         </div>
 
-        <div class="education__sources">
-          <div class="education__tutoring">
-            <div class="skill">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <h3>Tutoring</h3>
-            </div>
-            <p>
-              After grabbing the basics I reached out to Tom Parson of
-              <a href="https://workwithhuddle.com/" target="_blank"
-                >Huddle Digital</a
-              >
-              via a tutoring website
-              <a href="https://www.superprof.com/" target="_blank">Superprof</a
-              >. Tom introduced me to a series of Adobe XD mock-up designs from
-              which I built web pages while continuing to self-study relevant
-              techniques. During the lessons feedback was discussed to later be
-              implemented in the projects. As Tom is an experienced Developer,
-              his lessons were of great value to my learning.
-            </p>
-          </div>
+        <div class="education__module">
+          <img
+            class="education__title"
+            src="img/udmy.png"
+            alt="Udemy Online Courses logo"
+          />
 
-          <div class="education__udemy">
-            <div class="skill">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <h3>Udemy</h3>
-            </div>
+          <h3>Udemy</h3>
+          <p>
+            [Completed]
+            <a
+              href="https://www.udemy.com/course/the-complete-javascript-course"
+              >The Complete JavaScript Course 2022 </a
+            ><br />
+            [In Progress...]
+            <a
+              href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+              >React - The Complete Guide (incl Hooks, React Router, Redux) </a
+            ><br />
+            On-going and thorough study of Udemy courses as I implement learnt
+            skills in the projects.
+          </p>
+        </div>
 
-            <p>
-              •
-              <a
-                href="https://www.udemy.com/course/the-complete-javascript-course"
-                >The Complete JavaScript Course 2022 </a
-              ><br />
-              •
-              <a
-                href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
-                >React - The Complete Guide (incl Hooks, React Router, Redux) </a
-              ><br />
-              On-going and thorough study of Udemy courses as I implement learnt
-              skills in the projects.
-            </p>
-          </div>
-          <div class="education__front-end-mentor">
-            <div class="skill">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <h3>Frontend Mentor</h3>
-            </div>
-            <p>
-              On-going practice of building apps and web pages from pre-designed
-              mock-ups at
-              <a href="https://www.frontendmentor.io/home">frontendmentor.io</a>
-            </p>
-          </div>
-          <div class="education__hackathon">
-            <div class="skill">
-              <i class="fa fa-book" aria-hidden="true"></i>
-              <h3>Global Legal Hackathon 2022</h3>
-            </div>
-            <p>
-              Working in a team developing new app that had to be accomplished
-              and published within 2 days. The team won the first stage of the
-              competition in the category of Access to Justice.<br />
-              •
-              <a href="https://www.youtube.com/watch?v=b4IADyH9BJM"
-                >Fast Law: Team presentation (video)</a
-              ><br />
-              •
-              <a
-                href="https://legaltech.wales/researcher-blogs/lilw-meets-glh-2022-fastlaw"
-                >Fast Law: Project description (article)</a
-              >
-            </p>
-          </div>
+        <div class="education__module">
+          <img
+            class="education__title"
+            src="img/fem.png"
+            alt="Frontend Mentor logo"
+          />
+          <h3>Frontend Mentor</h3>
+          <p>
+            On-going practice of building apps and web pages from pre-designed
+            mock-ups at
+            <a href="https://www.frontendmentor.io/home">frontendmentor.io</a>
+          </p>
+        </div>
+
+        <div class="education__module">
+          <img
+            class="education__title"
+            src="img/hlg.png"
+            alt="Global Legal Hackathon 2022 image title"
+          />
+          <h3>Global Legal Hackathon</h3>
+          <p>
+            Working in a team developing new app that had to be accomplished and
+            published within 2 days. The team won the first stage of the
+            competition in the category of Access to Justice.<br />
+            <a href="https://www.youtube.com/watch?v=b4IADyH9BJM"
+              >Fast Law: Team presentation (video)</a
+            ><br />
+            <a
+              href="https://legaltech.wales/researcher-blogs/lilw-meets-glh-2022-fastlaw"
+              >Fast Law: Project description (article)</a
+            >
+          </p>
         </div>
       </section>
 
@@ -271,7 +254,7 @@
         </div>
 
         <div class="prj e-commerce-page">
-          <a class="prj__title" href="e-commerce-page/">
+          <a class="prj__title" href="/pages/e-commerce-page/">
             <i class="fas fa-file-alt"></i>
             <h3>E-Commerce Page</h3>
             <i class="fas fa-arrow-right"></i>
@@ -284,22 +267,44 @@
             <li>Desktop</li>
             <li>Mobile</li>
           </ul>
-          <a href="e-commerce-page/" class="prj__img-box">
+          <div class="prj__img-box">
             <img
               src="img-webp/e-commerce-page.webp"
-              alt="sample page E-Commerce Page"
+              alt="screenshot product page for an e-commerce company"
             />
-          </a>
+            <div class="img__overlay">
+              <p>First page built with ReactJS Functional Components.</p>
+              <ul>
+                <li>Optimal layout for desktop, tablet and mobile devices</li>
+                <li>Hover states for interactive elements on the page</li>
+                <li>
+                  Clicking on the large product image opens a lightbox gallery
+                </li>
+                <li>
+                  Clicking on the small thumbnail images switches the large
+                  product page
+                </li>
+                <li>Set product quantity can be added to the cart</li>
+                <li>The cart can be viewed and emptied</li>
+              </ul>
+              <nav>
+                <a href="/pages/e-commerce-page"
+                  ><i class="fa fa-link" aria-hidden="true"> </i>
+                </a>
+                <a href="https://github.com/Zluf/e-commerce-app"
+                  ><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
 
         <div class="prj advice-generator-page">
-          <div class="prj__title">
-            <a class="prj__title" href="advice-generator-app/">
-              <i class="fas fa-file-alt"></i>
-              <h3>Advice Generator App</h3>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a class="prj__title" href="/pages/advice-generator-app/">
+            <i class="fas fa-file-alt"></i>
+            <h3>Advice Generator App</h3>
+            <i class="fas fa-arrow-right"></i>
+          </a>
           <ul class="prj__skills-used flex">
             <li>HTML</li>
             <li>CSS</li>
@@ -308,55 +313,110 @@
             <li>Desktop</li>
             <li>Mobile</li>
           </ul>
-          <a href="advice-generator-app/" class="prj__img-box">
+          <div class="prj__img-box">
             <img
               src="img-webp/advice.webp"
-              alt="sample page Advice Generator App"
+              alt="screenshot app that generates text from API"
             />
-          </a>
+            <div class="img__overlay">
+              <p>
+                An app that generates random advice text from an external API.
+              </p>
+              <ul>
+                <li>Optimal layout for desktop and mobile devices</li>
+                <li>Hover states for interactive elements on the page</li>
+                <li>Clicking the button generates a new piece of advice</li>
+              </ul>
+              <nav>
+                <a href="/pages/advice-generator-app"
+                  ><i class="fa fa-link" aria-hidden="true"> </i>
+                </a>
+                <a href="https://github.com/Zluf/advise-generator-app"
+                  ><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
 
         <div class="prj interiors-page">
-          <a class="prj__title" href="interior/">
+          <a class="prj__title" href="/pages/interior/">
             <i class="fas fa-file-alt"></i>
-            <h3>Interior Design page</h3>
+            <h3>Interior Design Landing page</h3>
             <i class="fas fa-arrow-right"></i>
           </a>
           <ul class="prj__skills-used flex">
             <li>HTML</li>
-            <li>CSS</li>
             <li>SASS</li>
             <li>Desktop</li>
             <li>Mobile</li>
           </ul>
-          <a href="interior/" class="prj__img-box">
+          <div class="prj__img-box">
             <img
               src="img-webp/interior.webp"
-              alt="sample page interior design"
+              alt="screenshot landing page for an interior design service"
             />
-          </a>
+            <div class="img__overlay">
+              <p>
+                An app that generates random advice text from an external API.
+              </p>
+              <ul>
+                <li>Optimal layout for desktop and mobile devices</li>
+                <li>Hover states for interactive elements on the page</li>
+                <li>Clicking the button generates a new piece of advice</li>
+              </ul>
+              <nav>
+                <a href="/pages/interior"
+                  ><i class="fa fa-link" aria-hidden="true"> </i>
+                </a>
+                <a href="https://github.com/Zluf/Interiors-page"
+                  ><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
 
         <div class="prj charity-page-2">
-          <a class="prj__title" href="charity2/">
+          <a class="prj__title" href="/pages/charity2/">
             <i class="fas fa-file-alt"></i>
             <h3>Charity page 2</h3>
             <i class="fas fa-arrow-right"></i>
           </a>
           <ul class="prj__skills-used flex">
             <li>HTML</li>
-            <li>CSS</li>
             <li>SASS</li>
             <li>JavaScript</li>
             <li>Desktop</li>
           </ul>
-          <a href="charity2/" class="prj__img-box">
-            <img src="img-webp/charity2.webp" alt="sample page charity" />
-          </a>
+          <div class="prj__img-box">
+            <img
+              src="img-webp/charity2.webp"
+              alt="screenshot homepage for a charity"
+            />
+            <div class="img__overlay">
+              <p>
+                An app that generates random advice text from an external API.
+              </p>
+              <ul>
+                <li>Optimal layout for desktop and mobile devices</li>
+                <li>Hover states for interactive elements on the page</li>
+                <li>Clicking the button generates a new piece of advice</li>
+              </ul>
+              <nav>
+                <a href="/pages/charity2"
+                  ><i class="fa fa-link" aria-hidden="true"> </i>
+                </a>
+                <a href="https://github.com/Zluf/Charity-page-2"
+                  ><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
 
         <div class="prj analytics-page">
-          <a class="prj__title" href="analytics/page1">
+          <a class="prj__title" href="/pages/analytics/page1">
             <i class="fas fa-file-alt"></i>
             <h3>Analytics page</h3>
             <i class="fas fa-arrow-right"></i>
@@ -369,24 +429,81 @@
           </ul>
           <div class="slider">
             <div class="slider__reel slides-x3">
-              <a href="analytics/page1" class="slide analytics-1">
+              <div class="prj__img-box slide analytics-1">
                 <img
                   src="img-webp/analytics-1.webp"
-                  alt="sample page analytics"
+                  alt="screenshot login page for an analytics service"
                 />
-              </a>
-              <a href="analytics/page2" class="slide analytics-2">
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/analytics/page1"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Analytics-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+              <div class="prj__img-box slide analytics-2">
                 <img
                   src="img-webp/analytics-2.webp"
-                  alt="sample page analytics"
+                  alt="screenshot page for an analytics service"
                 />
-              </a>
-              <a href="analytics/page3" class="slide analytics-3">
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/analytics/page2"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Analytics-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+              <div class="prj__img-box slide analytics-3">
                 <img
                   src="img-webp/analytics-3.webp"
-                  alt="sample page analytics"
+                  alt="screenshot page for an analytics service"
                 />
-              </a>
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/analytics/page3"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Analytics-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
           <div class="slider-navigation flex">
@@ -399,7 +516,7 @@
         </div>
 
         <div class="prj sports-data-page">
-          <a class="prj__title" href="sports-data/">
+          <a class="prj__title" href="/pages/sports-data/">
             <i class="fas fa-file-alt"></i>
             <h3>Sports Data page</h3>
             <i class="fas fa-arrow-right"></i>
@@ -411,12 +528,56 @@
           </ul>
           <div class="slider">
             <div class="slider__reel slides-x2">
-              <a href="sports-data" class="slide analytics-1">
-                <img src="img-webp/sports-1.webp" alt="sample page analytics" />
-              </a>
-              <a href="sports-data/page2" class="slide analytics-2">
-                <img src="img-webp/sports-2.webp" alt="sample page analytics" />
-              </a>
+              <div class="prj__img-box slide">
+                <img
+                  src="img-webp/sports-1.webp"
+                  alt="screenshot login page for an analytics service"
+                />
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/sports-data"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Sports-data-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+              <div class="prj__img-box slide">
+                <img
+                  src="img-webp/sports-2.webp"
+                  alt="screenshot page for an analytics service"
+                />
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/sports-data/page2"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Sports-data-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
           <div class="slider-navigation flex">
@@ -428,7 +589,7 @@
         </div>
 
         <div class="prj debt-solutions-page slides">
-          <a class="prj__title" href="debt-solutions/">
+          <a class="prj__title" href="/pages/debt-solutions/">
             <i class="fas fa-file-alt"></i>
             <h3>Debt Solutions page</h3>
             <i class="fas fa-arrow-right"></i>
@@ -440,18 +601,56 @@
           </ul>
           <div class="slider">
             <div class="slider__reel slides-x2">
-              <a href="debt-solutions" class="slide analytics-1">
+              <div class="prj__img-box slide analytics-1">
                 <img
                   src="img-webp/debt-1.webp"
-                  alt="sample page debt solutions"
+                  alt="screenshot login page for a debt solutions service"
                 />
-              </a>
-              <a href="debt-solutions/page2" class="slide analytics-2">
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/debt-solutions"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Debt-Solutions-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+              <div class="prj__img-box slide analytics-2">
                 <img
                   src="img-webp/debt-2.webp"
-                  alt="sample page debt solutions"
+                  alt="screenshot login page for a debt solutions service"
                 />
-              </a>
+                <div class="img__overlay">
+                  <p>
+                    An app that generates random advice text from an external
+                    API.
+                  </p>
+                  <ul>
+                    <li>Optimal layout for desktop and mobile devices</li>
+                    <li>Hover states for interactive elements on the page</li>
+                    <li>Clicking the button generates a new piece of advice</li>
+                  </ul>
+                  <nav>
+                    <a href="/pages/debt-solutions/page2"
+                      ><i class="fa fa-link" aria-hidden="true"> </i>
+                    </a>
+                    <a href="https://github.com/Zluf/Debt-Solutions-page"
+                      ><i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
           <div class="slider-navigation flex">
@@ -463,7 +662,7 @@
         </div>
 
         <div class="prj charity-page-1">
-          <a class="prj__title" href="charity1/">
+          <a class="prj__title" href="/pages/charity1/">
             <i class="fas fa-file-alt"></i>
             <h3>Charity page 1</h3>
             <i class="fas fa-arrow-right"></i>
@@ -473,9 +672,30 @@
             <li>CSS</li>
             <li>Desktop</li>
           </ul>
-          <a href="charity1/" class="prj__img-box">
-            <img src="img-webp/charity1.webp" alt="sample page charity" />
-          </a>
+          <div class="prj__img-box">
+            <img
+              src="img-webp/charity1.webp"
+              alt="sample homepage for a charity organization"
+            />
+            <div class="img__overlay">
+              <p>
+                An app that generates random advice text from an external API.
+              </p>
+              <ul>
+                <li>Optimal layout for desktop and mobile devices</li>
+                <li>Hover states for interactive elements on the page</li>
+                <li>Clicking the button generates a new piece of advice</li>
+              </ul>
+              <nav>
+                <a href="/pages/charity1"
+                  ><i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/Zluf/Charity-page-1"
+                  ><i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
       </section>
     </main>

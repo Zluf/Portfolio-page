@@ -18,7 +18,7 @@
   color: white;
   width: 100%;
   height: 100vh;
-  background-image: url("img-webp/stockport.webp");
+  background-image: url("../img-webp/stockport.webp");
   background-position: center;
   background-size: cover;
 
@@ -32,6 +32,7 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.5s;
+
     .brgr-midline {
       position: relative;
       width: 100%;
@@ -56,6 +57,8 @@
     }
   }
 
+  // Header inside of Hero
+
   .header {
     position: absolute;
     display: flex;
@@ -75,7 +78,9 @@
     }
   }
 
-  &__content {
+  // Container with Title & Icons
+
+  &__container {
     margin-top: 60vh;
     padding: 0 8vw;
     width: 100%;
@@ -84,6 +89,8 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  // TITLE ("Slav Konovalov, Front End...")
 
   &__title {
     h3:first-child {
@@ -114,17 +121,19 @@
     display: none;
   }
 
-  &__layer--dotted,
-  &__layer--darkening {
+  // OVERLAYs
+
+  &__overlay--dotted,
+  &__overlay--darkening {
     position: absolute;
     width: 100%;
     height: 100vh;
   }
-  &__layer--darkening {
+  &__overlay--darkening {
     background: black;
     opacity: 0.6;
   }
-  &__layer--dotted {
+  &__overlay--dotted {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==);
   }
 
@@ -145,7 +154,6 @@
         rgba(0, 0, 0, 0.936) 10%,
         rgba(0, 0, 0, 0.202)
       );
-      z-index: 2;
 
       ul {
         position: static;
