@@ -3,10 +3,10 @@
 main {
   // Varied section background
   section:nth-child(odd) {
-    background-image: linear-gradient(45deg, white, black 95%);
+    background-image: linear-gradient(45deg, $light, $dark 95%);
   }
   section:nth-child(even) {
-    background-image: linear-gradient(45deg, black 25%, white);
+    background-image: linear-gradient(45deg, $dark 15%, $light);
   }
 
   section {
@@ -17,6 +17,7 @@ main {
       font-size: 2.4rem;
       font-weight: bold;
       padding: 5vh 0 3vh;
+      text-align: center;
     }
     i {
       color: black;
@@ -29,16 +30,6 @@ main {
     }
     article {
       width: 100%;
-    }
-  }
-
-  .skills {
-    background: linear-gradient(45deg, white 0, black 75%);
-
-    ul {
-      p {
-        margin-bottom: 7vw;
-      }
     }
   }
 
@@ -76,7 +67,6 @@ main {
     }
     section {
       width: 100%;
-      // padding: 0 10vw;
       padding-bottom: 5vh;
     }
 
@@ -85,22 +75,6 @@ main {
       margin-bottom: 10px;
       i {
         margin-right: 15px;
-      }
-    }
-    .skills {
-      h2 {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        li {
-          width: 40%;
-        }
-        li p {
-          margin-bottom: 4vh;
-        }
       }
     }
   }

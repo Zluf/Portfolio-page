@@ -20,30 +20,34 @@
     <title>Slav Konovalov | Front End Developer</title>
   </head>
   <body>
-    <header class="body__header header">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-      </ul>
+    <!-- 🚩BODY HEADER -->
+    <header class="header" href="#hero">
+      <a class="header__logo" href="#hero">
+        <img src="img/sk-logo.png" alt="Slav Konovalov SK logo" />
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+      </nav>
     </header>
 
+    <!-- 🚩 HERO -->
     <section class="hero" id="hero">
       <header class="hero__header header">
-        <ul class="nav-menu">
-          <li class="mobile-hidden"><a href="#about">About</a></li>
-          <li class="mobile-hidden"><a href="#education">Education</a></li>
-          <li class="mobile-hidden"><a href="#skills">Skills</a></li>
-          <li class="mobile-hidden"><a href="#portfolio">Portfolio</a></li>
-        </ul>
+        <nav class="header__nav">
+          <a class="mobile-hidden" href="#about">About</a>
+          <a class="mobile-hidden" href="#education">Education</a>
+          <a class="mobile-hidden" href="#skills">Skills</a>
+          <a class="mobile-hidden" href="#portfolio">Portfolio</a>
+        </nav>
       </header>
-      <div class="hero__overlay--dotted"></div>
-      <div class="hero__overlay--darkening"></div>
+      <div class="hero__overlay"></div>
       <div class="hero__brgr-menu">
         <div class="brgr-midline"></div>
       </div>
-      <div class="hero__container flex">
+      <div class="hero__container">
         <div class="hero__title">
           <h3>Hi, there! I'm</h3>
           <h1>Slav Konovalov</h1>
@@ -53,7 +57,7 @@
             Stockport, UK
           </h3>
         </div>
-        <div class="hero__icons">
+        <nav class="hero__icons">
           <a
             href="https://www.linkedin.com/in/slav-konovalov-466650182"
             target="_blank"
@@ -71,11 +75,12 @@
             aria-label="Email link"
             ><i class="fas fa-envelope-square"></i
           ></a>
-        </div>
+        </nav>
       </div>
     </section>
 
     <main>
+      <!-- 🚩 ABOUT -->
       <section id="about">
         <div class="logo-sk">
           <img
@@ -99,6 +104,7 @@
         </article>
       </section>
 
+      <!-- 🚩 EDUCATION -->
       <section class="education" id="education">
         <h2 class="center-text">Education</h2>
 
@@ -130,16 +136,19 @@
 
           <h3>Udemy</h3>
           <p>
-            [Completed]
             <a
               href="https://www.udemy.com/course/the-complete-javascript-course"
               >The Complete JavaScript Course 2022 </a
-            ><br />
-            [In Progress...]
+            >[Completed]<br />
             <a
               href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
-              >React - The Complete Guide (incl Hooks, React Router, Redux) </a
-            ><br />
+              >React (incl Hooks, React Router, Redux)
+            </a>
+            [In Progress...]<br />
+            <a
+              href="https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
+              >Node.js, Express, MongoDB & More </a
+            >[In Progress...]<br />
             On-going and thorough study of Udemy courses as I implement learnt
             skills in the projects.
           </p>
@@ -181,68 +190,101 @@
         </div>
       </section>
 
+      <!-- 🚩 SKILLs -->
       <section class="skills" id="skills">
         <h2>Skills</h2>
-        <ul>
-          <li>
-            <div class="skill">
-              <i class="fa fa-html5"></i>
-              <h3>HTML5</h3>
-            </div>
-            <p>HTML tree | Parent/Child Elements | Semantics | Tables/Forms</p>
-          </li>
-          <li>
-            <div class="skill">
-              <i class="fa fa-css3"></i>
-              <h3>CSS3</h3>
-            </div>
-            <p>
-              Classes | Box Model | Positioning | Flexbox | Grid | Pseudo
-              Elements | Z-Index | Transitions and Animations | Selectors |
-              Length Units | Media Quieries
-            </p>
-          </li>
-          <li>
-            <div class="skill">
-              <i class="fab fa-js-square"></i>
-              <h3>Javascript</h3>
-            </div>
-            <p>DOM Manipulation | ES6+ | OOP | API</p>
-          </li>
-          <li>
-            <div class="skill">
-              <i class="fab fa-react"></i>
-              <h3>ReactJS</h3>
-            </div>
-            <p>Components | Props | Hooks | States | Events</p>
-          </li>
-          <li>
-            <div class="skill">
-              <i class="fab fa-sass"></i>
-              <h3>SASS</h3>
-            </div>
-            <p>Partials | Variables | Maps | Nesting | Mixins</p>
-          </li>
-          <li>
-            <div class="skill">
-              <i class="fas fa-mobile-alt"></i>
-              <h3>Responsive Design</h3>
-            </div>
-            <p>
-              Adjusting of CSS properties for the viewports of appropriate
-              devices.
-            </p>
-          </li>
-          <li>
-            <div class="skill">
-              <i class="fab fa-git-alt"></i>
-              <h3>GIT</h3>
-            </div>
-            <p>Deploying projects to Github at various stages of completion.</p>
-          </li>
-        </ul>
+
+        <div class="skills__img-container">
+          <h3>HTML</h3>
+          <img src="img/png-icons/HTML5.png" alt="html5 icon png image" />
+          <p>
+            Use of Semantic markup tags and their attributes. Checking for W3C
+            Validation and Performance. Basic understanding of Accessibility
+            tools.
+          </p>
+        </div>
+
+        <div class="skills__img-container">
+          <h3>CSS</h3>
+          <img src="img/png-icons/CSS3.png" alt="css3 icon png image" />
+          <p>
+            Understanding Box Model, Unit Lengths, BEM convention, Selectors and
+            Positioning. Alignment & Layout of elements with Flexbox & Grid. Use
+            of Transitions, Animations, Selectors & Media Quieries for
+            Responsive Design.
+          </p>
+        </div>
+
+        <div class="skills__img-container">
+          <h3>Sass</h3>
+          <img
+            src="img/png-icons/Sass.png"
+            alt="sass css pre-procecessor icon png image"
+          />
+          <p>
+            Using features like nesting, mixins & variables to organize styling.
+          </p>
+        </div>
+
+        <div class="skills__img-container">
+          <h3>JavaScript</h3>
+          <img src="img/png-icons/JS.png" alt="javascript icon png image" />
+          <p>
+            Understanding of Basic Syntax, Procedural & Object-Oriented
+            Programming. Manipulating DOM-Tree. Use of Asynchronous functions
+            and Fetch API. Import and use of 3rd party Packages with NPM.
+          </p>
+        </div>
+
+        <div class="skills__img-container">
+          <h3>ReactJS</h3>
+          <img src="img/png-icons/React.png" alt="reactJS icon png image" />
+          <p>
+            Building Single-Page Applications with Functional Components. Use of
+            React Hooks.
+          </p>
+        </div>
+
+        <div class="skills__img-container">
+          <h3>Git</h3>
+          <img
+            src="img/png-icons/git.png"
+            alt="git version control icon png image"
+          />
+          <p>
+            Knowledge of Git & GitHub commands in a Command-Line Interface.
+            Understanding of Git workflow. Use of Github Desktop software.
+          </p>
+        </div>
+
+        <h2>Tools</h2>
+
+        <div class="skills__img-container">
+          <h3>VSCode</h3>
+          <img
+            src="img/png-icons/VSCode.png"
+            alt="Virtual Studio Code icon png image"
+          />
+          <p>
+            I use VSCode as my main code editor. With installed software
+            extensions for code formatting and compiling.
+          </p>
+        </div>
+
+        <div class="skills__img-container">
+          <h3>Photoshop</h3>
+          <img
+            src="img/png-icons/PS.png"
+            alt="Adobe Photohop Code icon png image"
+          />
+          <p>
+            Basic skills for image editing. Sometimes I would make adjustments
+            for digital assets or create my own ones.
+          </p>
+        </div>
       </section>
 
+      <!-- 🚩 PORTFOLIO -->
       <section class="portfolio" id="portfolio">
         <div class="portfolio__info center-text">
           <h2>Portfolio</h2>
@@ -253,6 +295,7 @@
           </p>
         </div>
 
+        <!-- 🎌 PAGE:E-Commerce -->
         <div class="prj e-commerce-page">
           <a class="prj__title" href="/pages/e-commerce-page/">
             <i class="fas fa-file-alt"></i>
@@ -273,7 +316,11 @@
               alt="screenshot product page for an e-commerce company"
             />
             <div class="img__overlay">
-              <p>First page built with ReactJS Functional Components.</p>
+              <p>
+                E-Commerce product page built with ReactJS Functional
+                Components. Instructions, mock-up and assets are provided by
+                Frontendmentor.io.
+              </p>
               <ul>
                 <li>Optimal layout for desktop, tablet and mobile devices</li>
                 <li>Hover states for interactive elements on the page</li>
@@ -299,6 +346,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Advice Generator -->
         <div class="prj advice-generator-page">
           <a class="prj__title" href="/pages/advice-generator-app/">
             <i class="fas fa-file-alt"></i>
@@ -321,6 +369,8 @@
             <div class="img__overlay">
               <p>
                 An app that generates random advice text from an external API.
+                Instructions, mock-up and assets are provided by
+                Frontendmentor.io.
               </p>
               <ul>
                 <li>Optimal layout for desktop and mobile devices</li>
@@ -339,6 +389,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Interior Design -->
         <div class="prj interiors-page">
           <a class="prj__title" href="/pages/interior/">
             <i class="fas fa-file-alt"></i>
@@ -358,13 +409,10 @@
             />
             <div class="img__overlay">
               <p>
-                An app that generates random advice text from an external API.
+                Built for HTML/CSS practice. Mock-up and Assets were provided by
+                Tom Parson as part of his private tutoring. As page was designed
+                for a client names and details are changed for confidentiality.
               </p>
-              <ul>
-                <li>Optimal layout for desktop and mobile devices</li>
-                <li>Hover states for interactive elements on the page</li>
-                <li>Clicking the button generates a new piece of advice</li>
-              </ul>
               <nav>
                 <a href="/pages/interior"
                   ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -377,6 +425,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Charity 2 -->
         <div class="prj charity-page-2">
           <a class="prj__title" href="/pages/charity2/">
             <i class="fas fa-file-alt"></i>
@@ -396,13 +445,10 @@
             />
             <div class="img__overlay">
               <p>
-                An app that generates random advice text from an external API.
+                Built for HTML/CSS practice. Mock-up and Assets were provided by
+                Tom Parson as part of his private tutoring. As page was designed
+                for a client names and details are changed for confidentiality.
               </p>
-              <ul>
-                <li>Optimal layout for desktop and mobile devices</li>
-                <li>Hover states for interactive elements on the page</li>
-                <li>Clicking the button generates a new piece of advice</li>
-              </ul>
               <nav>
                 <a href="/pages/charity2"
                   ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -415,6 +461,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Analytics -->
         <div class="prj analytics-page">
           <a class="prj__title" href="/pages/analytics/page1">
             <i class="fas fa-file-alt"></i>
@@ -436,14 +483,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/analytics/page1"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -461,14 +505,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/analytics/page2"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -486,14 +527,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/analytics/page3"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -515,6 +553,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Sports Data -->
         <div class="prj sports-data-page">
           <a class="prj__title" href="/pages/sports-data/">
             <i class="fas fa-file-alt"></i>
@@ -535,14 +574,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/sports-data"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -560,14 +596,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/sports-data/page2"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -588,6 +621,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Debt Solutions -->
         <div class="prj debt-solutions-page slides">
           <a class="prj__title" href="/pages/debt-solutions/">
             <i class="fas fa-file-alt"></i>
@@ -608,14 +642,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/debt-solutions"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -633,14 +664,11 @@
                 />
                 <div class="img__overlay">
                   <p>
-                    An app that generates random advice text from an external
-                    API.
+                    Built for HTML/CSS practice. Mock-up and Assets were
+                    provided by Tom Parson as part of his private tutoring. As
+                    page was designed for a client names and details are changed
+                    for confidentiality.
                   </p>
-                  <ul>
-                    <li>Optimal layout for desktop and mobile devices</li>
-                    <li>Hover states for interactive elements on the page</li>
-                    <li>Clicking the button generates a new piece of advice</li>
-                  </ul>
                   <nav>
                     <a href="/pages/debt-solutions/page2"
                       ><i class="fa fa-link" aria-hidden="true"> </i>
@@ -661,6 +689,7 @@
           </div>
         </div>
 
+        <!-- 🎌 PAGE: Charity 1 -->
         <div class="prj charity-page-1">
           <a class="prj__title" href="/pages/charity1/">
             <i class="fas fa-file-alt"></i>
@@ -679,13 +708,10 @@
             />
             <div class="img__overlay">
               <p>
-                An app that generates random advice text from an external API.
+                Built for HTML/CSS practice. Mock-up and Assets were provided by
+                Tom Parson as part of his private tutoring. As page was designed
+                for a client names and details are changed for confidentiality.
               </p>
-              <ul>
-                <li>Optimal layout for desktop and mobile devices</li>
-                <li>Hover states for interactive elements on the page</li>
-                <li>Clicking the button generates a new piece of advice</li>
-              </ul>
               <nav>
                 <a href="/pages/charity1"
                   ><i class="fa fa-link" aria-hidden="true"></i>
@@ -699,6 +725,8 @@
         </div>
       </section>
     </main>
+
+    <!-- 🚩 FOOTER -->
     <footer class="footer">
       <a class="footer__btn--back-to-top" href="#hero">
         <span></span>
@@ -706,7 +734,6 @@
         <span></span>
         <p>Back to Top</p>
       </a>
-
       <div class="footer__icons">
         <a
           href="https://www.linkedin.com/in/slav-konovalov-466650182"
@@ -727,6 +754,7 @@
         ></a>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

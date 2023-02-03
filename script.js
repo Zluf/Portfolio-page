@@ -4,13 +4,13 @@ const brgrBox = document.querySelector(".hero__brgr-menu");
 
 brgrBox.addEventListener("click", function () {
   if (!brgrBox.classList.contains("menu-open")) {
-    document.querySelectorAll(".nav-menu li").forEach(function (o) {
+    document.querySelectorAll(".header__nav a").forEach(function (o) {
       o.classList.remove("mobile-hidden");
       o.classList.add("mobile-visible");
     });
     brgrBox.classList.add("menu-open");
   } else if (brgrBox.classList.contains("menu-open")) {
-    document.querySelectorAll(".nav-menu li").forEach(function (o) {
+    document.querySelectorAll(".header__nav a").forEach(function (o) {
       o.classList.add("mobile-hidden");
       o.classList.remove("mobile-visible");
     });
