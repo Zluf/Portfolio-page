@@ -2,8 +2,13 @@
 
 .portfolio {
   .prj {
-    position: relative;
     margin-top: 7vh;
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
     &__title {
       display: flex;
@@ -88,47 +93,68 @@
         }
       }
     }
+  }
 
-    &__img-box {
-      display: flex;
+  .prj__skills-used {
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    li {
+      font-weight: 600;
+      background: linear-gradient(
+        45deg,
+        rgb(79, 78, 78),
+        14%,
+        rgb(133, 133, 133)
+      );
+      box-shadow: 5px 10px 10px #0000008b;
+      padding: 0 1vw;
+      font-size: small;
+      margin-right: 1vw;
+    }
+  }
+
+  .prj__img-box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-shadow: 5px 10px 10px #6c6c6c;
+
+    img {
       width: 100%;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 5px 10px 10px #6c6c6c;
-
-      img {
-        width: 100%;
-        margin-bottom: 0;
-      }
-
-      .img__overlay {
-        display: none;
-      }
+      margin-bottom: 0;
     }
 
-    &__img-box:hover .img__overlay {
-      opacity: 1;
-      visibility: visible;
-      transform: scale(1, 1);
-    }
-
-    &__skills-used {
-      flex-wrap: wrap;
-      margin-top: 2vh;
-      margin-bottom: 1vh;
+    .img__overlay {
+      width: 100%;
+      background: rgba(231, 231, 231, 0.615);
+      padding: 8%;
+      overflow: scroll;
+      ul {
+        margin-top: 2vw;
+        padding-left: 5%;
+      }
       li {
-        font-weight: 600;
-        background: linear-gradient(
-          45deg,
-          rgb(79, 78, 78),
-          14%,
-          rgb(133, 133, 133)
-        );
-        box-shadow: 5px 10px 10px #0000008b;
+        list-style: disc;
+      }
+      p,
+      li {
+        color: rgba(0, 0, 0, 0.74);
+        font-weight: bolder;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        text-shadow: none;
+      }
+      nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
 
-        padding: 1vw;
-        font-size: small;
-        margin-right: 1vw;
+        margin-top: 5vw;
+        i {
+          color: rgba(0, 0, 0, 0.632);
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -139,39 +165,120 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     &__info {
       width: 100%;
+      margin-bottom: 5vw;
     }
+
     .prj {
       width: 45%;
       margin-top: 0;
-      margin-bottom: 7vh;
-
+      margin-bottom: 100px;
       h3 {
         font-size: 1.2rem;
       }
-
       &__title {
         margin-bottom: 1vh;
       }
-
       &__skills-used {
+        flex-wrap: nowrap;
         margin-top: 0vh;
         margin-bottom: 1vh;
         li {
-          padding: 0.45vw;
+          font-size: 1.5vw;
+          margin-bottom: 1vw;
         }
       }
+    }
 
-      .slider,
-      &__img-box {
+    // MED Res.: Img-Box & Overlay
+    .prj__img-box {
+      .img__overlay {
+        overflow: scroll;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0%;
+        background: rgba(232, 232, 232, 0.826);
+        transform: translateY(100%);
         transition: all 0.3s;
-        transform: scale(1, 1) translateY(0);
+        padding: 3% 8%;
+        p {
+          opacity: 0;
+          transition: all 1s;
+          transition-delay: 0.3s;
+        }
+        p,
+        li {
+          font-size: 0.7rem;
+          line-height: 1rem;
+        }
+        ul {
+          padding-left: 5%;
+          opacity: 0;
+          transform: translateY(-80%);
+          transition: all 1s;
+        }
+        li {
+          list-style: disc;
+        }
+        nav {
+          transform: translateY(180%);
+          transition: all 1s;
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          margin: 0;
+          i {
+            color: white;
+            font-size: 1.4rem;
+          }
+        }
       }
+      .img__overlay:hover nav,
+      .img__overlay:hover ul,
+      .img__overlay:hover p {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
 
-      .slider:hover,
-      &__img-box:hover {
-        transform: scale(1.2, 1.2) translateY(-6%);
+    .prj__img-box:hover .img__overlay {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0%);
+    }
+
+    // MED. Res.: Img-Box + Slider
+    .prj__img-box,
+    .slider {
+      transition: all 0.3s;
+      transform: scale(1, 1) translateY(0);
+    }
+
+    .slider:hover {
+      transform: scale(1.2, 1.2) translateY(-6%);
+      .prj__img-box {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@include breakpoint-up(large) {
+  .portfolio {
+    .prj__title h3 {
+      font-size: 1.5rem;
+    }
+
+    .prj {
+      &__skills-used {
+        position: static;
+        margin-bottom: 7vh;
+        li {
+          font-size: 0.75rem;
+        }
       }
 
       .img__overlay {
@@ -183,6 +290,7 @@
         background: rgba(29, 19, 19, 0.615);
         opacity: 0;
         visibility: hidden;
+        transform: none;
         transition: all 0.3s;
         transform: scale(0.2, 0.2);
         display: flex;
@@ -198,8 +306,10 @@
         }
         p,
         li {
+          font-weight: normal;
           font-size: 0.7rem;
           line-height: 1rem;
+          color: white;
         }
         nav {
           transform: translateY(180%);
@@ -222,14 +332,31 @@
           transition: all 1s;
           transition-delay: 0.3s;
         }
+      }
 
-        // Img-Overlay Hover States
+      // LARGE Res.: Img-Overlay Hover States
 
-        &:hover nav,
-        &:hover ul,
-        &:hover p {
-          opacity: 1;
-          transform: translate(0);
+      &__img-box,
+      .slider {
+        transition: all 0.3s;
+        transform: scale(1, 1) translateY(0);
+      }
+
+      &__img-box:hover {
+        transform: scale(1.2, 1.2) translateY(-6%);
+      }
+
+      .img__overlay:hover nav,
+      .img__overlay:hover ul,
+      .img__overlay:hover p {
+        opacity: 1;
+        transform: translate(0);
+      }
+
+      .slider:hover {
+        transform: scale(1.2, 1.2) translateY(-6%);
+        .prj__img-box {
+          transform: scale(1);
         }
       }
     }

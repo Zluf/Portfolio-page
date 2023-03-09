@@ -1,4 +1,4 @@
-// HEADER underneath Hero / Style properties for both Headers
+// Header-Under-Hero / Style properties for both Headers
 
 .header {
   position: fixed;
@@ -41,7 +41,8 @@
     }
   }
 
-  // cancels hiding on large resolution
+  // cancels hiding Header-Under-Hero on large resolution
+
   @include breakpoint-up(large) {
     display: flex;
     padding: 0.7vw 8vw;

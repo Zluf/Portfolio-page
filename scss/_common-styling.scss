@@ -1,5 +1,4 @@
-// $dark: #373b44;
-// $light: #4286f4;
+
 $dark: black;
 $light: rgb(189, 189, 189);
 $neutral: grey;
@@ -59,7 +58,7 @@ h3,
 p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
 }
-h2 {
+main h2 {
   @include breakpoint-up(large) {
     margin-bottom: 30px;
   }

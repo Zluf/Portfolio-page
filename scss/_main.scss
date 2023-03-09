@@ -22,6 +22,11 @@ main {
     i {
       color: black;
     }
+
+    @include breakpoint-up(medium) {
+      width: 100%;
+      padding-bottom: 5vh;
+    }
   }
 
   #about {
@@ -30,6 +35,31 @@ main {
     }
     article {
       width: 100%;
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      article {
+        width: 50%;
+        p {
+          margin-bottom: 20px;
+        }
+      }
+      .logo-sk {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        img {
+          opacity: 0.1;
+          width: 40%;
+          filter: brightness(5000%) drop-shadow(-30px 30px 15px black);
+          box-shadow: 20px solid black;
+        }
+      }
     }
   }
 
@@ -45,37 +75,4 @@ main {
   }
 
   // MAIN MEDIUM
-
-  @include breakpoint-up(medium) {
-    #about {
-      display: flex;
-      article {
-        width: 50%;
-      }
-      .logo-sk {
-        display: flex;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        img {
-          opacity: 0.1;
-          width: 40%;
-          filter: brightness(5000%) drop-shadow(-30px 30px 15px black);
-          box-shadow: 20px solid black;
-        }
-      }
-    }
-    section {
-      width: 100%;
-      padding-bottom: 5vh;
-    }
-
-    .skill {
-      margin-right: 20px;
-      margin-bottom: 10px;
-      i {
-        margin-right: 15px;
-      }
-    }
-  }
 }
