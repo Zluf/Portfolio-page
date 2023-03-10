@@ -1,13 +1,30 @@
 @import "_common-styling";
 
 .portfolio {
+  @include breakpoint-up(medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+
   .prj {
     margin-top: 7vh;
 
     @include breakpoint-up(medium) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      width: 45%;
+
+      &:hover {
+        .prj__skills-used {
+          position: relative;
+          z-index: 2;
+        }
+        .prj__img-box {
+          z-index: 1;
+        }
+      }
     }
 
     &__title {
@@ -25,12 +42,41 @@
       i:nth-child(3) {
         font-size: 1rem;
       }
+
+      @include breakpoint-up(medium) {
+        margin-bottom: 1vh;
+        h3 {
+          font-size: 3vw;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__info {
+      @include breakpoint-up(medium) {
+        width: 100%;
+        margin-bottom: 5vw;
+      }
     }
 
     .slider {
       overflow: hidden;
       box-shadow: 5px 10px 10px #6c6c6c;
       margin-bottom: 10px;
+
+      @include breakpoint-up(large) {
+        &:hover {
+          transform: scale(1.2, 1.2) translateY(-6%);
+          .prj__img-box {
+            transform: scale(1);
+          }
+        }
+      }
 
       &__reel {
         position: relative;
@@ -99,6 +145,7 @@
     flex-wrap: wrap;
     margin-top: 2vh;
     margin-bottom: 1vh;
+
     li {
       font-weight: 600;
       background: linear-gradient(
@@ -112,6 +159,23 @@
       font-size: small;
       margin-right: 1vw;
     }
+
+    @include breakpoint-up(medium) {
+      flex-wrap: nowrap;
+      margin-top: 0vh;
+      margin-bottom: 1vh;
+      li {
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      position: static;
+      li {
+        font-size: 0.75rem;
+      }
+    }
   }
 
   .prj__img-box {
@@ -122,243 +186,167 @@
 
     img {
       width: 100%;
-      margin-bottom: 0;
     }
 
-    .img__overlay {
+    @include breakpoint-up(medium) {
+      &:hover .img__overlay {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+      }
+    }
+    @include breakpoint-up(large) {
+      &:hover {
+        transform: scale(1.2, 1.2) translateY(-6%);
+      }
+    }
+  }
+
+  // .IMG__OVERLAY Small Resulution
+  .img__overlay {
+    width: 100%;
+    background: rgba(231, 231, 231, 0.615);
+    padding: 6% 8% 50px 8%;
+    position: relative;
+    p {
+      padding-bottom: 2vw;
+    }
+    ul {
+      padding-left: 5%;
+    }
+    li {
+      list-style: disc;
+    }
+    p,
+    li {
+      color: rgba(0, 0, 0, 0.74);
+      font-weight: bolder;
+      font-size: 0.7rem;
+      line-height: 1rem;
+      text-shadow: none;
+    }
+    nav {
+      display: flex;
       width: 100%;
-      background: rgba(231, 231, 231, 0.615);
-      padding: 8%;
-      overflow: scroll;
+      justify-content: space-evenly;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover {
+          transform: scale(1.2) translateY(-20%);
+          i {
+            color: black;
+          }
+        }
+      }
+      a::after {
+        content: "View Page";
+        color: black;
+        text-align: center;
+        font-size: 0.5rem;
+        background-color: white;
+        transform: translateY(-100%);
+        opacity: 0;
+        padding: 0 5px;
+        transition: all 0.3s;
+      }
+      a:nth-child(2)::after {
+        content: "View GitHub page";
+      }
+      a:hover::after {
+        opacity: 1;
+        transform: translateY(20%);
+      }
+
+      i {
+        color: rgba(0, 0, 0, 0.632);
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // .IMG__OVERLAY Medium Resulution
+  @include breakpoint-up(medium) {
+    .img__overlay {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0%;
+      min-height: 100%;
+      background: rgba(232, 232, 232, 0.826);
+      transform: translateY(100%);
+      transition: all 0.3s;
+      padding: 3% 8%;
+      p {
+        opacity: 0;
+        transition: all 1s;
+        transition-delay: 0.3s;
+      }
       ul {
-        margin-top: 2vw;
-        padding-left: 5%;
-      }
-      li {
-        list-style: disc;
-      }
-      p,
-      li {
-        color: rgba(0, 0, 0, 0.74);
-        font-weight: bolder;
-        font-size: 0.7rem;
-        line-height: 1rem;
-        text-shadow: none;
+        opacity: 0;
+        transform: translateY(-80%);
+        transition: all 1s;
+        margin-bottom: 20%;
       }
       nav {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
+        transform: translateY(180%);
+        transition: all 1s;
+        a:hover i {
+          color: white;
+        }
+      }
 
-        margin-top: 5vw;
+      // MED & LARGE Res.: Img-Overlay Hover States
+      &:hover nav,
+      &:hover ul,
+      &:hover p {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+
+  // .IMG__OVERLAY Large Resulution
+  @include breakpoint-up(large) {
+    .img__overlay {
+      background: rgba(29, 19, 19, 0.615);
+      transform: scale(0.2, 0.2);
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8% 4% 2% 4%;
+      p,
+      li {
+        font-weight: normal;
+        color: white;
+      }
+      ul {
+        margin: 0;
+      }
+      nav {
+        position: static;
+        transform: translateY(180%);
         i {
-          color: rgba(0, 0, 0, 0.632);
+          color: white;
           font-size: 1.4rem;
         }
       }
     }
   }
-}
 
-@include breakpoint-up(medium) {
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    &__info {
-      width: 100%;
-      margin-bottom: 5vw;
-    }
-
-    .prj {
-      width: 45%;
-      margin-top: 0;
-      margin-bottom: 100px;
-      h3 {
-        font-size: 1.2rem;
-      }
-      &__title {
-        margin-bottom: 1vh;
-      }
-      &__skills-used {
-        flex-wrap: nowrap;
-        margin-top: 0vh;
-        margin-bottom: 1vh;
-        li {
-          font-size: 1.5vw;
-          margin-bottom: 1vw;
-        }
-      }
-    }
-
-    // MED Res.: Img-Box & Overlay
-    .prj__img-box {
-      .img__overlay {
-        overflow: scroll;
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        top: 0%;
-        background: rgba(232, 232, 232, 0.826);
-        transform: translateY(100%);
-        transition: all 0.3s;
-        padding: 3% 8%;
-        p {
-          opacity: 0;
-          transition: all 1s;
-          transition-delay: 0.3s;
-        }
-        p,
-        li {
-          font-size: 0.7rem;
-          line-height: 1rem;
-        }
-        ul {
-          padding-left: 5%;
-          opacity: 0;
-          transform: translateY(-80%);
-          transition: all 1s;
-        }
-        li {
-          list-style: disc;
-        }
-        nav {
-          transform: translateY(180%);
-          transition: all 1s;
-          display: flex;
-          width: 100%;
-          justify-content: space-around;
-          margin: 0;
-          i {
-            color: white;
-            font-size: 1.4rem;
-          }
-        }
-      }
-      .img__overlay:hover nav,
-      .img__overlay:hover ul,
-      .img__overlay:hover p {
-        opacity: 1;
-        transform: translate(0);
-      }
-    }
-
-    .prj__img-box:hover .img__overlay {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0%);
-    }
-
-    // MED. Res.: Img-Box + Slider
-    .prj__img-box,
-    .slider {
+  // MED & LARGE Res.: Img-Box + Slider
+  .prj__img-box,
+  .slider {
+    @include breakpoint-up(medium) {
       transition: all 0.3s;
       transform: scale(1, 1) translateY(0);
-    }
-
-    .slider:hover {
-      transform: scale(1.2, 1.2) translateY(-6%);
-      .prj__img-box {
-        transform: scale(1);
-      }
-    }
-  }
-}
-
-@include breakpoint-up(large) {
-  .portfolio {
-    .prj__title h3 {
-      font-size: 1.5rem;
-    }
-
-    .prj {
-      &__skills-used {
-        position: static;
-        margin-bottom: 7vh;
-        li {
-          font-size: 0.75rem;
-        }
-      }
-
-      .img__overlay {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        right: 0%;
-        bottom: 0%;
-        background: rgba(29, 19, 19, 0.615);
-        opacity: 0;
-        visibility: hidden;
-        transform: none;
-        transition: all 0.3s;
-        transform: scale(0.2, 0.2);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 3% 8%;
-        overflow: scroll;
-        ul {
-          padding-left: 5%;
-        }
-        li {
-          list-style: disc;
-        }
-        p,
-        li {
-          font-weight: normal;
-          font-size: 0.7rem;
-          line-height: 1rem;
-          color: white;
-        }
-        nav {
-          transform: translateY(180%);
-          transition: all 1s;
-          display: flex;
-          width: 100%;
-          justify-content: space-around;
-          i {
-            color: white;
-            font-size: 1.4rem;
-          }
-        }
-        ul {
-          opacity: 0;
-          transform: translateY(-80%);
-          transition: all 1s;
-        }
-        p {
-          opacity: 0;
-          transition: all 1s;
-          transition-delay: 0.3s;
-        }
-      }
-
-      // LARGE Res.: Img-Overlay Hover States
-
-      &__img-box,
-      .slider {
-        transition: all 0.3s;
-        transform: scale(1, 1) translateY(0);
-      }
-
-      &__img-box:hover {
-        transform: scale(1.2, 1.2) translateY(-6%);
-      }
-
-      .img__overlay:hover nav,
-      .img__overlay:hover ul,
-      .img__overlay:hover p {
-        opacity: 1;
-        transform: translate(0);
-      }
-
-      .slider:hover {
-        transform: scale(1.2, 1.2) translateY(-6%);
-        .prj__img-box {
-          transform: scale(1);
-        }
-      }
     }
   }
 }
