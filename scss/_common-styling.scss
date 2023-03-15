@@ -58,11 +58,7 @@ h3,
 p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
 }
-main h2 {
-  @include breakpoint-up(large) {
-    margin-bottom: 30px;
-  }
-}
+
 
 i {
   color: white;

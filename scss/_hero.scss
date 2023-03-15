@@ -138,11 +138,68 @@
   //HEADER LARGE
 
   @include breakpoint-up(large) {
-    z-index: 2;
+    z-index: 4;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
     &__brgr-menu {
       display: none;
     }
   }
+}
+
+// Toggled Clesses (Burger Menu)
+
+.menu-open {
+  transform: translateY(-50%);
+  transition: all 0.5s;
+  .brgr-midline {
+    background-color: transparent !important;
+    transition: all 0.5s;
+    &::before {
+      transform: rotate(45deg) translate(21px, 22px);
+      transition: all 0.5s;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      transition: all 0.5s;
+    }
+  }
+}
+
+// Menu Links (for Small and Mid Resulution)
+
+.mobile-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.8s;
+  @include breakpoint-up(large) {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.mobile-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.8s;
+}
+
+.hidden:nth-child(2),
+.visible:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.hidden:nth-child(3),
+.visible:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.hidden:nth-child(4),
+.visible:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.highlight {
+  color: #d67701;
 }
