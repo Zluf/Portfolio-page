@@ -91,7 +91,7 @@ main img:nth-of-type(2) {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   main {
     transform: translateY(0);
     padding: 40px 35px 61px;
