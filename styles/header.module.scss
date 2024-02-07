@@ -42,7 +42,7 @@
     }
   }
 
-  // cancels hiding Header-Under-Hero on large resolution
+  // cancelss hiding Header-Under-Hero on large resolution
 
   @include breakpoint-up(large) {
     display: flex;
