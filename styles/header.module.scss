@@ -1,4 +1,5 @@
-@use "globals.scss";
+@use "_globals";
+@use "_mixins";
 
 // Header-Under-Hero / Style properties for both Headers
 .header {
@@ -37,14 +38,14 @@
       font-weight: bolder;
       &:hover {
         transform: scale(1.2);
-        text-shadow: $text-shadow;
+        text-shadow: globals.$text-shadow;
       }
     }
   }
 
   // cancelss hiding Header-Under-Hero on large resolution
 
-  @include breakpoint-up(large) {
+  @include mixins.breakpoint-up(large) {
     display: flex;
     padding: 0.7vw 8vw;
     nav a:hover {
@@ -72,7 +73,7 @@
     }
   }
 
-  @include breakpoint-up(large) {
+  @include mixins.breakpoint-up(large) {
     display: flex;
     position: fixed;
     background: linear-gradient(rgba(0, 0, 0, 0.936) 10%, rgba(0, 0, 0, 0.202));
