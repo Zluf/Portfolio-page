@@ -1,0 +1,92 @@
+@use "_partials";
+
+// MAIN
+
+main {
+  // Varied section background
+  section:nth-child(odd) {
+    background-image: linear-gradient(
+      45deg,
+      partials.$light,
+      partials.$dark 95%
+    );
+  }
+  section:nth-child(even) {
+    background-image: linear-gradient(
+      45deg,
+      partials.$dark 15%,
+      partials.$light
+    );
+  }
+
+  section {
+    position: relative;
+    padding: 0 7vw 5vh;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      padding-top: 7vw;
+      text-align: center;
+      margin-bottom: 30px;
+      @include partials.breakpoint-up(large) {
+        padding-top: 50px;
+      }
+    }
+    i {
+      color: black;
+    }
+
+    @include partials.breakpoint-up(medium) {
+      width: 100%;
+      padding-bottom: 5vh;
+    }
+  }
+
+  #about {
+    .logo-sk {
+      display: none;
+    }
+    article {
+      width: 100%;
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include partials.breakpoint-up(medium) {
+      display: flex;
+      article {
+        width: 50%;
+        p {
+          margin-bottom: 20px;
+        }
+      }
+      .logo-sk {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        img {
+          opacity: 0.1;
+          width: 40%;
+          filter: brightness(5000%) drop-shadow(-30px 30px 15px black);
+          box-shadow: 20px solid black;
+        }
+      }
+    }
+  }
+
+  .skill {
+    display: flex;
+    align-items: center;
+    i {
+      width: 3vw;
+      text-align: center;
+      margin-right: 30px;
+      font-size: 2rem;
+    }
+  }
+
+  // MAIN MEDIUM
+}
