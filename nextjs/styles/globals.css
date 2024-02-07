@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Oxygen;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+a {
+  color: rgb(189, 172, 112);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #da6358;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Oswald;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p,
+li {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-family: Source Sans Pro;
+  color: rgba(255, 255, 255, 0.708);
+}
+
+h1,
+h2,
+h3,
+p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
+}
+
+i {
+  color: white;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 63.9375rem) {
+  p,
+  li {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 86.4375rem) {
+  i {
+    margin-right: 0;
+  }
+}

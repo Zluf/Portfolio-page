@@ -1,0 +1,10 @@
+@import "_mixins";
+
+$dark: black;
+$light: rgb(189, 189, 189);
+$neutral: grey;
+$saturated: #da6358;
+$dark-deep: #5c2924;
+$text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
+$gradient-light-dark: linear-gradient(45deg, $light, $dark 95%);
+$gradient-dark-light: linear-gradient(45deg, $dark 15%, $light);
