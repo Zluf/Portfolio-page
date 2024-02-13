@@ -1,0 +1,57 @@
+@import "_partials";
+
+.education {
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  img {
+    display: none;
+    width: 35%;
+  }
+  &__module {
+    margin-bottom: 15px;
+  }
+}
+
+@include breakpoint-up(large) {
+  .education {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__module:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &__module {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+
+      h3,
+      p,
+      img {
+        display: block;
+        width: 50%;
+      }
+
+      h3 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      h3:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}

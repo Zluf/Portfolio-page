@@ -66,3 +66,27 @@ i {
     margin-right: 0;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+/* Hover states */
+
+.header__logo:hover,
+.body__header__icons:hover {
+  color: #5c2924;
+}
+
+.header__logo,
+.hero__icons *,
+.footer__icons * {
+  transition: transform 0.2s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
+}
+
+.header__logo:hover,
+.hero__icons *:hover,
+.footer__icons *:hover {
+  transform: scale(1.1);
+}
