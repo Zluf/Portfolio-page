@@ -1,34 +1,49 @@
 // import "../../styles/globals.css";
+"use client";
+
 import "../../styles/hero.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function Hero() {
+  const [brgrClass, setBrgrClass] = useState("mobile-hidden");
+
+  const toggleBrgrMenu = () => {
+    setBrgrClass((prevBrgrClass) => {
+      return prevBrgrClass === "mobile-visible"
+        ? "mobile-hidden"
+        : "mobile-visible";
+    });
+  };
+
   return (
     <section className="hero" id="hero">
       <header className="hero__header header">
         <nav className="header__nav">
-          <a className="mobile-hidden" href="#about">
+          <a className={brgrClass} href="#about">
             About
           </a>
-          <a className="mobile-hidden" href="#education">
+          <a className={brgrClass} href="#education">
             Education
           </a>
-          <a className="mobile-hidden" href="#skills">
+          <a className={brgrClass} href="#skills">
             Skills
           </a>
-          <a className="mobile-hidden" href="#portfolio">
+          <a className={brgrClass} href="#portfolio">
             Portfolio
           </a>
         </nav>
       </header>
+
       <div className="hero__overlay"></div>
-      <div className="hero__brgr-menu">
+
+      <button className="hero__brgr-menu" onClick={toggleBrgrMenu}>
         <div className="brgr-midline"></div>
-      </div>
+      </button>
+
       <div className="hero__container">
         <div className="hero__title">
           <h3>Hi, there! I'm</h3>

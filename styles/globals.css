@@ -11,10 +11,6 @@
   line-height: 1.6;
 }
 
-svg {
-  font-size: 1.2rem;
-}
-
 a {
   color: rgb(189, 172, 112);
   text-decoration: none;
@@ -52,22 +48,11 @@ p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
 }
 
-i {
-  color: white;
-  font-size: 2rem;
-}
-
 @media only screen and (max-width: 63.9375rem) {
   p,
   li {
     font-size: 1.1rem;
     line-height: 1.8rem;
-  }
-}
-
-@media only screen and (max-width: 86.4375rem) {
-  i {
-    margin-right: 0;
   }
 }
 
@@ -80,6 +65,7 @@ i {
 .hero__icons a,
 .footer__icons a {
   color: white;
+  font-size: 2rem;
 }
 
 /* Hover states */

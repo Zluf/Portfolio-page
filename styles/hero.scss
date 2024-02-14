@@ -24,6 +24,8 @@
 
   &__brgr-menu {
     position: absolute;
+    background-color: transparent;
+    border: none;
     top: 5vw;
     right: 8vw;
     width: 40px;
@@ -50,6 +52,7 @@
     .brgr-midline::after {
       content: "";
       width: 100%;
+      left: 0;
       height: 5px;
       border-radius: 3px;
       background: white;
@@ -104,14 +107,14 @@
         display: flex;
         align-items: center;
         color: #da6358;
-        margin-right: 0.4vw;
+        margin-right: 0.6rem;
       }
     }
   }
 
   &__icons {
     margin-top: 15px;
-    width: 100px;
+    width: 120px;
     display: flex;
     justify-content: space-between;
   }
@@ -125,13 +128,9 @@
     }
 
     &__icons {
-      margin: 0vw;
       width: auto;
       flex-direction: column;
       justify-content: space-around;
-      a:nth-child(2) {
-        margin: 1vh 0;
-      }
     }
   }
 

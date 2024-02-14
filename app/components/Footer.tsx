@@ -1,4 +1,7 @@
 import "../../styles/footer.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -9,28 +12,28 @@ export default function Footer() {
         <span></span>
         <p>Back to Top</p>
       </a>
-      <div className="footer__icons">
+      <nav className="footer__icons">
         <a
           href="https://www.linkedin.com/in/slav-konovalov-466650182"
           target="_blank"
           aria-label="LinkedIn page link"
         >
-          <i className="fab fa-linkedin"></i>
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a
           href="https://github.com/Zluf"
           aria-label="GitHub page link"
           target="_blank"
         >
-          <i className="fab fa-github-square"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
           href="mailto:slav.konovalov@gmail.com?subject=Interested in web development services&body=Hi, Slav"
           aria-label="Email link"
         >
-          <i className="fas fa-envelope-square"></i>
+          <FontAwesomeIcon icon={faEnvelope} />
         </a>
-      </div>
+      </nav>
     </footer>
   );
 }
