@@ -11,6 +11,10 @@
   line-height: 1.6;
 }
 
+svg {
+  font-size: 1.2rem;
+}
+
 a {
   color: rgb(189, 172, 112);
   text-decoration: none;
@@ -69,6 +73,13 @@ i {
 
 .flex {
   display: flex;
+}
+
+/* Font Awesome */
+
+.hero__icons a,
+.footer__icons a {
+  color: white;
 }
 
 /* Hover states */
