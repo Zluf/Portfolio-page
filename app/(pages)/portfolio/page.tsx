@@ -1,6 +1,5 @@
-import React from "react";
-// import classes from "../styles/portfolio.module.scss";
+import Portfolio from "@/app/components/Portfolio";
 
 export default function Education() {
-  return <div>Education</div>;
+  return <Portfolio />;
 }

@@ -61,7 +61,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="E-Commerce Page"
         links={{
-          href: ["/(pages)/e-commerce-page/"],
+          href: ["/pages/e-commerce-page/"],
           github: "https://github.com/Zluf/e-commerce-app",
         }}
         skills={["ReactJS", "CSS", "Desktop", "Mobile"]}
@@ -86,7 +86,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="Advice Generator App"
         links={{
-          href: ["/(pages)/advice-generator-app/"],
+          href: ["/pages/advice-generator-app/"],
           github: "https://github.com/Zluf/advise-generator-app/",
         }}
         skills={["HTML", "CSS", "JavaScript", "API", "Desktop", "Mobile"]}
@@ -108,7 +108,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="Interior Design page"
         links={{
-          href: ["/(pages)/interior/"],
+          href: ["/pages/interior/"],
           github: "https://github.com/Zluf/Interiors-page",
         }}
         skills={["HTML", "Sass", "Desktop", "Mobile"]}
@@ -127,7 +127,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="Charity page 2"
         links={{
-          href: ["/(pages)/charity2/"],
+          href: ["/pages/charity2/"],
           github: "https://github.com/Zluf/Charity-page-2",
         }}
         skills={["HTML", "Sass", "JavaScript", "Desktop"]}
@@ -146,9 +146,9 @@ export default function Portfolio() {
         title="Analytics page"
         links={{
           href: [
-            "/(pages)/analytics/page1",
-            "/(pages)/analytics/page2",
-            "/(pages)/analytics/page3",
+            "/pages/analytics/page1",
+            "/pages/analytics/page2",
+            "/pages/analytics/page3",
           ],
           github: "https://github.com/Zluf/Analytics-page",
         }}
@@ -171,7 +171,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="Sports Data page"
         links={{
-          href: ["/(pages)/sports-data/", "/(pages)/sports-data/page2"],
+          href: ["/pages/sports-data/", "/pages/sports-data/page2"],
           github: "https://github.com/Zluf/Sports-data-page",
         }}
         skills={["HTML", "CSS", "Desktop"]}
@@ -189,7 +189,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="Debt Solutions page"
         links={{
-          href: ["/(pages)/debt-solutions", "/(pages)/debt-solutions/page2"],
+          href: ["/pages/debt-solutions", "/pages/debt-solutions/page2"],
           github: "https://github.com/Zluf/Debt-Solutions-page",
         }}
         skills={["HTML", "CSS", "Desktop", " Mobile"]}
@@ -207,7 +207,7 @@ export default function Portfolio() {
       <PortfolioEntry
         title="Charity page 1"
         links={{
-          href: ["/(pages)/charity1/"],
+          href: ["/pages/charity1/"],
           github: "https://github.com/Zluf/Charity-page-1",
         }}
         skills={["HTML", "CSS", "Desktop"]}

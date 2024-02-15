@@ -1,6 +1,5 @@
-import React from "react";
-// import classes from "../styles/about.module.scss";
+import About from "@/app/components/About";
 
-export default function About() {
-  return <div>about</div>;
+export default function Education() {
+  return <About />;
 }

@@ -11,10 +11,12 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Portfolio from "./components/Portfolio";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <Hero />
       <main>
         <About />
