@@ -1,5 +1,6 @@
-/*Common styling*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
+/*Common styling*/
 * {
   margin: 0;
   padding: 0;
@@ -18,20 +19,21 @@ body * {
 
 .websk {
   position: relative;
-  font-size: 4.8vw;
+  font-size: 2rem;
   margin: 25px 0 0 200px;
   color: white;
   text-align: center;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .websk::after {
   position: absolute;
   content: "";
-  top: 5.6vw;
-  width: 10.6vw;
+  top: 2.4rem;
+  width: 70px;
   height: 2px;
   background: white;
 }
@@ -232,12 +234,7 @@ a:nth-of-type(2) {
 
   .websk {
     margin: -20vw 0 0 0;
-    font-size: 2.8vw;
-  }
-
-  .websk::after {
-    top: 3.4vw;
-    width: 6.2vw;
+    /* font-size: 2.8vw; */
   }
 
   .magenta,

@@ -49,6 +49,7 @@ export default function Hero() {
           <h3>Hi, there! I'm</h3>
           <h1>Slav Konovalov</h1>
           <h2>Front End Developer</h2>
+
           <div className="hero__location">
             <span>
               <FontAwesomeIcon icon={faLocationDot} />

@@ -1,199 +1,30 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-nav ul {
   list-style: none;
+  box-sizing: border-box;
 }
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input,
-select {
-  vertical-align: middle;
-}
-
-/* Common classes/elements */
 
 @font-face {
   font-family: FS Me Pro Regular;
-  src: url("FSMePro-Regular.otf");
+  src: url("./fonts/FSMePro-Regular.otf");
 }
 
 @font-face {
   font-family: FS Me Pro Bold;
-  src: url("FSMePro-Bold.otf");
+  src: url("./fonts/FSMePro-Bold.otf");
 }
 
 @font-face {
   font-family: FS Me Pro Light;
-  src: url("FSMePro-Light.otf");
+  src: url("./fonts/FSMePro-Light.otf");
 }
 
 * {
   font-family: "FS Me Pro Light";
   list-style: none;
   font-weight: lighter;
-  color: white;
 }
 
 p,
@@ -218,29 +49,18 @@ button {
   font-size: 0.7rem;
   border-color: transparent;
   border-radius: 30px;
-  float: left;
   background-color: #804236;
   cursor: pointer;
   padding: 0 10px;
 }
-
-button i {
-  font-size: 0.8rem;
-}
-
-.logo {
-  font-size: 3vw;
-  font-family: FS Me Pro Light;
-  border: 3px solid white;
-  border-radius: 10px;
-  padding: 0 1vw;
-  display: inline-flex;
+button svg {
+  width: 12px;
 }
 
 /*Header*/
 
 header {
-  position: absolute;
+  position: rela;
   width: 100%;
   height: 100vh;
   margin-bottom: -500px;
@@ -249,11 +69,12 @@ header {
 }
 
 .logo {
+  color: white;
   font-size: 3vw;
   font-family: FS Me Pro Light;
   border: 3px solid white;
   border-radius: 10px;
-  padding: 0 1vw;
+  padding: 0.5vw 1vw;
   display: inline-flex;
 }
 
@@ -290,15 +111,12 @@ a {
 }
 
 nav button {
+  display: flex;
   margin-right: 3%;
   background-color: white;
   float: right;
   color: black;
   width: 120px;
-}
-
-nav button i {
-  color: black;
 }
 
 .man-reading {
@@ -310,19 +128,25 @@ nav button i {
 /*Section*/
 
 section {
-  position: relative;
-  top: 30vh;
+  margin-top: 16vh;
   background-color: #9bd2f1;
   padding-top: 200px;
   clip-path: polygon(35% 0, 100% 50vh, 100% 100%, 0 100%, 0 5%);
+  line-height: auto;
+  overflow: hidden;
 }
-
-section * {
+section,
+section button {
   color: white;
 }
 
 .container {
   padding: 20px 10vw;
+  overflow: hidden;
+}
+
+.container > p {
+  margin-bottom: 50px;
 }
 
 h2 {
@@ -353,7 +177,7 @@ section .container > p {
   padding-left: 13px;
 }
 
-.explore-and-watch .circle-button i {
+.explore-and-watch .circle-button svg {
   color: #804236;
 }
 
@@ -410,7 +234,7 @@ section .container > p {
   width: 140px;
 }
 
-.container ul li a:last-of-type {
+.container ul li .contact a:last-of-type {
   text-decoration: underline;
 }
 
@@ -455,8 +279,8 @@ section .container > p {
   background-color: #9bd2f1;
 }
 
-.play-video .play-button button i {
-  font-size: 35px;
+.play-video .play-button button svg {
+  width: 35px;
   padding-left: 5px;
 }
 
@@ -470,7 +294,7 @@ section .container > p {
 .what-we-do p,
 h2,
 button {
-  margin: 20px auto;
+  margin: 20px 0;
 }
 
 .what-we-do h2 {
@@ -485,6 +309,7 @@ button {
 
 .our-stories {
   position: relative;
+  line-height: 0;
 }
 
 .our-stories img {
@@ -558,7 +383,7 @@ h3 {
 
 footer {
   position: relative;
-  margin-top: 180px;
+  /* margin-top: 180px;  */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -595,22 +420,40 @@ footer::after {
 footer nav > a,
 footer p,
 footer address {
+  color: white;
   opacity: 50%;
 }
 
-footer nav:nth-child(4) a {
-  opacity: 1;
+footer .get-directions {
+  display: flex;
 }
 
 footer nav:first-child a:last-child {
   opacity: 1;
 }
+footer .get-directions svg {
+  width: 12px;
+  margin-left: 0.3rem;
+}
 
-footer nav:nth-child(4) i {
+footer nav:nth-child(4) a,
+footer h4 {
+  color: white;
+  opacity: 1;
+}
+
+footer nav:nth-child(4) {
+  line-height: 0.4;
+}
+footer nav:nth-child(4) a {
+  display: flex;
   border: 1px solid white;
   border-radius: 50%;
-  padding: 5px;
   margin-bottom: 5px;
+}
+footer nav:nth-child(4) svg {
+  width: 20px;
+  padding: 5px;
 }
 
 footer > a:last-child {
@@ -623,7 +466,7 @@ footer > p {
 
 footer .lower-footer {
   display: flex;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 footer .lower-footer p {
@@ -644,8 +487,8 @@ footer .lower-footer img {
 .bottom-links a {
   display: block;
   width: 20%;
-  height: 30px;
-  padding-top: 8px;
+  /* height: 30px; */
+  padding: 8px 0;
 }
 
 .bottom-links a:first-child {

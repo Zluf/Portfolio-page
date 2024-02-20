@@ -33,7 +33,7 @@ const PortfolioEntry: React.FC<PFEntryProps> = ({
 
       <ul className="prj__skills-used flex">
         {skills.map((sk) => (
-          <li>{sk}</li>
+          <li key={sk}>{sk}</li>
         ))}
       </ul>
 
