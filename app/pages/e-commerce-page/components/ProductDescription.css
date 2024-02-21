@@ -1,0 +1,106 @@
+.product-description {
+  padding-top: 6.2vw;
+  padding-bottom: 6vw;
+}
+
+/* INFO */
+
+.product-description__info h5 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--orange);
+  letter-spacing: 0.09rem;
+  margin-bottom: 3.5vw;
+}
+
+.product-description__info h2 {
+  font-family: "KumbhSans-SemiBold";
+  font-size: 1.7rem;
+  line-height: 2rem;
+  margin-bottom: 4.1vw;
+}
+
+.product-description__info p {
+  color: var(--darkGrayishBlue);
+  line-height: 1.4rem;
+  font-size: var(--smallText);
+  line-height: 1.58rem;
+  margin-bottom: 6.7vw;
+}
+
+/* PRICE */
+
+.product-description__price--current {
+  margin-bottom: 0.6vw;
+}
+
+.product-description__price--current h2 {
+  letter-spacing: 1px;
+  font-family: "KumbhSans-SemiBold";
+  font-size: 1.7rem;
+}
+.product-description__price--current span {
+  padding: 0.2rem 0.5rem 0.1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: var(--paleOrange);
+  color: var(--orange);
+  font-family: "KumbhSans-Medium";
+}
+
+.product-description__price--old {
+  color: var(--grayishBlue);
+  font-weight: bold;
+  text-decoration: line-through;
+  font-family: "KumbhSans-Medium";
+}
+
+/* 🖥️🖥️🖥️🖥️ 🖥️🖥️*/
+/* 🖥️DESKTOP🖥️ */
+/* 🖥️🖥️🖥️🖥️ 🖥️🖥️*/
+
+@media (min-width: 640px) {
+  .product-description {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* 🖥️ INFO */
+
+  .product-description__info {
+    margin-bottom: 1.7vw;
+  }
+
+  .product-description__info h5 {
+    font-size: 0.8rem;
+    letter-spacing: 0.11rem;
+    margin-bottom: 1.25vw;
+  }
+
+  .product-description__info h2 {
+    font-family: "KumbhSans-SemiBold";
+    font-size: 2.7rem;
+    line-height: 3rem;
+    margin-bottom: 2.48vw;
+  }
+
+  .product-description__info p {
+    line-height: 1.62rem;
+    margin-bottom: 0;
+  }
+
+  /* 🖥️ PRICE */
+
+  .product-description__price {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2.5vw;
+  }
+
+  .product-description__price--current {
+    font-size: 1.15rem;
+    margin-bottom: 0.6vw;
+  }
+}
