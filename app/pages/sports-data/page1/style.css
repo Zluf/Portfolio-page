@@ -8,27 +8,27 @@
 
 @font-face {
   font-family: Akkurat-Bold;
-  src: url("fonts/Akkurat-Bold.ttf");
+  src: url("./fonts/AKKURAT-BOLD.TTF");
 }
 
 @font-face {
   font-family: Akkurat;
-  src: url("Akkurat.ttf");
+  src: url("./fonts/AKKURAT.TTF");
 }
 
 @font-face {
   font-family: Knockout HTF47Bantamweight Regular;
-  src: url("Knockout HTF47Bantamweight Regular.otf");
+  src: url("./fonts/KNOCKOUT-HTF47-BANTAMWEIGHT.OTF");
 }
 
 @font-face {
   font-family: Akkurat-Light;
-  src: url("AKKURAT-LIGHT.TTF");
+  src: url("./fonts/AKKURAT-LIGHT.TTF");
 }
 
 @font-face {
   font-family: Akkurat-Bold-Extra;
-  src: url("AKKURAT-BOLDEXTRA.TTF");
+  src: url("./fonts/AKKURAT-BOLDEXTRA.TTF");
 }
 
 .websk {
@@ -45,7 +45,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: url(bg-pic.png);
+  background-image: url("/pages-img/sports-data/page1/bg-pic.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -101,15 +101,15 @@ body * {
   z-index: 2;
 }
 
-.layer-4-play i {
+.layer-4-play svg {
   opacity: 2;
   color: black;
-  font-size: 2vh;
+  width: 2vh;
 }
 
 .layer-3-container {
   width: 86%;
-  height: 75%;
+  height: 74%;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -197,9 +197,9 @@ input:focus {
   color: #c6c6c6;
 }
 
-.search-box a i {
+.search-box a svg {
   color: #02a1d4;
-  font-size: 1vmax;
+  width: 1vmax;
 }
 
 .button {
@@ -295,18 +295,23 @@ article {
 
 .cont1:first-child {
   position: relative;
-  background-image: url("crowd.png");
+  background-image: url("/crowd.png");
   background-size: cover;
 }
 
 .art-con a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   color: #02a1d4;
   font-size: 0.7vmax;
 }
 
-.art-con a i {
+.art-con a svg {
+  width: 0.7vmax;
   color: #02a1d4;
   padding: 0 1vh;
+  /* transform: translateY(0.2vmax); */
 }
 
 h3 {
@@ -367,7 +372,7 @@ section article .banner p {
 
 section article a {
   bottom: 3vh;
-  justify: flex-end;
+  justify-content: flex-end;
 }
 
 section article h4 {
@@ -389,8 +394,8 @@ section article h5 {
   margin-bottom: 1vh;
 }
 
-section article h5 i {
-  font-size: 3vh;
+section article h5 svg {
+  width: 3vh;
   color: #80bd26;
   padding-left: 5px;
 }
@@ -400,7 +405,7 @@ section .cont2 {
 }
 
 .cont2:nth-child(4) {
-  background-image: url("conference.png");
+  background-image: url("/conference.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -544,7 +549,7 @@ h6 {
   justify-content: space-around;
 }
 
-.footer-right .social-media i {
-  font-size: 1vw;
+.footer-right .social-media svg {
+  width: 1vw;
   color: #7a7979;
 }

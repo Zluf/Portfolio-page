@@ -1,24 +1,24 @@
 * {
-    margin:0;
-    padding:0;
-    list-style:none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*Common styling*/
 
 @font-face {
   font-family: Akkurat-Bold;
-  src: url('fonts/Akkurat-Bold.ttf');
+  src: url("./fonts/AKKURAT-BOLD.TTF");
 }
 
 @font-face {
   font-family: Akkurat;
-  src: url('fonts/Akkurat.ttf');
+  src: url("./fonts/AKKURAT.TTF");
 }
 
 @font-face {
   font-family: Knockout HTF47Bantamweight Regular;
-  src: url('Knockout HTF47Bantamweight Regular.otf');
+  src: url("./fonts/KNOCKOUT-HTF47-BANTAMWEIGHT.OTF");
 }
 
 .websk {
@@ -41,13 +41,13 @@ a {
 }
 
 body * {
-  font-family: 'Akkurat';
+  font-family: "Akkurat";
   text-decoration: none;
 }
 
 .layer-1 {
   position: absolute;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   top: 0;
   right: 0;
   bottom: 0;
@@ -66,13 +66,12 @@ body * {
   width: 55%;
   height: 60vw;
   margin-bottom: 6vh;
-
 }
 
 .o {
   width: 100%;
   height: 100%;
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -82,7 +81,7 @@ body * {
 .sub-o {
   width: 75%;
   height: 75%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 50%;
 }
 
@@ -128,16 +127,16 @@ body * {
 }
 
 .layer-3-container header nav ul li a {
-  color: #7E7E7E;
+  color: #7e7e7e;
   padding-bottom: 5%;
   border-bottom: 2px solid #00000000;
-  transition: border-bottom .5s;
+  transition: border-bottom 0.5s;
 }
 
 .layer-3-container header nav ul li a:hover {
-  color: #02A1D4;
-  border-bottom: 2px solid #02A1D4;
-  transition: border-bottom .5s;
+  color: #02a1d4;
+  border-bottom: 2px solid #02a1d4;
+  transition: border-bottom 0.5s;
 }
 
 /* SEARCH & LOGIN */
@@ -157,15 +156,14 @@ body * {
   align-items: center;
   overflow: hidden;
   padding: 0 10px;
-  border: 1px solid #CFCFCF;
+  border: 1px solid #cfcfcf;
 }
-
 
 .search-box input {
   border: 0;
   width: 100px;
   height: 30px;
-  color: #C6C6C6;
+  color: #c6c6c6;
   font-size: 2vh;
 }
 
@@ -174,16 +172,16 @@ input:focus {
 }
 
 ::placeholder {
-  color: #C6C6C6;
+  color: #c6c6c6;
 }
 
-.search-box a i {
-  color: #02A1D4;
-  font-size: 1vmax;
+.search-box a svg {
+  color: #02a1d4;
+  width: 1vmax;
 }
 
 .button {
-  background: #02A1D4;
+  background: #02a1d4;
   padding: 0 4%;
   text-transform: uppercase;
   font-size: 1.5vh;
@@ -201,7 +199,7 @@ input:focus {
 }
 
 .thesis h2 {
-  font-family: 'Knockout HTF47Bantamweight Regular';
+  font-family: "Knockout HTF47Bantamweight Regular";
   color: black;
   font-weight: lighter;
   text-transform: uppercase;
@@ -215,28 +213,28 @@ input:focus {
 
 /* SECTION */
 
-.cont1:first-child::before, article::before {
-  content: '';
+.cont1:first-child::before,
+article::before {
+  content: "";
   width: 0.35vw;
   height: 4.5vh;
-  background: #FB7A7A;
+  background: #fb7a7a;
   top: 2vh;
   left: -0.35vw;
   position: absolute;
 }
 
 .cont1:first-child::before {
-  background: #F2891E;
+  background: #f2891e;
 }
 
 .cont1 article:nth-child(2)::before {
-  background: #80BD26;
+  background: #80bd26;
 }
 
- .cont2 article:nth-child(2)::before {
+.cont2 article:nth-child(2)::before {
   content: none;
 }
-
 
 .art-con {
   position: absolute;
@@ -251,7 +249,9 @@ input:focus {
   font-size: 100%;
 }
 
-.cont1:first-child, article, .cont2:last-child {
+.cont1:first-child,
+article,
+.cont2:last-child {
   box-shadow: 2px 2px 12px -7px rgba(0, 0, 0, 0.2);
 }
 
@@ -278,7 +278,7 @@ article {
 
 .cont1:first-child {
   position: relative;
-  background-image: url('crowd.png');
+  background-image: url("/pages-img/sports-data/page2/crowd.png");
   background-size: cover;
 }
 
@@ -289,7 +289,7 @@ article {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: #1C1C1D;
+  background-color: #1c1c1d;
   opacity: 0.6;
 }
 
@@ -304,13 +304,15 @@ article {
 }
 
 .art-con a {
-  color: #02A1D4;
+  color: #02a1d4;
   font-size: 0.7vmax;
 }
 
-.art-con a i {
-  color: #02A1D4;
+.art-con a svg {
+  width: 0.7vmax;
+  color: #02a1d4;
   padding: 0 1vh;
+  transform: translateY(0.2vmax);
 }
 
 h3 {
@@ -371,11 +373,11 @@ section article .banner p {
 
 section article a {
   bottom: 3vh;
-  justify: flex-end;
+  justify-content: flex-end;
 }
 
 section article h4 {
-  font-family: 'Knockout HTF47Bantamweight Regular';
+  font-family: "Knockout HTF47Bantamweight Regular";
   font-size: 2.8vh;
   font-weight: lighter;
   line-height: 2.6vh;
@@ -383,20 +385,21 @@ section article h4 {
 }
 
 section article h5 {
-  font-family: 'Knockout HTF47Bantamweight Regular';
+  font-family: "Knockout HTF47Bantamweight Regular";
   font-size: 6.5vh;
   font-weight: lighter;
   line-height: 5vh;
-  color: #02A1D4;
+  color: #02a1d4;
   display: flex;
   align-items: center;
   margin-bottom: 1vh;
 }
 
-section article h5 i {
-  font-size: 3vh;
-  color: #80BD26;
+section article h5 svg {
+  width: 3vh;
+  color: #80bd26;
   padding-left: 5px;
+  transform: scale(170%);
 }
 
 section .cont2 {
@@ -404,7 +407,7 @@ section .cont2 {
 }
 
 .cont2:nth-child(4) {
-  background-image: url('conference.png');
+  background-image: url("/pages-img/sports-data/page2/conference.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -433,13 +436,13 @@ footer {
   position: absolute;
   width: 86vw;
   height: 12vh;
-  left:7vw;
+  left: 7vw;
   bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-top: 0.4vh solid #DADADA;
-  color: #F6F6F6;
+  border-top: 0.4vh solid #dadada;
+  color: #f6f6f6;
   line-height: 2.1vh;
   font-size: 0.7rem;
   padding-bottom: 3vh;
@@ -479,7 +482,8 @@ footer .addresses h6 {
   display: flex;
 }
 
-.cr-top *, .cr-bottom * {
+.cr-top *,
+.cr-bottom * {
   margin: 0 1vw;
 }
 
@@ -506,7 +510,7 @@ footer .addresses h6 {
 .language nav {
   position: absolute;
   bottom: 10%;
-  background: #DADADA;
+  background: #dadada;
 }
 
 .language a {
@@ -537,7 +541,7 @@ footer .addresses h6 {
   justify-content: space-around;
 }
 
-.footer-right .social-media i {
-  font-size: 1vw;
+.footer-right .social-media svg {
+  width: 1vw;
   color: #888888;
 }
