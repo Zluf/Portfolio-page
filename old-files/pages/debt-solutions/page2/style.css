@@ -1,0 +1,506 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/*Common styling*/
+
+main,
+footer {
+  font-size: 2.5vh;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: 50px;
+}
+
+h4 {
+  margin-bottom: 0.8em;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+a,
+address {
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.button {
+  /* padding: 1vw; */
+  font-size: 0.8em;
+  padding: 15px 100px 15px 20px;
+  background-color: #5bb3e0;
+  position: relative;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 1px;
+  right: 20px;
+  top: 28px;
+  background-color: white;
+}
+
+.container {
+  margin: 100px 30% 100px 17%;
+}
+
+.outer-container {
+  margin: 0 10% 0 20%;
+}
+
+.logo {
+  font-size: 3vw;
+  color: white;
+  border: 3px solid #7f7e7e;
+  border-radius: 10px;
+  padding: 0 1vw;
+  display: inline-flex;
+  margin-left: 40px;
+  margin-right: 70px;
+  color: #63abda;
+}
+
+/*Header*/
+
+header * {
+  color: #7f7e7e;
+}
+
+header {
+  width: 100%;
+  font-size: 1.8vh;
+}
+
+header .fixed {
+  position: absolute;
+  display: flex;
+  transform: rotate(-90deg);
+  margin: 250px 0 0 -240px;
+}
+
+header .fixed a {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .fixed a::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #7f7e7e;
+}
+
+header .fixed svg {
+  transform: rotate(90deg);
+  margin-left: 40px;
+}
+
+header .fixed svg .a {
+  fill: #7f7e7e;
+}
+
+header .fixed svg .a:nth-child(2) {
+  fill: #5bb3e0;
+}
+
+header .fixed svg .b {
+  fill: white;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 40px 60px 0 150px;
+}
+
+header nav ul {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.contact-address {
+  display: flex;
+  width: 35vw;
+  justify-content: space-between;
+}
+
+.contact-address .contact a {
+  display: block;
+}
+
+header h2 {
+  width: 55%;
+  color: white;
+  font-size: 5vh;
+  margin: 50px 0 0 20vw;
+  transform: translateY(40%);
+}
+
+header > img {
+  display: block;
+  width: 65vw;
+  margin-top: 60px;
+}
+
+header .icons {
+  display: block;
+  position: absolute;
+  top: 70vh;
+  right: 40px;
+  color: white;
+}
+
+header .icons i {
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/*MAIN*/
+
+main article h2 {
+  font-weight: normal;
+  font-size: 2.5em;
+  margin-top: 100px;
+}
+
+main article p,
+ol {
+  margin-top: 2em;
+  font-size: 0.8em;
+}
+
+main article ol {
+  margin: 2em 0 0 70px;
+  color: #5bb3e0;
+}
+
+main article ol li {
+  margin-bottom: 0.7em;
+}
+
+main .box {
+  width: 70%;
+  margin: 40px 0 60px 12%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .box .box-1 {
+  height: 250px;
+  background-color: #ecf5fb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #63abda;
+}
+
+main .box .box-1 img {
+  width: 25%;
+}
+
+main .box .box-1 p {
+  width: 35%;
+}
+
+main article ol:nth-child(2) {
+  list-style-type: none;
+}
+
+main article ol:nth-child(2) li:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  margin: 12px 0 0 -20px;
+  background-color: #63abda;
+}
+
+main .box .box-2-3 {
+  position: relative;
+  display: inline-block;
+  color: #63abda;
+  width: 46%;
+  margin: 40px 20px 0 0;
+  background-color: #ecf5fb;
+}
+
+main .box .box-2-3 h4 {
+  font-size: 1rem;
+}
+
+main .box .box-2-3 img {
+  width: 53%;
+  left: 50%;
+  top: -15px;
+  position: absolute;
+}
+
+main .box .box-2-3 .box-text {
+  width: 60%;
+  padding: 85px 0 50px 12%;
+}
+
+main .box .box-2-3 .button {
+  position: absolute;
+  bottom: -22px;
+  right: 10%;
+}
+
+main > img {
+  display: block;
+}
+
+main > img::after {
+  content: "JS Team at No.1 West Regent Street";
+  color: #7f7e7e;
+  display: block;
+  background-color: red;
+}
+
+main div h3 {
+  font-size: 1.6em;
+  color: #5bb3e0;
+  margin-bottom: 40px;
+}
+
+.last-button::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 1px;
+  right: 20px;
+  top: 25px;
+  background-color: white;
+}
+
+/* FOOTER */
+
+footer {
+  width: 80%;
+  margin: 80px 0;
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e5;
+}
+
+footer .top-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer * {
+  color: #a2a2a2;
+  font-size: 1.5vh;
+}
+
+footer nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: baseline;
+  align-content: space-between;
+  width: 200px;
+  height: 9vh;
+  margin-bottom: 20px;
+}
+
+footer .contact-address {
+  width: 25vw;
+}
+
+footer p {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Oxygen;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+a {
+  color: rgb(189, 172, 112);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #da6358;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Oswald;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p,
+li {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-family: Source Sans Pro;
+  color: rgba(255, 255, 255, 0.708);
+}
+
+h1,
+h2,
+h3,
+p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
+}
+
+@media only screen and (max-width: 63.9375rem) {
+  p,
+  li {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+/* Font Awesome */
+
+.hero__icons a,
+.footer__icons a {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Hover states */
+
+.header__logo:hover,
+.body__header__icons:hover {
+  color: #5c2924;
+}
+
+.header__logo,
+.hero__icons *,
+.footer__icons * {
+  transition: transform 0.2s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
+}
+
+.header__logo:hover,
+.hero__icons *:hover,
+.footer__icons *:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*Common styling*/
+
+@font-face {
+  font-family: Akkurat-Bold;
+  src: url("fonts/Akkurat-Bold.ttf");
+}
+
+@font-face {
+  font-family: Akkurat;
+  src: url("Akkurat.ttf");
+}
+
+@font-face {
+  font-family: Knockout HTF47Bantamweight Regular;
+  src: url("Knockout HTF47Bantamweight Regular.otf");
+}
+
+@font-face {
+  font-family: Akkurat-Light;
+  src: url("AKKURAT-LIGHT.TTF");
+}
+
+@font-face {
+  font-family: Akkurat-Bold-Extra;
+  src: url("AKKURAT-BOLDEXTRA.TTF");
+}
+
+.websk {
+  font-family: Knockout HTF47Bantamweight Regular;
+  font-size: 2.8vw;
+  color: white;
+  border-bottom: 3px solid #7f7e7e;
+  margin-bottom: 0.45vw;
+  display: inline-flex;
+  color: white;
+  text-transform: uppercase;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(bg-pic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+}
+
+a {
+  color: white;
+}
+
+body * {
+  font-family: "Akkurat";
+  text-decoration: none;
+}
+
+.layer-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #1c1c1d;
+  opacity: 0.4;
+}
+
+.layer-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8;
+  background: linear-gradient(0deg, black, transparent 20%);
+}
+
+.layer-4-play {
+  width: 6vw;
+  height: 6vw;
+  display: block;
+  background-color: white;
+  opacity: 0.5;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 6vh);
+  left: 44vw;
+  z-index: 2;
+}
+
+.layer-4-play i {
+  opacity: 2;
+  color: black;
+  font-size: 2vh;
+}
+
+.layer-3-container {
+  width: 86%;
+  height: 75%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: 5vh;
+  left: 7%;
+  z-index: 2;
+}
+
+.layer-3-container .logo {
+  width: 6%;
+}
+
+.layer-3-container .logo img {
+  display: block;
+  width: 100%;
+}
+
+/*HEADER*/
+
+.layer-3-container header {
+  width: 95%;
+  margin-top: 10px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.layer-3-container header nav {
+  margin-left: 5%;
+}
+
+.layer-3-container header nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  font-size: 2.2vh;
+}
+
+.layer-3-container header nav ul li a {
+  color: white;
+  padding-bottom: 5%;
+  border-bottom: 2px solid #00000000;
+  transition: border-bottom 0.5s;
+}
+
+.layer-3-container header nav ul li a:hover {
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.5s;
+}
+
+/* SEARCH & LOGIN */
+
+.search-and-login {
+  width: 24%;
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+.layer-3-container header .search-box {
+  width: 55%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 10px;
+  border: 1px solid #cfcfcf;
+}
+
+.search-box input {
+  border: 0;
+  width: 100px;
+  height: 30px;
+  color: #c6c6c6;
+  font-size: 2vh;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #c6c6c6;
+}
+
+.search-box a i {
+  color: #02a1d4;
+  font-size: 1vmax;
+}
+
+.button {
+  background: #02a1d4;
+  padding: 0 4%;
+  text-transform: uppercase;
+  font-size: 1.5vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+}
+
+.thesis {
+  width: 17vw;
+  position: absolute;
+  bottom: 0px;
+}
+
+.thesis h2 {
+  font-family: "Knockout HTF47Bantamweight Regular";
+  color: white;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 4vh;
+}
+
+.thesis .button {
+  width: 10vw;
+  margin-top: 2vh;
+}
+
+/* SECTION */
+
+article:not(selector)::before {
+  content: "";
+  width: 0.35vw;
+  height: 4.5vh;
+  background: #80bd26;
+  top: 2vh;
+  left: -0.35vw;
+  position: absolute;
+}
+
+.cont1 article:nth-child(2)::before {
+  background: #fb7a7a;
+}
+
+.cont2 article:nth-child(2)::before {
+  content: none;
+}
+
+.art-con {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  font-size: 100%;
+}
+
+.cont1:first-child,
+article,
+.cont2:last-child {
+  box-shadow: 2px 2px 12px -7px rgba(0, 0, 0, 0.2);
+}
+
+.cont1 {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cont2 {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  width: 47%;
+  height: 100%;
+  background: white;
+  position: relative;
+}
+
+.cont1:first-child {
+  position: relative;
+  background-image: url("crowd.png");
+  background-size: cover;
+}
+
+.art-con a {
+  color: #02a1d4;
+  font-size: 0.7vmax;
+}
+
+.art-con a i {
+  color: #02a1d4;
+  padding: 0 1vh;
+}
+
+h3 {
+  font-size: 1vmax;
+  font-weight: lighter;
+}
+
+.art-con p {
+  font-size: 0.7vmax;
+  line-height: 2vh;
+  color: #919191;
+}
+
+.cont1:first-child .win1-text {
+  position: absolute;
+  z-index: 3;
+  bottom: 3vh;
+  top: 0;
+  color: white;
+  padding: 25vh 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+
+section article {
+  box-sizing: border-box;
+  padding: 5% 7% 3vh 5%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+section article h3 {
+  font-weight: bold;
+  line-height: 2.2vh;
+}
+
+section article .banner {
+  width: 120%;
+  display: flex;
+  align-items: center;
+}
+
+section article .banner img {
+  width: 7vh;
+}
+
+section article:nth-child(2) .banner img {
+  width: 6vh;
+}
+
+section article .banner p {
+  font-size: 1.2vh;
+  color: black;
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+section article a {
+  bottom: 3vh;
+  justify: flex-end;
+}
+
+section article h4 {
+  font-family: "Knockout HTF47Bantamweight Regular";
+  font-size: 2.8vh;
+  font-weight: lighter;
+  line-height: 2.6vh;
+  margin-bottom: 0.8vh;
+}
+
+section article h5 {
+  font-family: "Knockout HTF47Bantamweight Regular";
+  font-size: 6.5vh;
+  font-weight: lighter;
+  line-height: 5vh;
+  color: #02a1d4;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+section article h5 i {
+  font-size: 3vh;
+  color: #80bd26;
+  padding-left: 5px;
+}
+
+section .cont2 {
+  position: relative;
+}
+
+.cont2:nth-child(4) {
+  background-image: url("conference.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.welcome {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  padding: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.welcome p {
+  margin-left: 5vw;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  width: 86vw;
+  height: 14vh;
+  top: 9vh;
+  left: 7vw;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* border-top: 0.4vh solid #DADADA; */
+  line-height: 2.1vh;
+  font-size: 0.7rem;
+  padding-bottom: 3vh;
+  font-size: 1.2vh;
+  z-index: 2;
+}
+
+footer::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  background: white;
+  top: 0;
+  opacity: 0.5;
+}
+
+address * {
+  font-style: normal;
+}
+
+footer .addresses {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  color: white;
+  opacity: 0.8;
+}
+
+/* FOOTER-RIGHT */
+
+h6 {
+  font-size: 0.7vw;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right .copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  color: #7a7979;
+}
+
+.footer-right .copyright .cr-top {
+  display: flex;
+}
+
+.cr-top *,
+.cr-bottom * {
+  margin: 0 1vw;
+}
+
+.footer-right .copyright .cr-bottom {
+  display: flex;
+}
+
+.footer-right .copyright a {
+  color: #7a7979;
+  text-decoration: underline;
+}
+
+/* LANGUAGE SELECT BOX */
+
+.language {
+  width: 12%;
+  height: 4vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 2%;
+}
+
+.language nav {
+  position: absolute;
+  bottom: 10%;
+  background: #404041;
+}
+
+.language a {
+  width: 3vw;
+  padding: 0.7vh 0.7vw;
+  color: #919191;
+  display: flex;
+  align-items: center;
+}
+
+.language a img {
+  width: 1.3vw;
+  height: 1.5vh;
+  margin-right: 15%;
+}
+
+.language a:not(:nth-child(4)) {
+  display: none;
+}
+
+.footer-right nav:hover a {
+  display: flex;
+}
+
+.footer-right .social-media {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-right .social-media i {
+  font-size: 1vw;
+  color: #7a7979;
+}

@@ -1,0 +1,37 @@
+// VARIABLES
+
+$dark: black;
+$light: rgb(189, 189, 189);
+$neutral: grey;
+$saturated: #da6358;
+$dark-deep: #5c2924;
+$text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
+$gradient-light-dark: linear-gradient(45deg, $light, $dark 95%);
+$gradient-dark-light: linear-gradient(45deg, $dark 15%, $light);
+
+// MIXINs
+
+// Breakpoints 640px, 1024px, 1400px
+$breakpoints-up: (
+  "medium": "40rem",
+  "large": "64rem",
+  "xlarge": "87.5rem",
+);
+
+// Breakpoints 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": "39.9375rem",
+  "medium": "63.9375rem",
+  "large": "86.4375rem",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

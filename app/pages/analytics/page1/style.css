@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/*Common styling*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #edeef2;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+.websk {
+  position: relative;
+  font-size: 2rem;
+  margin: 25px 0 0 200px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.websk::after {
+  position: absolute;
+  content: "";
+  top: 2.4rem;
+  width: 70px;
+  height: 2px;
+  background: white;
+}
+
+.page-select {
+  position: fixed;
+  z-index: 1;
+  color: white;
+  background-color: #080c2f;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page-select .page-num span {
+  font-size: 13px;
+}
+.page-select a {
+  line-height: 1.7;
+  text-decoration: none;
+  color: white !important;
+  font-size: inherit !important;
+}
+
+.page-select .page-num a:hover {
+  color: #40cccc !important;
+}
+
+/* Colours */
+
+.colours {
+  background: #080c2f;
+  width: 100vw;
+  height: 50vh;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+.logo {
+  width: 100%;
+  margin: 25px 0 0 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.colours img {
+  top: 0;
+  left: 0;
+  height: 65px;
+}
+
+.magenta,
+.cyan {
+  width: 125vw;
+  height: 65vh;
+}
+
+.magenta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #d8315b;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.cyan {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  right: -200px;
+  background: #40cccc;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.white {
+  display: none;
+  width: 25vw;
+  height: 25vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+/* Main */
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main * {
+  display: block;
+}
+
+.login {
+  padding-top: 32vh;
+}
+
+.login span {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.input-field,
+.button {
+  width: 320px;
+  max-width: 85vw;
+  height: 8vh;
+}
+
+.input-field {
+  background: white;
+  border: 1px solid #d1d3d9;
+  margin: 15px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.input-field img {
+  width: 4.5%;
+  margin-right: 10px;
+}
+
+label,
+input,
+a:nth-of-type(2) {
+  font-size: 12px;
+}
+
+input,
+input:focus {
+  border: none;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.button {
+  background: #080c2f;
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+a:nth-of-type(2) {
+  color: #080c2f;
+}
+
+@media only screen and (min-width: 700px) {
+  .page-select {
+    right: 2vw;
+    top: 2vw;
+  }
+
+  body {
+    display: flex;
+  }
+
+  .colours {
+    background: #080c2f;
+    width: 35%;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    clip-path: none;
+  }
+
+  /* .logo {
+    width: 100%;
+    margin: -45vh 0 0 0;
+  }
+
+  .logo img {
+    height: 90px;
+  } */
+
+  .websk {
+    margin: -20vw 0 0 0;
+    /* font-size: 2.8vw; */
+  }
+
+  .magenta,
+  .cyan {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .cyan {
+    right: 0;
+  }
+
+  .white {
+    display: block;
+  }
+
+  main {
+    background: #edeef2;
+    width: 65%;
+    height: 100vh;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login {
+    padding-top: 0;
+  }
+
+  .login span {
+    font-size: 2.5vw;
+    font-weight: lighter;
+    margin-bottom: 2vw;
+  }
+
+  label,
+  a:nth-of-type(2) {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  .input-field,
+  .button {
+    width: 27vw;
+    height: 3.5vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .input-field img {
+    width: 4%;
+  }
+
+  .button {
+    font-size: 1.3vw;
+    font-weight: 500;
+  }
+}
