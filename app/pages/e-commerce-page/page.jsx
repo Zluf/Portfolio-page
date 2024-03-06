@@ -9,7 +9,7 @@ import Purchase from "./components/Purchase";
 import Cart from "./components/Cart/Cart";
 import SliderFullScreen from "./components/Slider/SliderFullScreen";
 
-function App() {
+function ECommercePage() {
   const [showCart, setShowCart] = React.useState(false);
   const [showSlider, setShowSlider] = React.useState(false);
   const [currentAmountInCart, setCurrentAmountInCart] = React.useState(0);
@@ -88,4 +88,4 @@ function App() {
   );
 }
 
-export default App;
+export default ECommercePage;

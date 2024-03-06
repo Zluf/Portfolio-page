@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 
-export default function page() {
+export default function AdviceGeneratorApp() {
   const [h2, setH2] = useState("");
   const [p, setP] = useState("");
   const [opacity, setOpacity] = useState(1);

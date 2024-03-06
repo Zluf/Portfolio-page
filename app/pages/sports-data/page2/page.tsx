@@ -12,7 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function page() {
+export default function SportsDataPage2() {
   return (
     <>
       <div className="layer-1"></div>

@@ -39,7 +39,7 @@ const Slider = (props) => {
           style={{ transform: `translateX(-${25 * props.currentImage}%)` }}
         >
           {Object.values(productImages).map((img, i) => {
-            return <img key={i} src={img.default.src} alt="trainers" />;
+            return <img key={img} src={img.default.src} alt="trainers" />;
           })}
         </div>
       </div>
@@ -65,7 +65,7 @@ const Slider = (props) => {
         {Object.values(productImages).map((img, i) => {
           return (
             <div
-              key={i}
+              key={img}
               style={
                 props.currentImage === i
                   ? { border: "2px solid var(--orange)" }
