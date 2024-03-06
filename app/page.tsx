@@ -1,6 +1,8 @@
 "use client";
 
 import "../styles/globals.css";
+import "../styles/header.scss";
+import "../styles/main.scss";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
