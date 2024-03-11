@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Slav Konovalov - Front End Developer",
-  description: "Front End Development portfolio page",
+  title: "Slav Konovalov | Front End Developer",
+  description: "Front End Developer Portfolio",
+  icons: ["/img/sk-logo.png"],
 };
 
 export default function RootLayout({
