@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import "../styles/globals.css";
+import "../styles/header.scss";
+import "../styles/main.scss";
 
 export const metadata: Metadata = {
   title: "Slav Konovalov | Front End Developer",

@@ -4,18 +4,18 @@ import "../styles/globals.css";
 import "../styles/header.scss";
 import "../styles/main.scss";
 
-import Header from "./components/Header";
+import Header from "../old-components/Header";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Footer from "./components/Footer";
-import Portfolio from "./components/Portfolio";
+import About from "../old-components/About";
+import Education from "../old-components/Education";
+import Skills from "../old-components/Skills";
+import Footer from "../old-components/Footer";
+import Portfolio from "../old-components/Portfolio";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       {/* <main>
         <About />
