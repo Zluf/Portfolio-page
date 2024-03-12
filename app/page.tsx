@@ -5,17 +5,19 @@ import "../styles/header.scss";
 import "../styles/main.scss";
 
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import About from "../old-components/About";
 import Education from "../old-components/Education";
 import Skills from "../old-components/Skills";
 import Footer from "../old-components/Footer";
 import Portfolio from "../old-components/Portfolio";
+import Head from "next/head";
+import Title from "./components/Title";
 
 export default function Home() {
   return (
-    <>
-      <Header />
+    <section className="wrapper">
+      <Title />
+      {/* <Test /> */}
       {/* <Hero /> */}
       {/* <main>
         <About />
@@ -25,6 +27,6 @@ export default function Home() {
       </main>
 
       <Footer /> */}
-    </>
+    </section>
   );
 }

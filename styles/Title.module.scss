@@ -1,0 +1,24 @@
+.title {
+  line-height: 1.2;
+  margin-top: 40vh;
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: rgb(197, 59, 59);
+  }
+}

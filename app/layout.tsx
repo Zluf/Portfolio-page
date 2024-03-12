@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/header.scss";
 import "../styles/main.scss";
+import Header from "./components/Header";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Slav Konovalov | Front End Developer",
@@ -16,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="body">{children}</body>
+      <body id="body">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
