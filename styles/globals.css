@@ -15,7 +15,7 @@
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
   background-image: linear-gradient(45deg, black 15%, rgba(0, 0, 0, 0.619)),
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==);
   background-attachment: fixed;
@@ -77,10 +77,6 @@ p {
     font-size: 1.1rem;
     line-height: 1.8rem;
   }
-}
-
-.flex {
-  display: flex;
 }
 
 /* Font Awesome */

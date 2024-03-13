@@ -1,11 +1,13 @@
 import React from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import classes from "../../styles/Icons.module.scss";
 
-const HeroTitle: React.FC = () => {
+const Icons: React.FC = () => {
   return (
-    <nav className="hero__icons">
+    <nav className={classes.icons}>
       <a
         href="https://www.linkedin.com/in/slav-konovalov-466650182"
         target="_blank"
@@ -30,4 +32,4 @@ const HeroTitle: React.FC = () => {
   );
 };
 
-export default HeroTitle;
+export default Icons;

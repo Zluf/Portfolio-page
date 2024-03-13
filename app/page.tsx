@@ -12,6 +12,7 @@ import Footer from "../old-components/Footer";
 import Portfolio from "../old-components/Portfolio";
 import Head from "next/head";
 import Title from "./components/Title";
+import Icons from "./components/Icons";
 
 export default function Home() {
   return (

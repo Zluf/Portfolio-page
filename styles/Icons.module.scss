@@ -1,0 +1,19 @@
+.icons {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  top: 60vh;
+  right: 30px;
+
+  svg {
+    width: 35px;
+    height: 35px;
+    color: white;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
