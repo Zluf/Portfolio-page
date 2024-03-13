@@ -6,12 +6,17 @@
   display: flex;
   flex-direction: row;
   gap: 15px;
-  bottom: 15vh;
+  bottom: 5vh;
   left: var(--padding);
+  // flex-direction: column;
+  // gap: 10px;
+  // left: auto;
+  // bottom: 25vh;
+  // right: var(--padding);
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     color: white;
     transition: all 0.3s;
     &:hover {

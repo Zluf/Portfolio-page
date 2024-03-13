@@ -14,9 +14,7 @@ export default function About() {
         <p>Greetings, dear visitor!</p>
         <p>
           My name is Slav Konovalov. I'm a Front-End Developer residing in
-          Stockport, UK. This website showcases some of&nbsp;
-          <a href="#portfolio">my works&nbsp;</a>built along an ongoing study of
-          Front-End technologies.
+          Stockport, UK. 
         </p>
         <p>
           I'm currently open to jobs or projects that match the skill level of a
