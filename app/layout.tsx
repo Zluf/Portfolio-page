@@ -22,7 +22,7 @@ export default function RootLayout({
       <body id="body">
         <Header />
         <Icons />
-        {children}
+        <div className="wrapper">{children}</div>
       </body>
     </html>
   );

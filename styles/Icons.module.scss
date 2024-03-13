@@ -1,19 +1,29 @@
+@use "_partials";
+
 .icons {
   position: absolute;
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  top: 60vh;
-  right: 30px;
+  flex-direction: row;
+  gap: 15px;
+  bottom: 15vh;
+  left: var(--padding);
 
   svg {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     color: white;
     transition: all 0.3s;
     &:hover {
       transform: scale(1.2);
     }
+  }
+
+  @include partials.breakpoint-up(medium) {
+    flex-direction: column;
+    gap: 10px;
+    left: auto;
+    bottom: 25vh;
+    right: var(--padding);
   }
 }

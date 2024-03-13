@@ -16,7 +16,7 @@ import Icons from "./components/Icons";
 
 export default function Home() {
   return (
-    <section className="wrapper">
+    <>
       <Title />
       {/* <Test /> */}
       {/* <Hero /> */}
@@ -28,6 +28,6 @@ export default function Home() {
       </main>
 
       <Footer /> */}
-    </section>
+    </>
   );
 }

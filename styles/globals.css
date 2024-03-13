@@ -2,6 +2,7 @@
 
 :root {
   --golden: #d9c65a;
+  --padding: 5vw;
 }
 
 * {
@@ -41,7 +42,7 @@ button {
 
 .wrapper {
   display: flex;
-  padding: 0 30px;
+  padding: 0 var(--padding);
 }
 
 h1,
