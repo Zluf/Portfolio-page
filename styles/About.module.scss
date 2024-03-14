@@ -7,28 +7,16 @@
   align-items: center;
   justify-content: space-evenly;
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .textWrapper {
-    height: 60vh;
-    overflow-y: scroll;
-  }
-  p {
-    // padding-right: calc(var(--padding) * 2);
-    margin-bottom: 1rem;
-  }
-
   @include partials.breakpoint-up(medium) {
     flex-direction: row;
     gap: 2rem;
-    .textWrapper {
-      height: 100%;
+    article {
+      max-width: 450px;
     }
-    p {
-      max-width: 500px;
-    }
+  }
+
+  p {
+    margin-bottom: 1rem;
   }
 }
 

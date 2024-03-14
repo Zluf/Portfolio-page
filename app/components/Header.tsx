@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import HeaderMenuButton from "./HeaderMenuButton";
 import classes from "../../styles/Header.module.scss";
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={classes.header}>
-      <Link href="/">
+      <Link onClick={() => setMenuOnOff(true)} href="/">
         <Image
           className={classes.logo}
           src="/img/sk-logo.png"
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       </Link>
 
       <HeaderMenuButton menuOnOff={menuOnOff} toggleBrgrMenu={toggleBrgrMenu} />
-      <HeaderNavMenu menuOnOff={menuOnOff} />
+      <HeaderNavMenu menuOnOff={menuOnOff} toggleBrgrMenu={toggleBrgrMenu} />
     </header>
   );
 };

@@ -3,16 +3,30 @@ import Link from "next/link";
 
 import classes from "../../styles/Header.module.scss";
 
-const HeaderNavMenu: React.FC<{ menuOnOff: boolean }> = ({ menuOnOff }) => {
+type HeaderNavMenusProps = {
+  menuOnOff?: boolean;
+  toggleBrgrMenu?: () => void;
+};
+
+const HeaderNavMenu: React.FC<HeaderNavMenusProps> = ({
+  menuOnOff,
+  toggleBrgrMenu,
+}) => {
   return (
     <nav
       className={`${classes.navMenu} ${
         !menuOnOff ? classes["navMenu__open"] : ""
       }`}
     >
-      <Link href="/about">About</Link>
-      <Link href="">Experience</Link>
-      <Link href="">Projects</Link>
+      <Link onClick={toggleBrgrMenu} href="/about">
+        About
+      </Link>
+      <Link onClick={toggleBrgrMenu} href="/experience">
+        Experience
+      </Link>
+      <Link onClick={toggleBrgrMenu} href="/projects">
+        Projects
+      </Link>
     </nav>
   );
 };

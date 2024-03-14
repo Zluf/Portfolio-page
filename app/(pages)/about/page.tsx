@@ -7,7 +7,7 @@ export default function About() {
     <section className={classes.about}>
       <article>
         <h2>About Me</h2>
-        <div className={classes.textWrapper}>
+        <div className="textWrapper">
           <p>Greetings, dear visitor!</p>
           <p>
             My name is Slav Konovalov. I'm a Front-End Developer residing in
@@ -38,25 +38,6 @@ export default function About() {
             .
           </p>
         </div>
-
-        {/* <h2>Skills</h2>
-        <div className={classes.skillWrapper}>
-          <div>
-            <Image
-              src="/img/png-icons/React.png"
-              width={50}
-              height={50}
-              alt="react"
-            />
-          </div>
-
-          <Image
-            src="/img/png-icons/Sass.png"
-            width={50}
-            height={50}
-            alt="react"
-          />
-        </div> */}
       </article>
       <Image
         className={classes.logoImg}

@@ -1,0 +1,34 @@
+@use "_partials.scss";
+
+.experience {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .expEntry {
+    margin-bottom: 3rem;
+    @include partials.breakpoint-up(medium) {
+      gap: 2rem;
+      padding-right: var(--padding);
+    }
+    @include partials.breakpoint-up(large) {
+      display: flex;
+      padding-right: var(--padding);
+      justify-content: space-between;
+      align-items: center;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .imgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    @include partials.breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+  }
+}
