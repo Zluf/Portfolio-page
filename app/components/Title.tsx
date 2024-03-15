@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "../../styles/Title.module.scss";
+import classes from "./Title.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 

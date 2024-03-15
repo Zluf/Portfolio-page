@@ -1,4 +1,4 @@
-@use "_partials.scss";
+@use "@/styles/partials.scss";
 
 .experience {
   display: flex;
@@ -9,6 +9,7 @@
     margin-bottom: 3rem;
     @include partials.breakpoint-up(medium) {
       gap: 2rem;
+      // additional padding for icons on large view
       padding-right: var(--padding);
     }
     @include partials.breakpoint-up(large) {

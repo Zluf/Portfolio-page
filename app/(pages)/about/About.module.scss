@@ -1,18 +1,21 @@
-@use "_partials";
+@use "@/styles/_partials";
 
 .about {
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
 
   @include partials.breakpoint-up(medium) {
+    padding-top: 100px;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 2rem;
     article {
-      max-width: 450px;
+      max-width: 500px;
     }
+  }
+  @include partials.breakpoint-up(large) {
+    padding-top: 120px;
   }
 
   p {
@@ -38,7 +41,4 @@
 .skillWrapper {
   display: flex;
   gap: 1rem;
-  img {
-    // filter: saturate(100) brightness(1000);
-  }
 }

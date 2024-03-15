@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "../../styles/Header.module.scss";
+import classes from "./Header.module.scss";
 
 type HeaderManuButtonProps = {
   menuOnOff?: boolean;

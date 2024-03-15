@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import "../styles/header.scss";
-import "../styles/main.scss";
 import Header from "./components/Header";
 import Icons from "./components/Icons";
 
@@ -21,6 +19,7 @@ export default function RootLayout({
       <body id="body">
         <Header />
         <Icons />
+        <div className="overlay"></div>
         <div className="wrapper">{children}</div>
       </body>
     </html>

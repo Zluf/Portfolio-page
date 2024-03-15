@@ -2,15 +2,15 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import classes from "../../styles/Icons.module.scss";
+import classes from "./Icons.module.scss";
 
 const Icons: React.FC = () => {
   return (
     <nav className={classes.icons}>
       <a
         href="https://www.linkedin.com/in/slav-konovalov-466650182"
-        target="_blank"
         aria-label="LinkedIn page link"
+        target="_blank"
       >
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
@@ -24,6 +24,7 @@ const Icons: React.FC = () => {
       <a
         href="mailto:slav.konovalov@gmail.com?subject=Interested in web development services&body=Hi, Slav"
         aria-label="Email link"
+        target="_blank"
       >
         <FontAwesomeIcon icon={faEnvelope} />
       </a>

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import classes from "../../styles/Header.module.scss";
+import classes from "./Header.module.scss";
 
 type HeaderNavMenusProps = {
   menuOnOff?: boolean;

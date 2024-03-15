@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import HeaderMenuButton from "./HeaderMenuButton";
-import classes from "../../styles/Header.module.scss";
+import classes from "./Header.module.scss";
 import HeaderNavMenu from "./HeaderNavMenu";
 import Link from "next/link";
 

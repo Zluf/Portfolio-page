@@ -1,6 +1,4 @@
 import "../styles/globals.css";
-import "../styles/header.scss";
-import "../styles/main.scss";
 
 import Title from "./components/Title";
 

@@ -1,4 +1,4 @@
-@use "_partials";
+@use "@/styles/_partials";
 
 .header {
   position: fixed;
@@ -30,13 +30,12 @@
 //
 .menuBtn {
   background-color: transparent;
-  width: 30px;
+  width: 32px;
   height: 25px;
   position: relative;
   cursor: pointer;
   z-index: 2;
   transition: all 0.5s;
-
   @include partials.breakpoint-up(medium) {
     display: none;
   }
@@ -62,21 +61,23 @@
   }
 
   &__open {
-    transform: translateY(-50%);
+    // transform: translateY(50%);
+    &:hover *::before,
+    &:hover *::after {
+      background-color: var(--golden);
+    }
 
     * {
-      background-color: transparent !important;
+      background-color: transparent;
       &::before {
-        transform: rotate(45deg) translate(16px, 16px);
+        left: 4px;
+        transform-origin: left;
+        transform: rotate(45deg);
       }
       &::after {
+        left: 4px;
+        transform-origin: left;
         transform: rotate(-45deg);
-      }
-      &:hover::after {
-        background-color: var(--golden);
-      }
-      &:hover::before {
-        background-color: var(--golden);
       }
     }
   }
