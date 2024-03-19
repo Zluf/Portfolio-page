@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import Header from "./components/Header/Header";
-import Icons from "./components/Icons";
+import "@/styles/globals.css";
+import Header from "../components/Header/Header";
+import Icons from "../components/Icons";
 
 export const metadata: Metadata = {
   title: "Slav Konovalov | Front End Developer",

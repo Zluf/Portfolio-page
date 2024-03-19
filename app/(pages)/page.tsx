@@ -1,6 +1,6 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 
-import Title from "./components/Title";
+import Title from "../components/Title";
 
 export default function Home() {
   return (
