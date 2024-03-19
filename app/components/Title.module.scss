@@ -1,0 +1,89 @@
+.title {
+  position: absolute;
+  line-height: 1.2;
+  bottom: 10vh;
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: rgb(197, 59, 59);
+  }
+
+  .skills {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: all 0.3s;
+      &:hover::after {
+        position: absolute;
+        bottom: -75%;
+        background-color: white;
+        color: black;
+        font-size: 0.7rem;
+        padding: 1px 5px;
+        width: max-content;
+      }
+    }
+    svg,
+    img {
+      filter: grayscale(25%) brightness(300%) opacity(75%);
+      transition: all 0.3s;
+    }
+    svg:hover,
+    img:hover {
+      filter: none;
+    }
+
+    .react:hover::after {
+      content: "React (incl. Next.js & React Native)";
+    }
+    .ts:hover::after {
+      content: "TypeScript";
+    }
+    .js {
+      svg {
+        color: yellow;
+      }
+      &:hover::after {
+        content: "JavaScript";
+      }
+    }
+    .sass:hover::after {
+      content: "Sass";
+    }
+    .css {
+      svg {
+        color: rgb(43, 93, 255);
+      }
+      &:hover::after {
+        content: "CSS";
+      }
+    }
+    .html:hover::after {
+      content: "HTML";
+    }
+    .git:hover::after {
+      content: "Git & GitHub";
+    }
+  }
+}

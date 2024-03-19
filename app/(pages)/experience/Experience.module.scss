@@ -1,0 +1,44 @@
+@use "@/styles/partials.scss";
+
+.experience {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .expEntry {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    p {
+      max-width: 500px;
+    }
+    @include partials.breakpoint-up(medium) {
+      gap: 2rem;
+    }
+    @include partials.breakpoint-up(large) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-right: var(--padding);
+      justify-content: space-between;
+      p {
+        max-width: 100%;
+      }
+
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .imgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    @include partials.breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+  }
+}

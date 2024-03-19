@@ -1,0 +1,35 @@
+@use "@/styles/_partials";
+
+.icons {
+  // On Mobile view the dedicated bottom area is the remaining 90vh:
+  // ./globals.css -> .wrapper -> height: 90vh
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem var(--padding);
+
+  svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  @include partials.breakpoint-up(medium) {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: auto;
+    padding: 0;
+    gap: 10px;
+    left: auto;
+    right: calc(var(--padding) / 2);
+  }
+}

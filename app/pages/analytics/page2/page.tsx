@@ -32,22 +32,17 @@ const Pres: React.FC<{ [key: string]: string }> = ({
 export default function AnalyticsPage2() {
   return (
     <>
-      <nav>
-        <ul>
-          <a href="/" className="websk">
-            web <br />
-            sk
-          </a>
-          <a href="#">
-            <img src="/pages-img/analytics/page2/Group 487.svg" alt="menu" />
-          </a>
-          <a href="./page3">
-            <img
-              src="/pages-img/analytics/page2/Group 470.svg"
-              alt="schedule"
-            />
-          </a>
-        </ul>
+      {/* <nav>
+        <a href="/" className="websk">
+          web <br />
+          sk
+        </a>
+        <a href="#">
+          <img src="/pages-img/analytics/page2/Group 487.svg" alt="menu" />
+        </a>
+        <a href="./page3">
+          <img src="/pages-img/analytics/page2/Group 470.svg" alt="schedule" />
+        </a>
         <a href="./page1">
           <img
             src="/pages-img/analytics/page2/Component 2 – 1.svg"
@@ -123,7 +118,7 @@ export default function AnalyticsPage2() {
           )}
         </ul>
         <div className="shadow"></div>
-      </section>
+      </section> */}
     </>
   );
 }

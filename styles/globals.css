@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
+:root {
+  --golden: #d9c65a;
+  --padding: 30px;
+  @media screen and (min-width: 375px) {
+    --padding: 10vw;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +15,14 @@
   list-style: none;
   font-family: Oxygen;
   font-weight: 400;
-  line-height: 1.6;
+}
+
+html {
+  overflow-x: hidden;
+  background-image: linear-gradient(45deg, black 15%, rgba(0, 0, 0, 0.619)),
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==);
+  background-attachment: fixed;
+  background-blend-mode: screen;
 }
 
 a {
@@ -15,9 +30,45 @@ a {
   text-decoration: none;
   transition: all 0.3s;
 }
-
 a:hover {
-  color: #da6358;
+  color: var(--golden);
+}
+
+button {
+  border: none;
+}
+
+section {
+  overflow-y: scroll;
+  padding: 100px var(--padding) 80px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper {
+  /* designed for feathered footer effect at the bottom */
+  display: flex;
+  position: fixed;
+  scrollbar-color: white transparent;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  mask-image: linear-gradient(
+    transparent 5%,
+    black 15%,
+    black 80%,
+    transparent 99%
+  );
+}
+
+strong {
+  font-weight: bold;
+  color: white;
 }
 
 h1,
@@ -47,16 +98,12 @@ p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.423);
 }
 
-@media only screen and (max-width: 63.9375rem) {
+@media only screen and (min-width: 63.9375rem) {
   p,
   li {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
-}
-
-.flex {
-  display: flex;
 }
 
 /* Font Awesome */

@@ -1,0 +1,44 @@
+@use "@/styles/_partials";
+
+.about {
+  width: 100%;
+
+  @include partials.breakpoint-up(medium) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 200px;
+    gap: 2rem;
+    article {
+      max-width: 500px;
+    }
+  }
+  @include partials.breakpoint-up(large) {
+    padding-top: 250px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+//
+//
+//
+.logoImg {
+  display: none;
+  opacity: 0.25;
+  filter: invert(100%) drop-shadow(0 0 10px var(--golden));
+  @include partials.breakpoint-up(large) {
+    display: block;
+  }
+}
+
+//
+//
+//
+.skillWrapper {
+  display: flex;
+  gap: 1rem;
+}

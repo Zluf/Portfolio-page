@@ -122,8 +122,9 @@
     .slider-navigation {
       justify-content: center;
       &__btn-container {
-        width: 70%;
-        justify-content: space-around;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
         .slide-btn {
           cursor: pointer;
           border: none;
@@ -147,6 +148,7 @@
     margin-bottom: 1vh;
 
     li {
+      display: inline;
       font-weight: 600;
       background: linear-gradient(
         45deg,
@@ -155,7 +157,7 @@
         rgb(133, 133, 133)
       );
       box-shadow: 5px 10px 10px #0000008b;
-      padding: 0 1vw;
+      padding: 5px 7px;
       font-size: small;
       margin-right: 1vw;
     }
@@ -174,30 +176,6 @@
       position: static;
       li {
         font-size: 0.75rem;
-      }
-    }
-  }
-
-  .prj__img-box {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    box-shadow: 5px 10px 10px #6c6c6c;
-
-    img {
-      width: 100%;
-    }
-
-    @include breakpoint-up(medium) {
-      &:hover .img__overlay {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0%);
-      }
-    }
-    @include breakpoint-up(large) {
-      &:hover {
-        transform: scale(1.2, 1.2) translateY(-6%);
       }
     }
   }
