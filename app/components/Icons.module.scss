@@ -24,11 +24,12 @@
 
   @include partials.breakpoint-up(medium) {
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
     width: auto;
     padding: 0;
     gap: 10px;
     left: auto;
-    bottom: 25vh;
-    right: var(--padding);
+    right: calc(var(--padding) / 2);
   }
 }

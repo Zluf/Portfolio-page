@@ -18,12 +18,16 @@ export default function Experience() {
           />
         </div>
         <p>
-          Since November 2024 I'm involved with Spring Act, an non-profit
-          organisation connecting human rights and technology. Their flagship
-          project Sophia is a chatbot that assists survivors of domestic
-          violence. I'm responsible for the development client-side code of
-          Sophia. I'm also involved in the front end development of other Spring
-          Act's future projects and have participated in their 2024 Hackathon.
+          Since November 2024, I've been actively engaged with{" "}
+          <a href="https://springact.org">Spring Act</a>, a non-profit
+          organization at the intersection of human rights and technology.
+          Within this role, I contribute to the development of client-side code
+          for their flagship project <a href="https://sophia.chat/">Sophia</a> —
+          a chatbot designed to assist survivors of domestic violence.
+          Additionally, I play a pivotal role in the front-end development of
+          upcoming projects at Spring Act, and I had the privilege to
+          participate in their{" "}
+          <a href="https://springact.org/hackathon-2024/">2024 Hackathon</a>.
         </p>
       </div>
 
@@ -36,13 +40,18 @@ export default function Experience() {
           />
         </div>
         <p>
-          Since early 2023 I've been a regular attendee of Software Crafters
-          Manchester, a meet-up group for software developers. During one kind
-          of sessions I would join improvised teams to solve coding katas in the
-          paradigm of Test-Driven Development. Other sessions would be dedicated
-          to the discussion of Tech-related problems and their possible
-          solutions. The group is run by the Manchester branch of Codurance, a
-          global software consultancy.
+          Starting from early 2023, I've been a dedicated participant at{" "}
+          <a href="https://www.meetup.com/software-crafters-manchester/">
+            Software Crafters Manchester
+          </a>
+          , a prominent local meetup group for software developers. During these
+          sessions, I immerse myself in collaborative problem-solving
+          activities, such as coding katas centered around Test-Driven
+          Development methodologies. Furthermore, I actively engage in
+          discussions addressing various tech-related challenges and their
+          potential solutions. The group is organized the Manchester branch of{" "}
+          <a href="https://www.codurance.com">Codurance</a>, a renowned global
+          software consultancy.
         </p>
       </div>
 
@@ -56,12 +65,19 @@ export default function Experience() {
         </div>
 
         <p>
-          In March 2022 I took part in Global Legal Hackathon 2022. I joined a
-          team of other participants of diverse professional backgrounds. The
-          goal was to develop a new app that had to be accomplished and
-          published within 48 hours. The team won the first stage of the
-          competition in the category of Access to Justice. Review of the event
-          can be viewed <a href="">here</a> .
+          In March 2022, I seized the opportunity to participate in the{" "}
+          <a href="https://globallegalhackathon.com/">
+            Global Legal Hackathon 2022
+          </a>
+          . Working alongside a diverse team composed of professionals from
+          various backgrounds, we endeavored to develop a new application within
+          a stringent 48-hour timeframe. Our efforts culminated in winning the
+          first stage of the competition in the Access to Justice category. A
+          comprehensive review of the event can be accessed{" "}
+          <a href="https://www.legaltech.wales/researcher-blogs/lilw-meets-glh-2022-fastlaw">
+            here
+          </a>
+          .
         </p>
       </div>
     </section>

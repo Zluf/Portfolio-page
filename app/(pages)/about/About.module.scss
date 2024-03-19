@@ -4,18 +4,18 @@
   width: 100%;
 
   @include partials.breakpoint-up(medium) {
-    padding-top: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 200px;
     gap: 2rem;
     article {
       max-width: 500px;
     }
   }
   @include partials.breakpoint-up(large) {
-    padding-top: 120px;
+    padding-top: 250px;
   }
 
   p {

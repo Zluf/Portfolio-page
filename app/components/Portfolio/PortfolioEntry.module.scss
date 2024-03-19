@@ -1,0 +1,289 @@
+@use "@/styles/_partials";
+
+.smallerPrj,
+.prj {
+  margin-top: 2rem;
+  .navLinks,
+  .skillsUsed {
+    margin-bottom: 0.3rem;
+  }
+}
+
+//
+//
+.smallerPrj {
+  position: relative;
+  @include partials.breakpoint-up(medium) {
+    width: 45%;
+    .title h3 {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+//
+//
+.prj {
+  position: relative;
+  width: 100%;
+  .imgOverlay .innerNavLinks {
+    display: none;
+  }
+  @include partials.breakpoint-up(medium) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .title h3 {
+      font-size: 1.5rem;
+    }
+    .imgOverlay {
+      background: transparent;
+      padding: 0;
+      width: 45%;
+    }
+    .slider {
+      width: 45%;
+    }
+    .skillsUsed,
+    .slider,
+    .imgOverlay {
+      margin-left: 1rem;
+    }
+  }
+  @include partials.breakpoint-up(large) {
+    width: 45%;
+    > .navLinks {
+      .pageLink,
+      .githubLink {
+        display: none;
+      }
+    }
+    &:nth-child(even) {
+      flex-direction: row;
+    }
+    &:hover {
+      .skillsUsed {
+        z-index: 1;
+      }
+      .slider {
+        transform: scale(1.2, 1.2) translateY(-6%);
+        .reel {
+          opacity: 0.25;
+        }
+      }
+      .imgOverlay {
+        opacity: 1;
+        .innerNavLinks {
+          display: flex;
+        }
+      }
+    }
+
+    .slider {
+      width: 100%;
+    }
+    .skillsUsed,
+    .slider,
+    .imgOverlay {
+      margin-left: 0rem;
+    }
+    .imgOverlay {
+      width: 110%;
+      transform: translateX(-5%);
+      position: absolute;
+      top: 4.8rem;
+      opacity: 0;
+      transition: all 0.3s;
+      a {
+        display: flex;
+      }
+      p,
+      li {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+//
+//
+//
+.navLinks {
+  display: flex;
+  gap: 1rem 0.5rem;
+  align-items: baseline;
+  width: 100%;
+
+  a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    margin-right: 0.3rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .pageLink:hover,
+  .githubLink:hover {
+    transform: scale(1.5);
+  }
+  .pageLink:hover::after,
+  .githubLink:hover::after {
+    position: absolute;
+    bottom: -100%;
+    background-color: white;
+    color: black;
+    font-size: 0.5rem;
+    padding: 1px 5px;
+    width: max-content;
+  }
+  .pageLink:hover::after {
+    content: "View Page";
+  }
+  .githubLink:hover::after {
+    content: "View GitHub page";
+  }
+  svg {
+    color: white;
+    width: 1rem;
+  }
+}
+
+//
+//
+//
+.skillsUsed {
+  flex-wrap: wrap;
+  @include partials.breakpoint-up(medium) {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  @include partials.breakpoint-up(large) {
+    position: static;
+    li {
+      font-size: 0.75rem;
+    }
+  }
+
+  li {
+    display: inline;
+    font-weight: 600;
+    background: linear-gradient(
+      45deg,
+      rgb(79, 78, 78),
+      14%,
+      rgb(133, 133, 133)
+    );
+    box-shadow: 5px 10px 10px #0000008b;
+    padding: 5px 7px;
+    font-size: small;
+    margin-right: 1vw;
+  }
+}
+
+//
+//
+//
+.imgOverlay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem 1rem 2rem;
+  position: relative;
+  background-image: linear-gradient(
+    45deg,
+    rgba(50, 50, 50, 0.471) 1%,
+    rgba(255, 255, 255, 0.445)
+  );
+  .innerNavLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    svg {
+      width: auto;
+      height: 1.5rem;
+    }
+  }
+  ul {
+    padding-left: 5%;
+  }
+  li {
+    list-style: disc;
+  }
+  p,
+  li {
+    color: rgba(255, 255, 255, 0.74);
+    line-height: 1.2rem;
+    text-shadow: 2px 2px 4px rgb(40, 25, 0);
+  }
+}
+
+//
+//
+//
+.sliderNavigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -1.4rem;
+  gap: 1rem;
+  .slideBtn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: medium;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    color: white;
+  }
+  .slideBtn:hover {
+    transform: scale(1.2);
+  }
+}
+
+.slider {
+  overflow: hidden;
+  transition: all 0.3s;
+  .reel {
+    position: relative;
+    display: flex;
+    transform: translateX(0);
+    transition: all 0.3s;
+
+    .slide {
+      display: flex;
+      img {
+        width: 100%;
+      }
+    }
+    .slides-x2 {
+      width: 204%;
+      .slide {
+        width: 50%;
+      }
+    }
+    .slides-x3 {
+      width: 309%;
+      .slide {
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+.imgBox {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  img {
+    width: 100%;
+  }
+}

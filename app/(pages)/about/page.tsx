@@ -9,27 +9,36 @@ export default function About() {
         <p>Greetings, dear visitor!</p>
         <p>
           My name is Slav Konovalov. I'm a Front-End Developer residing in
-          Manchester, UK. My areas of focus are apps and web pages built with{" "}
-          <strong>React.js</strong> with strong emphasis UI and UX design.
+          Manchester, UK. MMy expertise lies in crafting applications and web
+          pages using <strong>React.js</strong> (including extensions{" "}
+          <strong>Next.js</strong> and <strong>React Native</strong>) with a
+          strong focus on both UI design and functionality.
         </p>
 
         <p>
-          I started my journey as an attempt at career change in 2021. After
-          grasping the basics of HTML/CSS I started building web pages as
-          practice projects. That was under the guidance of a senior developer{" "}
-          (Tom Parson of Huddle Digital) who took me through the principles and
-          standards of Front End Development.
+          My journey into the realm of Front-End Development began in 2021,
+          spurred by a desire for a career change. Starting with the
+          fundamentals of HTML/CSS, I began crating web pages as practical
+          exercises. Guided by the expertise of a seasoned developer,{" "}
+          <a href="https://tomparson.com/">Tom Parson</a> from Huddle Digital, I
+          delved into the principles and standards of Front-End Development.
         </p>
         <p>
           In the coming years I would build my own web projects, take part in
-          Hackathons, engage with other Developers at local meetups, take part
-          in a number of courses to further my knowledge. Up to this day I
-          continue to practice everything that was mentioned above, while never
-          losing passion and fasciantion for the craft.
+          Hackathons, network with other Developers at local meetups, undertake
+          a number of Udemy courses to enhance my skill set. To this day, I
+          remain dedicated to honing my craft, fueled by an unwavering passion
+          and fascination.
         </p>
 
         <p>
-          You can view my resume {""}
+          Presently, I am proud to be a member of the esteemed developer team at{" "}
+          <a href="https://springact.org">Spring Act</a>, an NGO dedicated to
+          supporting victims of domestic violence.
+        </p>
+
+        <p>
+          For further details, please feel free to explore my resume {""}
           <a href="https://drive.google.com/file/d/1QIGpIIXwkRXfM63f_FPbaHA0m0v9lQoY/view?usp=sharing">
             here
           </a>

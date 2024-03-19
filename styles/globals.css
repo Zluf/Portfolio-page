@@ -39,9 +39,8 @@ button {
 }
 
 section {
-  /* padding-bottom: 1000px; */
   overflow-y: scroll;
-  padding: 100px var(--padding) 50px;
+  padding: 100px var(--padding) 80px;
 }
 
 section h2 {
@@ -51,16 +50,20 @@ section h2 {
 
 .wrapper {
   /* designed for feathered footer effect at the bottom */
-  /* overflow: hidden; */
   display: flex;
   position: fixed;
-  overflow-y: scroll;
+  scrollbar-color: white transparent;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: -1;
-  mask-image: linear-gradient(black 80%, transparent 99%);
+  mask-image: linear-gradient(
+    transparent 5%,
+    black 15%,
+    black 80%,
+    transparent 99%
+  );
 }
 
 strong {

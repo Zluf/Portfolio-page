@@ -20,6 +20,7 @@
 .logo {
   filter: invert(100%);
   transition: all 0.2s;
+
   &:hover {
     filter: invert(100%) drop-shadow(0 0 10px var(--golden));
   }

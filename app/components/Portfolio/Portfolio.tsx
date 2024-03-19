@@ -1,17 +1,15 @@
 import PortfolioEntry from "./PortfolioEntry";
-import "../../styles/portfolio.scss";
+import classes from "./Portfolio.module.scss";
+import "@/styles/portfolio.scss";
 
 export default function Portfolio() {
   return (
-    <section className="portfolio" id="portfolio">
-      <article className="portfolio__info">
-        <h2>Portfolio</h2>
-        <p>
-          Here you can view the pages I've built, arranged most recent to
-          oldest. All pages are built from scratch from pre-designed Adobe XD
-          mock-ups.
-        </p>
-      </article>
+    <section className={classes.portfolio}>
+      <h2>Personal Projects</h2>
+      <p>
+        Web applications developed from my own concepts to address challenges
+        within personal commitments or everyday routines.
+      </p>
 
       {/* 🎌 PAGE: Precision Gym */}
       <PortfolioEntry
@@ -25,15 +23,20 @@ export default function Portfolio() {
           src: ["img/precision-gym.png"],
           alt: "screenshot precision-gym app",
         }}
-        description="A Front End app that allows the user to track their gym progress by inputting relevant data. Built after an idea during workout sessions."
+        description="A front-end application enabling users to monitor their gym progress by entering pertinent data. Conceived during workout sessions, this app was developed to facilitate tracking and improvement."
         bulletpoints={[
-          "Own project",
           "User Input",
           "Data manipulation",
           "Storing and Fetching Database",
           "User Account Authentication",
         ]}
       />
+
+      <h2>Custom Web Pages</h2>
+      <p>
+        Web applications and pages crafted using mock-ups and assets sourced
+        from frontendmentor.io to hone and enhance my skills through practice.
+      </p>
 
       {/* 🎌 PAGE: Tic Tac Toe  */}
       <PortfolioEntry
@@ -47,7 +50,7 @@ export default function Portfolio() {
           src: ["img/tic-tac-toe.png"],
           alt: "screenshot tic tac toe game",
         }}
-        description="A Front End app that allows the user to track their gym progress by inputting relevant data. Built after an idea during workout sessions."
+        description="Tic Tac Toe game built with ReactJS Functional Components with Vite build tool."
         bulletpoints={[
           "Animation sequences for Xs, Os and crossing out winning combination",
           "Score that gets updated",
@@ -70,8 +73,7 @@ export default function Portfolio() {
           alt: "screenshot product page for an e-commerce company",
         }}
         description="E-Commerce product page built with ReactJS Functional
-            Components. Instructions, mock-up and assets are provided by
-            Frontendmentor.io."
+            Components."
         bulletpoints={[
           "Optimal layout for desktop, tablet and mobile devices",
           "Hover states for interactive elements on the page",
@@ -94,9 +96,7 @@ export default function Portfolio() {
           src: ["img/advice.png"],
           alt: "screenshot app that generates text from API",
         }}
-        description="An app that generates random advice text from an external API.
-            Instructions, mock-up and assets are provided by
-            Frontendmentor.io."
+        description="An app that generates random advice text from an external API."
         bulletpoints={[
           "Optimal layout for desktop and mobile devices",
           "Hover states for interactive elements on the page",
@@ -104,9 +104,18 @@ export default function Portfolio() {
         ]}
       />
 
+      <h2>Private Tutoring Projects</h2>
+      <p>
+        Web pages created based on mock-ups and assets supplied by Tom Parson
+        during private tutoring sessions on Front End Development. These
+        projects feature unique designs by Huddle Digital for real-life
+        scenarios. To maintain confidentiality, any client names and specifics
+        have been altered.
+      </p>
+
       {/* 🎌 PAGE: Interior Design  */}
       <PortfolioEntry
-        title="Interior Design page"
+        title="Interior Design Landing page"
         links={{
           href: ["/pages/interior/"],
           github: "https://github.com/Zluf/Interiors-page",
@@ -116,11 +125,6 @@ export default function Portfolio() {
           src: ["img/interior.png"],
           alt: "screenshot landing page for an interior design service",
         }}
-        description="Landing page for an interior design company. Built for
-            HTML/CSS practice. Mock-up and Assets were provided by Tom
-            Parson as part of his private tutoring. As page was designed
-            for a client names and details are changed for
-            confidentiality."
       />
 
       {/* 🎌 PAGE: Charity 2  */}
@@ -135,10 +139,6 @@ export default function Portfolio() {
           src: ["img/charity2.png"],
           alt: "screenshot homepage for a charity",
         }}
-        description="Built for HTML/CSS practice. Mock-up and Assets were provided
-            by Tom Parson as part of his private tutoring. As page was
-            designed for a client names and details are changed for
-            confidentiality."
       />
 
       {/* 🎌 PAGE: Analytics  */}
@@ -161,10 +161,6 @@ export default function Portfolio() {
           ],
           alt: "screenshot login page for an analytics service",
         }}
-        description="Built for HTML/CSS practice. Mock-up and Assets were
-            provided by Tom Parson as part of his private tutoring. As
-            page was designed for a client names and details are
-            changed for confidentiality."
       />
 
       {/* 🎌 PAGE: Sports Data  */}
@@ -179,10 +175,6 @@ export default function Portfolio() {
           src: ["img/sports-1.png", "img/sports-2.png"],
           alt: "screenshot a sports analytics page",
         }}
-        description="Built for HTML/CSS practice. Mock-up and Assets were
-            provided by Tom Parson as part of his private tutoring. As
-            page was designed for a client names and details are
-            changed for confidentiality."
       />
 
       {/* 🎌 PAGE: Debt Solutions  */}
@@ -197,10 +189,6 @@ export default function Portfolio() {
           src: ["img/debt-1.png", "img/debt-2.png"],
           alt: "screenshot page for a debt solutions service",
         }}
-        description="Built for HTML/CSS practice. Mock-up and Assets were
-            provided by Tom Parson as part of his private tutoring. As
-            page was designed for a client names and details are
-            changed for confidentiality."
       />
 
       {/* 🎌 PAGE: Charity 1  */}
@@ -215,10 +203,6 @@ export default function Portfolio() {
           src: ["img/charity1.png"],
           alt: "screenshot page for a charity organization",
         }}
-        description="Built for HTML/CSS practice. Mock-up and Assets were
-            provided by Tom Parson as part of his private tutoring. As
-            page was designed for a client names and details are
-            changed for confidentiality."
       />
     </section>
   );

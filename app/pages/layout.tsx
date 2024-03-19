@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import Header from "./components/Header/Header";
-import Icons from "./components/Icons";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Slav Konovalov | Front End Developer",
@@ -16,12 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="body">
-        <Header />
-        <Icons />
-        <div className="overlay"></div>
-        <div className="wrapper">{children}</div>
-      </body>
+      <body id="body">{children}</body>
     </html>
   );
 }
