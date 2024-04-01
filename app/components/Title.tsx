@@ -18,7 +18,6 @@ import git from "@/public/img/png-icons/git.png";
 const Title: React.FC = () => {
   return (
     <section className={classes.title}>
-      <h3>Hi, there! I'm</h3>
       <h1>Slav Konovalov</h1>
       <h2>Front End Developer</h2>
       <div className={classes.skills}>

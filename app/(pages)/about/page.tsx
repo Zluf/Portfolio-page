@@ -9,7 +9,7 @@ export default function About() {
         <p>Greetings, dear visitor!</p>
         <p>
           My name is Slav Konovalov. I'm a Front-End Developer residing in
-          Manchester, UK. MMy expertise lies in crafting applications and web
+          Manchester, UK. My expertise lies in crafting applications and web
           pages using <strong>React.js</strong> (including extensions{" "}
           <strong>Next.js</strong> and <strong>React Native</strong>) with a
           strong focus on both UI design and functionality.

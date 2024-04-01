@@ -2,20 +2,24 @@
 
 .about {
   width: 100%;
+  // background-color: rgb(88, 88, 88);
+  article {
+    // background-color: gray;
+  }
 
   @include partials.breakpoint-up(medium) {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 200px;
+    // padding-top: 200px;
     gap: 2rem;
     article {
       max-width: 500px;
     }
   }
   @include partials.breakpoint-up(large) {
-    padding-top: 250px;
+    // padding-top: 250px;
   }
 
   p {

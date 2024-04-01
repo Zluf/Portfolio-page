@@ -26,7 +26,10 @@ const Header: React.FC = () => {
       </Link>
 
       <HeaderMenuButton menuOnOff={menuOnOff} toggleBrgrMenu={toggleBrgrMenu} />
-      <HeaderNavMenu menuOnOff={menuOnOff} toggleBrgrMenu={toggleBrgrMenu} />
+      <HeaderNavMenu
+        menuOnOff={menuOnOff}
+        toggleBrgrMenu={() => setMenuOnOff(true)}
+      />
     </header>
   );
 };

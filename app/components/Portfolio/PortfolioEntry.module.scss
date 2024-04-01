@@ -29,15 +29,16 @@
   .imgOverlay .innerNavLinks {
     display: none;
   }
+  .title h3 {
+    font-size: 1.8rem;
+  }
   @include partials.breakpoint-up(medium) {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 5vw;
     &:nth-child(even) {
       flex-direction: row-reverse;
-    }
-    .title h3 {
-      font-size: 1.5rem;
     }
     .imgOverlay {
       background: transparent;
@@ -47,63 +48,13 @@
     .slider {
       width: 45%;
     }
+    .skillsUsed {
+      margin-bottom: 1rem;
+    }
     .skillsUsed,
     .slider,
     .imgOverlay {
       margin-left: 1rem;
-    }
-  }
-  @include partials.breakpoint-up(large) {
-    width: 45%;
-    > .navLinks {
-      .pageLink,
-      .githubLink {
-        display: none;
-      }
-    }
-    &:nth-child(even) {
-      flex-direction: row;
-    }
-    &:hover {
-      .skillsUsed {
-        z-index: 1;
-      }
-      .slider {
-        transform: scale(1.2, 1.2) translateY(-6%);
-        .reel {
-          opacity: 0.25;
-        }
-      }
-      .imgOverlay {
-        opacity: 1;
-        .innerNavLinks {
-          display: flex;
-        }
-      }
-    }
-
-    .slider {
-      width: 100%;
-    }
-    .skillsUsed,
-    .slider,
-    .imgOverlay {
-      margin-left: 0rem;
-    }
-    .imgOverlay {
-      width: 110%;
-      transform: translateX(-5%);
-      position: absolute;
-      top: 4.8rem;
-      opacity: 0;
-      transition: all 0.3s;
-      a {
-        display: flex;
-      }
-      p,
-      li {
-        font-size: 0.8rem;
-      }
     }
   }
 }
@@ -173,12 +124,7 @@
   li {
     display: inline;
     font-weight: 600;
-    background: linear-gradient(
-      45deg,
-      rgb(79, 78, 78),
-      14%,
-      rgb(133, 133, 133)
-    );
+    background-color: rgba(130, 130, 130, 0.119);
     box-shadow: 5px 10px 10px #0000008b;
     padding: 5px 7px;
     font-size: small;
@@ -219,7 +165,7 @@
   p,
   li {
     color: rgba(255, 255, 255, 0.74);
-    line-height: 1.2rem;
+    line-height: 1.4rem;
     text-shadow: 2px 2px 4px rgb(40, 25, 0);
   }
 }

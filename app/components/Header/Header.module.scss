@@ -90,7 +90,6 @@
 .navMenu {
   display: flex;
   gap: 1.2rem;
-  transition: all 0.5s;
   font-size: 1.2rem;
   // Small res.:
   position: absolute;
@@ -102,6 +101,7 @@
   height: 100vh;
   padding: 100px var(--padding) 0 40px;
   transform: translateX(100%);
+  transition: all 0.5s;
 
   &__open {
     transform: translateX(0);

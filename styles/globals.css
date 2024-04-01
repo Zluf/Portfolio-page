@@ -19,8 +19,9 @@
 
 html {
   overflow-x: hidden;
-  background-image: linear-gradient(45deg, black 15%, rgba(0, 0, 0, 0.619)),
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==);
+  background: url("/img/bg.jpg") no-repeat center center/cover;
+  /* background-image: linear-gradient(45deg, black 15%, rgba(0, 0, 0, 0.619)),
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==); */
   background-attachment: fixed;
   background-blend-mode: screen;
 }
@@ -39,7 +40,7 @@ button {
 }
 
 section {
-  overflow-y: scroll;
+  position: absolute;
   padding: 100px var(--padding) 80px;
 }
 
@@ -52,12 +53,13 @@ section h2 {
   /* designed for feathered footer effect at the bottom */
   display: flex;
   position: fixed;
-  scrollbar-color: white transparent;
+  scrollbar-color: #cea458 transparent;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: -1;
+  overflow-y: scroll;
   mask-image: linear-gradient(
     transparent 5%,
     black 15%,

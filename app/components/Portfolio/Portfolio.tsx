@@ -1,6 +1,20 @@
 import PortfolioEntry from "./PortfolioEntry";
 import classes from "./Portfolio.module.scss";
-import "@/styles/portfolio.scss";
+
+const skills = {
+  ReactJS: { name: "#ReactJS", color: "#61DAFB" },
+  Firebase: { name: "#Firebase", color: "#FFCA28" },
+  Database: { name: "#Database", color: "#FF7043" },
+  CSS: { name: "#CSS", color: "#2965f1" },
+  Sass: { name: "#Sass", color: "#CC6699" },
+  Vite: { name: "#Vite", color: "#646CFF" },
+  HTML: { name: "#HTML", color: "#E44D26" },
+  JavaScript: { name: "#JavaScript", color: "#F7DF1E" },
+  Desktop: { name: "#Desktop", color: "#fff" },
+  Mobile: { name: "#Mobile", color: "#fff" },
+  Animations: { name: "#Animations", color: "#fff" },
+  API: { name: "#API", color: "#fff" },
+};
 
 export default function Portfolio() {
   return (
@@ -18,7 +32,12 @@ export default function Portfolio() {
           href: ["https://precision-gym.netlify.app/"],
           github: "https://github.com/Zluf/precision-gym-app-react",
         }}
-        skills={["ReactJS", "Firebase", "Database", "CSS"]}
+        skills={[
+          skills["ReactJS"],
+          skills["Firebase"],
+          skills["Database"],
+          skills["CSS"],
+        ]}
         img={{
           src: ["img/precision-gym.png"],
           alt: "screenshot precision-gym app",
@@ -35,7 +54,8 @@ export default function Portfolio() {
       <h2>Custom Web Pages</h2>
       <p>
         Web applications and pages crafted using mock-ups and assets sourced
-        from frontendmentor.io to hone and enhance my skills through practice.
+        from <a href="https://www.frontendmentor.io/">frontendmentor.io</a> to
+        hone and enhance my skills through practice.
       </p>
 
       {/* 🎌 PAGE: Tic Tac Toe  */}
@@ -45,7 +65,12 @@ export default function Portfolio() {
           href: ["https://tic-tac-toe-by-slavk.netlify.app/"],
           github: "https://github.com/Zluf/tic-tac-toe",
         }}
-        skills={["ReactJS", "Vite", "CSS", "Animations"]}
+        skills={[
+          skills["ReactJS"],
+          skills["Vite"],
+          skills["CSS"],
+          skills["Animations"],
+        ]}
         img={{
           src: ["img/tic-tac-toe.png"],
           alt: "screenshot tic tac toe game",
@@ -67,13 +92,18 @@ export default function Portfolio() {
           href: ["/pages/e-commerce-page/"],
           github: "https://github.com/Zluf/e-commerce-app",
         }}
-        skills={["ReactJS", "CSS", "Desktop", "Mobile"]}
+        skills={[
+          skills["ReactJS"],
+          skills["CSS"],
+          skills["Desktop"],
+          skills["Mobile"],
+        ]}
         img={{
           src: ["img/e-commerce-page.png"],
           alt: "screenshot product page for an e-commerce company",
         }}
         description="E-Commerce product page built with ReactJS Functional
-            Components."
+      Components."
         bulletpoints={[
           "Optimal layout for desktop, tablet and mobile devices",
           "Hover states for interactive elements on the page",
@@ -91,7 +121,14 @@ export default function Portfolio() {
           href: ["/pages/advice-generator-app/"],
           github: "https://github.com/Zluf/advise-generator-app/",
         }}
-        skills={["HTML", "CSS", "JavaScript", "API", "Desktop", "Mobile"]}
+        skills={[
+          skills["HTML"],
+          skills["CSS"],
+          skills["JavaScript"],
+          skills["API"],
+          skills["Desktop"],
+          skills["Mobile"],
+        ]}
         img={{
           src: ["img/advice.png"],
           alt: "screenshot app that generates text from API",
@@ -106,11 +143,12 @@ export default function Portfolio() {
 
       <h2>Private Tutoring Projects</h2>
       <p>
-        Web pages created based on mock-ups and assets supplied by Tom Parson
-        during private tutoring sessions on Front End Development. These
-        projects feature unique designs by Huddle Digital for real-life
-        scenarios. To maintain confidentiality, any client names and specifics
-        have been altered.
+        Web pages created based on mock-ups and assets supplied by{" "}
+        <a href="https://tomparson.com/">Tom Parson</a> during private tutoring
+        sessions on Front End Development. These projects feature unique designs
+        by <a href="https://www.huddledigital.com/">Huddle Digital</a> for
+        real-life scenarios. To maintain confidentiality, any client names and
+        specifics have been altered.
       </p>
 
       {/* 🎌 PAGE: Interior Design  */}
@@ -120,24 +158,15 @@ export default function Portfolio() {
           href: ["/pages/interior/"],
           github: "https://github.com/Zluf/Interiors-page",
         }}
-        skills={["HTML", "Sass", "Desktop", "Mobile"]}
+        skills={[
+          skills["HTML"],
+          skills["Sass"],
+          skills["Desktop"],
+          skills["Mobile"],
+        ]}
         img={{
           src: ["img/interior.png"],
           alt: "screenshot landing page for an interior design service",
-        }}
-      />
-
-      {/* 🎌 PAGE: Charity 2  */}
-      <PortfolioEntry
-        title="Charity page 2"
-        links={{
-          href: ["/pages/charity2/"],
-          github: "https://github.com/Zluf/Charity-page-2",
-        }}
-        skills={["HTML", "Sass", "JavaScript", "Desktop"]}
-        img={{
-          src: ["img/charity2.png"],
-          alt: "screenshot homepage for a charity",
         }}
       />
 
@@ -152,7 +181,12 @@ export default function Portfolio() {
           ],
           github: "https://github.com/Zluf/Analytics-page",
         }}
-        skills={["HTML", "CSS", "Desktop", " Mobile"]}
+        skills={[
+          skills["HTML"],
+          skills["CSS"],
+          skills["Desktop"],
+          skills["Mobile"],
+        ]}
         img={{
           src: [
             "img/analytics-1.png",
@@ -163,20 +197,6 @@ export default function Portfolio() {
         }}
       />
 
-      {/* 🎌 PAGE: Sports Data  */}
-      <PortfolioEntry
-        title="Sports Data page"
-        links={{
-          href: ["/pages/sports-data/", "/pages/sports-data/page2"],
-          github: "https://github.com/Zluf/Sports-data-page",
-        }}
-        skills={["HTML", "CSS", "Desktop"]}
-        img={{
-          src: ["img/sports-1.png", "img/sports-2.png"],
-          alt: "screenshot a sports analytics page",
-        }}
-      />
-
       {/* 🎌 PAGE: Debt Solutions  */}
       <PortfolioEntry
         title="Debt Solutions page"
@@ -184,24 +204,34 @@ export default function Portfolio() {
           href: ["/pages/debt-solutions", "/pages/debt-solutions/page2"],
           github: "https://github.com/Zluf/Debt-Solutions-page",
         }}
-        skills={["HTML", "CSS", "Desktop", " Mobile"]}
+        skills={[
+          skills["HTML"],
+          skills["CSS"],
+          skills["Desktop"],
+          skills["Mobile"],
+        ]}
         img={{
           src: ["img/debt-1.png", "img/debt-2.png"],
           alt: "screenshot page for a debt solutions service",
         }}
       />
 
-      {/* 🎌 PAGE: Charity 1  */}
+      {/* 🎌 PAGE: Charity  */}
       <PortfolioEntry
-        title="Charity page 1"
+        title="Charity pages"
         links={{
-          href: ["/pages/charity1/"],
-          github: "https://github.com/Zluf/Charity-page-1",
+          href: ["/pages/charity1/", "/pages/charity2/"],
+          github: "https://github.com/Zluf/Charity-page-2",
         }}
-        skills={["HTML", "CSS", "Desktop"]}
+        skills={[
+          skills["HTML"],
+          skills["CSS"],
+          skills["Sass"],
+          skills["JavaScript"],
+        ]}
         img={{
-          src: ["img/charity1.png"],
-          alt: "screenshot page for a charity organization",
+          src: ["img/charity1.png", "img/charity2.png"],
+          alt: "screenshot homepage for a charity",
         }}
       />
     </section>

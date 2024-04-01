@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface PFEntryProps {
   title: string;
-  skills: string[];
+  skills: Array<{ name: string; color: string }>;
   links: { href: string[]; github: string };
   description?: string;
   bulletpoints?: string[];
@@ -50,7 +50,9 @@ const PortfolioEntry: React.FC<PFEntryProps> = ({
       {/* Skills Used */}
       <ul className={classes.skillsUsed}>
         {skills.map((sk) => (
-          <li key={sk}>{sk}</li>
+          <li key={sk.name} style={{ color: sk.color }}>
+            {sk.name}
+          </li>
         ))}
       </ul>
 
@@ -65,7 +67,9 @@ const PortfolioEntry: React.FC<PFEntryProps> = ({
         >
           {img.src.map((imgPath, i) => (
             <div key={imgPath} className={`${classes.imgBox} ${classes.slide}`}>
-              <img src={imgPath} alt={img.alt} />
+              <Link href={links.href[slide]} style={{ display: "flex" }}>
+                <img src={imgPath} alt={img.alt} />
+              </Link>
             </div>
           ))}
         </div>
