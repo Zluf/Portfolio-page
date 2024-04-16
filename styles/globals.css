@@ -18,10 +18,7 @@
 }
 
 html {
-  overflow-x: hidden;
   background: url("/img/bg.jpg") no-repeat center center/cover;
-  /* background-image: linear-gradient(45deg, black 15%, rgba(0, 0, 0, 0.619)),
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2OU1LT4//z6CUYGKIAzMARgKjFUAABQxQgFH95/xgAAAABJRU5ErkJggg==); */
   background-attachment: fixed;
   background-blend-mode: screen;
 }
@@ -40,7 +37,6 @@ button {
 }
 
 section {
-  position: absolute;
   padding: 100px var(--padding) 80px;
 }
 
