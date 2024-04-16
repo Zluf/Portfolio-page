@@ -1,6 +1,7 @@
 @use "@/styles/_partials";
 
 .portfolio {
+  width: 100%;
   @include partials.breakpoint-up(medium) {
     display: flex;
     flex-wrap: wrap;

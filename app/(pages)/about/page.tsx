@@ -39,7 +39,7 @@ export default function About() {
 
         <p>
           For further details, please feel free to explore my resume {""}
-          <a href="https://drive.google.com/file/d/1QIGpIIXwkRXfM63f_FPbaHA0m0v9lQoY/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1ips-8N7Tt-9lNKJd_y7_PKe1nhRqbS5d/view?usp=sharing">
             here
           </a>
           .
