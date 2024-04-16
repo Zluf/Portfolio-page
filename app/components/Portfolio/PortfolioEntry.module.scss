@@ -109,9 +109,10 @@
 //
 //
 .skillsUsed {
+  display: flex;
   flex-wrap: wrap;
+  width: 100%;
   @include partials.breakpoint-up(medium) {
-    width: 100%;
     flex-wrap: nowrap;
   }
   @include partials.breakpoint-up(large) {
