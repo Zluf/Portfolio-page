@@ -18,7 +18,7 @@ export default function Experience() {
           />
         </div>
         <p>
-          Since November 2024, I've been actively engaged with{" "}
+          Since November 2023, I've been actively engaged with{" "}
           <a href="https://springact.org">Spring Act</a>, a non-profit
           organization at the intersection of human rights and technology.
           Within this role, I contribute to the development of client-side code
