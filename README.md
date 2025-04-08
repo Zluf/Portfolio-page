@@ -20,17 +20,22 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tools and Configurations
 
-To learn more about Next.js, take a look at the following resources:
+This project utilizes a modern development stack and tools to ensure a streamlined workflow and high-quality code:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js**: A React framework for building server-rendered and statically generated web applications.
+- **TypeScript**: Adds static typing to JavaScript, improving code quality and maintainability.
+- **TailwindCSS**: A utility-first CSS framework for building responsive and modern designs.
+- **Sass**: Enables advanced styling capabilities with features like variables, nesting, and mixins.
+- **Prettier**: Ensures consistent code formatting across the project. Configured via `.prettierrc`.
+- **Font Awesome**: Provides scalable vector icons and social logos for the UI.
+- **next/image**: Optimizes images with lazy loading and responsive sizing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Dynamic Routing**: Built with the Next.js [app](http://_vscodecontentref_/2) directory for seamless routing.
+- **Font Optimization**: Uses `next/font` to optimize and load custom Google Fonts.
+- **Responsive Design**: Fully responsive and mobile-friendly.
+- **Image Optimization**: Leverages the `next/image` component for optimized images with lazy loading.
+- **Modern Development Tools**: Includes TypeScript, Sass, and Prettier for a streamlined development experience.
