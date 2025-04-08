@@ -30,6 +30,27 @@ export default function About() {
           remain dedicated to honing my craft, fueled by an unwavering passion
           and fascination.
         </p>
+        <p>
+          In the coming years I would build my own web projects, take part in
+          Hackathons, network with other Developers at local meetups, undertake
+          a number of Udemy courses to enhance my skill set. To this day, I
+          remain dedicated to honing my craft, fueled by an unwavering passion
+          and fascination.
+        </p>
+        <p>
+          In the coming years I would build my own web projects, take part in
+          Hackathons, network with other Developers at local meetups, undertake
+          a number of Udemy courses to enhance my skill set. To this day, I
+          remain dedicated to honing my craft, fueled by an unwavering passion
+          and fascination.
+        </p>
+        <p>
+          In the coming years I would build my own web projects, take part in
+          Hackathons, network with other Developers at local meetups, undertake
+          a number of Udemy courses to enhance my skill set. To this day, I
+          remain dedicated to honing my craft, fueled by an unwavering passion
+          and fascination.
+        </p>
 
         <p>
           Presently, I am proud to be a member of the esteemed developer team at{' '}

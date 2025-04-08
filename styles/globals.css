@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Oxygen:wght@300;400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 :root {
   --golden: #d9c65a;
@@ -18,7 +18,7 @@
 }
 
 html {
-  background: url("/img/bg.jpg") no-repeat center center/cover;
+  background: url('/img/bg.jpg') no-repeat center center/cover;
   background-attachment: fixed;
   background-blend-mode: screen;
 }
@@ -47,7 +47,6 @@ section h2 {
 
 .wrapper {
   /* designed for feathered footer effect at the bottom */
-  display: flex;
   position: fixed;
   scrollbar-color: #cea458 transparent;
   top: 0;
