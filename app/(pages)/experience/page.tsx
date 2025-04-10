@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import classes from './Experience.module.scss'
-import softwareCraftersManchester from '@/public/img/software-crafters-manchester.jpeg'
-import globalLegalHackathon2022 from '@/public/img/global-legal-hackathon-2022.png'
+import React from 'react';
+import Image from 'next/image';
+import classes from './Experience.module.scss';
+import softwareCraftersManchester from '@/public/img/software-crafters-manchester.jpeg';
+import globalLegalHackathon2022 from '@/public/img/global-legal-hackathon-2022.png';
 
 export default function Experience() {
   return (
@@ -21,13 +21,12 @@ export default function Experience() {
           Since November 2023, I've been actively engaged with{' '}
           <a href="https://springact.org">Spring Act</a>, a non-profit
           organization at the intersection of human rights and technology.
-          Within this role, I contribute to the development of client-side code
-          for their flagship project <a href="https://sophia.chat/">Sophia</a> —
-          a chatbot designed to assist survivors of domestic violence.
-          Additionally, I play a pivotal role in the front-end development of
-          upcoming projects at Spring Act, and I had the privilege to
-          participate in their{' '}
-          <a href="https://springact.org/hackathon-2024/">2024 Hackathon</a>.
+          Within this role, I have contributed to the development of client-side
+          code for <a href="https://sophia.chat/">Sophia</a> — a chatbot
+          designed to assist survivors of domestic violence. Currently I play a
+          pivotal role in the front-end development of{' '}
+          <a href="https://comebackcatz.com/">Comeback Catz</a>, a gamified web
+          app empowering to speak up against sexism with confidence and humour.
         </p>
       </div>
 
@@ -81,5 +80,5 @@ export default function Experience() {
         </p>
       </div>
     </section>
-  )
+  );
 }
